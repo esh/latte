@@ -1,0 +1,23 @@
+<project default="build">
+  <path id="classpath">
+    <fileset dir="lib" includes="**/*.jar"/>
+  </path>
+
+  <target name="clean">
+    <delete dir="bin"/>
+    <mkdir dir="bin"/>
+  </target>
+
+  <target name="compile">
+    <javac srcdir="src" destdir="bin" classpathref="classpath"/>
+  </target>
+  
+  <target name="jar" depends="compile">
+    <jar destfile="lib/latte.jar"
+         basedir="bin"
+         includes="**/*.class"
+         />
+  </target>
+  
+  <target name="build" depends="compile,jar" />
+</project>

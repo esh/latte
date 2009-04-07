@@ -1,0 +1,60 @@
+body {
+	margin: 0px;
+	background: white;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: #404040;
+}
+
+#preview {
+	width: 462px;
+	margin: auto;
+	padding: 0 0 1px 0;
+	border: 0;
+}
+
+#preview img {
+	width: 460px;
+	margin: 0;
+	padding: 0px 1px 0px 1px;
+	border: 0;
+}
+
+#description {
+	width: 462px;
+	padding: 10px 0 10px 0;
+	margin: auto;
+	text-align: left;
+}
+
+#tagged {
+	font-weight:bold;
+	text-decoration: underline;
+}
+
+#description h1 {
+	font-size: 28px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#description p {
+	margin: 15px 0px 0px 0px;
+}
+
+#stream {
+	width: 462px;
+	margin: auto;
+}
+
+#stream img {
+	margin: 1px 1px 1px 1px;
+	padding: 0;
+	border: 0;
+	width: 64px;
+	height: 64px;
+	float: left;
+}

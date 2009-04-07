@@ -1,0 +1,816 @@
+2009-04-07 20:22:29,104  INFO org.latte.scripting.Javascript - connected to imap server
+2009-04-07 20:26:52,371  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:26:52,410 DEBUG Datastore.js - cache miss: all
+2009-04-07 20:26:52,446 DEBUG Datastore.js - cache miss: 0
+2009-04-07 20:26:52,451 DEBUG Datastore.js - cache miss: _cloud
+2009-04-07 20:26:52,540  INFO org.latte.scripting.Javascript - handled /
+2009-04-07 20:27:35,490  INFO org.latte.scripting.Javascript - connected to imap server
+2009-04-07 20:27:41,793  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:27:41,814 DEBUG Datastore.js - cache miss: all
+2009-04-07 20:27:41,843 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/all (No such file or directory)
+2009-04-07 20:27:42,038 ERROR org.latte.scripting.Javascript - undefined not defined
+2009-04-07 20:27:45,064  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:27:45,074  INFO org.latte.scripting.Javascript - handled /login
+2009-04-07 20:27:47,066  INFO org.latte.scripting.Javascript - {passcode=[Ljava.lang.String;@16de49c}
+2009-04-07 20:27:47,073  INFO org.latte.scripting.Javascript - entry:passcode=[Ljava.lang.String;@5e55ab
+2009-04-07 20:27:47,076  INFO org.latte.scripting.Javascript - P:({passcode:"eddio22"})
+2009-04-07 20:27:47,084  INFO org.latte.scripting.Javascript - handled http://localhost:8080/login/authenticate
+2009-04-07 20:27:47,302  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:27:47,303 DEBUG Datastore.js - cache miss: all
+2009-04-07 20:27:47,305 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/all (No such file or directory)
+2009-04-07 20:27:47,422 ERROR org.latte.scripting.Javascript - undefined not defined
+2009-04-07 20:27:57,000  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:27:57,072  INFO org.latte.scripting.Javascript - handled /blog/create
+2009-04-07 20:28:21,491  INFO org.latte.scripting.Javascript - {tags=[B@176cad3, title=[B@1fe1feb, upload=small.JPG}
+2009-04-07 20:28:21,525  INFO org.latte.scripting.Javascript - entry:tags=[B@176cad3
+2009-04-07 20:28:21,526  INFO org.latte.scripting.Javascript - entry:title=[B@1fe1feb
+2009-04-07 20:28:21,526  INFO org.latte.scripting.Javascript - entry:upload=small.JPG
+2009-04-07 20:28:21,558  INFO org.latte.scripting.Javascript - P:({tags:"a b ", title:"hello world", upload:/tmp/MultiPart41464.JPG})
+2009-04-07 20:28:21,559  INFO org.latte.scripting.Javascript - creating new model
+2009-04-07 20:28:21,559 DEBUG Datastore.js - cache miss: all
+2009-04-07 20:28:21,596 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/all (No such file or directory)
+2009-04-07 20:28:21,602 DEBUG Datastore.js - cache miss: _cloud
+2009-04-07 20:28:21,606 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/_cloud (No such file or directory)
+2009-04-07 20:28:21,607 DEBUG Datastore.js - cache miss: _cloud
+2009-04-07 20:28:21,716 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/_cloud (No such file or directory)
+2009-04-07 20:28:21,719 DEBUG Datastore.js - cache miss: a
+2009-04-07 20:28:21,720 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/a (No such file or directory)
+2009-04-07 20:28:21,721 DEBUG Datastore.js - cache miss: a
+2009-04-07 20:28:21,723 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/a (No such file or directory)
+2009-04-07 20:28:21,726 DEBUG Datastore.js - cache miss: b
+2009-04-07 20:28:21,727 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/b (No such file or directory)
+2009-04-07 20:28:21,728 DEBUG Datastore.js - cache miss: b
+2009-04-07 20:28:21,729 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/b (No such file or directory)
+2009-04-07 20:28:21,732 DEBUG Datastore.js - cache miss: all
+2009-04-07 20:28:21,733 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/all (No such file or directory)
+2009-04-07 20:28:21,736 DEBUG Datastore.js - cache miss: all
+2009-04-07 20:28:21,737 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/all (No such file or directory)
+2009-04-07 20:28:21,803  INFO org.latte.scripting.Javascript - saved public/blog/0/o.jpg
+2009-04-07 20:28:21,804  INFO org.latte.scripting.Javascript - convert -geometry 480x public/blog/0/o.jpg public/blog/0/p.jpg
+2009-04-07 20:28:23,309  INFO org.latte.scripting.Javascript - convert -geometry x80 public/blog/0/o.jpg public/blog/0/t.jpg
+2009-04-07 20:28:23,660  INFO org.latte.scripting.Javascript - convert -crop 80x80+13.5+0 public/blog/0/t.jpg public/blog/0/t.jpg
+2009-04-07 20:28:23,702 DEBUG Datastore.js - cache miss: 0
+2009-04-07 20:28:23,703 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/0 (No such file or directory)
+2009-04-07 20:28:23,705  INFO org.latte.scripting.Javascript - handled http://localhost:8080/blog/save
+2009-04-07 20:28:23,712  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:28:23,712 DEBUG Datastore.js - cache miss: 0
+2009-04-07 20:28:23,756  INFO org.latte.scripting.Javascript - handled /blog/show/all/0
+2009-04-07 20:30:34,851  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:30:34,851  INFO org.latte.scripting.Javascript - handled /login
+2009-04-07 20:30:36,402  INFO org.latte.scripting.Javascript - {passcode=[Ljava.lang.String;@e61fd1}
+2009-04-07 20:30:36,403  INFO org.latte.scripting.Javascript - entry:passcode=[Ljava.lang.String;@331059
+2009-04-07 20:30:36,403  INFO org.latte.scripting.Javascript - P:({passcode:"eddio22"})
+2009-04-07 20:30:36,404  INFO org.latte.scripting.Javascript - handled http://localhost:8080/login/authenticate
+2009-04-07 20:30:36,416  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:30:36,419  INFO org.latte.scripting.Javascript - handled /blog/show
+2009-04-07 20:30:40,921  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:30:40,924  INFO org.latte.scripting.Javascript - handled /blog/edit/0
+2009-04-07 20:30:44,607  INFO org.latte.scripting.Javascript - {tags=[B@1950198, title=[B@19bb25a, original=[B@da6bf4, date=[B@1e58cb8, upload=[B@179935d, key=[B@b9e45a}
+2009-04-07 20:30:44,608  INFO org.latte.scripting.Javascript - entry:tags=[B@1950198
+2009-04-07 20:30:44,610  INFO org.latte.scripting.Javascript - entry:title=[B@19bb25a
+2009-04-07 20:30:44,611  INFO org.latte.scripting.Javascript - entry:original=[B@da6bf4
+2009-04-07 20:30:44,611  INFO org.latte.scripting.Javascript - entry:date=[B@1e58cb8
+2009-04-07 20:30:44,613  INFO org.latte.scripting.Javascript - entry:upload=[B@179935d
+2009-04-07 20:30:44,614  INFO org.latte.scripting.Javascript - entry:key=[B@b9e45a
+2009-04-07 20:30:44,615  INFO org.latte.scripting.Javascript - P:({title:"hello world", original:"/blog/0/o.jpg", key:"0", tags:"b all a c", date:"undefined", upload:""})
+2009-04-07 20:30:44,617 DEBUG Datastore.js - cache miss: c
+2009-04-07 20:30:44,618 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/c (No such file or directory)
+2009-04-07 20:30:44,619 DEBUG Datastore.js - cache miss: c
+2009-04-07 20:30:44,623 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/c (No such file or directory)
+2009-04-07 20:30:44,625  INFO org.latte.scripting.Javascript - handled http://localhost:8080/blog/save
+2009-04-07 20:30:44,643  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:30:44,645  INFO org.latte.scripting.Javascript - handled /blog/show/all/0
+2009-04-07 20:31:18,790  INFO org.latte.scripting.Javascript - connected to imap server
+2009-04-07 20:31:21,548  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:31:21,558 DEBUG Datastore.js - cache miss: all
+2009-04-07 20:31:21,618 DEBUG Datastore.js - cache miss: 0
+2009-04-07 20:31:21,620 DEBUG Datastore.js - cache miss: _cloud
+2009-04-07 20:31:21,708  INFO org.latte.scripting.Javascript - handled /blog/show/all/0
+2009-04-07 20:31:24,657  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:31:24,659 DEBUG Datastore.js - cache miss: c
+2009-04-07 20:31:24,688  INFO org.latte.scripting.Javascript - handled /blog/show/c
+2009-04-07 20:31:27,706  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:31:27,716 DEBUG Datastore.js - cache miss: 0
+2009-04-07 20:31:27,722  INFO org.latte.scripting.Javascript - handled /blog/show/all
+2009-04-07 20:31:32,699  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:31:32,700  INFO org.latte.scripting.Javascript - handled /login
+2009-04-07 20:31:34,017  INFO org.latte.scripting.Javascript - {passcode=[Ljava.lang.String;@153f67e}
+2009-04-07 20:31:34,028  INFO org.latte.scripting.Javascript - entry:passcode=[Ljava.lang.String;@5e1077
+2009-04-07 20:31:34,030  INFO org.latte.scripting.Javascript - P:({passcode:"eddio22"})
+2009-04-07 20:31:34,033  INFO org.latte.scripting.Javascript - handled http://localhost:8080/login/authenticate
+2009-04-07 20:31:34,054  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:31:34,056  INFO org.latte.scripting.Javascript - handled /blog/show
+2009-04-07 20:31:37,987  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:31:38,018  INFO org.latte.scripting.Javascript - handled /blog/create
+2009-04-07 20:31:55,149  INFO org.latte.scripting.Javascript - {tags=[B@8ee016, title=[B@19e15c, upload=PICT0012.JPG}
+2009-04-07 20:31:55,155  INFO org.latte.scripting.Javascript - entry:tags=[B@8ee016
+2009-04-07 20:31:55,156  INFO org.latte.scripting.Javascript - entry:title=[B@19e15c
+2009-04-07 20:31:55,156  INFO org.latte.scripting.Javascript - entry:upload=PICT0012.JPG
+2009-04-07 20:31:55,158  INFO org.latte.scripting.Javascript - P:({tags:"a b", title:"test 2", upload:/tmp/MultiPart49722.JPG})
+2009-04-07 20:31:55,159  INFO org.latte.scripting.Javascript - creating new model
+2009-04-07 20:31:55,166 DEBUG Datastore.js - cache miss: a
+2009-04-07 20:31:55,183 DEBUG Datastore.js - cache miss: b
+2009-04-07 20:31:55,194  INFO org.latte.scripting.Javascript - saved public/blog/1/o.jpg
+2009-04-07 20:31:55,195  INFO org.latte.scripting.Javascript - convert -geometry 480x public/blog/1/o.jpg public/blog/1/p.jpg
+2009-04-07 20:31:58,061  INFO org.latte.scripting.Javascript - convert -geometry x80 public/blog/1/o.jpg public/blog/1/t.jpg
+2009-04-07 20:31:59,798  INFO org.latte.scripting.Javascript - convert -crop 80x80+13.5+0 public/blog/1/t.jpg public/blog/1/t.jpg
+2009-04-07 20:31:59,923 DEBUG Datastore.js - cache miss: 1
+2009-04-07 20:31:59,929 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/1 (No such file or directory)
+2009-04-07 20:31:59,931  INFO org.latte.scripting.Javascript - handled http://localhost:8080/blog/save
+2009-04-07 20:31:59,958  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:31:59,959 DEBUG Datastore.js - cache miss: 1
+2009-04-07 20:31:59,961  INFO org.latte.scripting.Javascript - handled /blog/show/all/1
+2009-04-07 20:35:56,485  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:35:56,498  INFO org.latte.scripting.Javascript - handled /blog/show/c
+2009-04-07 20:35:58,225  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:35:58,229  INFO org.latte.scripting.Javascript - handled /blog/show/b
+2009-04-07 20:36:00,055  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:36:00,058  INFO org.latte.scripting.Javascript - handled /blog/show/a
+2009-04-07 20:36:01,649  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:36:01,652  INFO org.latte.scripting.Javascript - handled /blog/show/c
+2009-04-07 20:36:10,196  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:36:10,200  INFO org.latte.scripting.Javascript - handled /blog/edit/1
+2009-04-07 20:36:14,543  INFO org.latte.scripting.Javascript - {tags=[B@6caf16, title=[B@15ad5c6, original=[B@88e2dd, date=[B@e64686, upload=[B@203c31, key=[B@4fc156}
+2009-04-07 20:36:14,544  INFO org.latte.scripting.Javascript - entry:tags=[B@6caf16
+2009-04-07 20:36:14,557  INFO org.latte.scripting.Javascript - entry:title=[B@15ad5c6
+2009-04-07 20:36:14,557  INFO org.latte.scripting.Javascript - entry:original=[B@88e2dd
+2009-04-07 20:36:14,558  INFO org.latte.scripting.Javascript - entry:date=[B@e64686
+2009-04-07 20:36:14,558  INFO org.latte.scripting.Javascript - entry:upload=[B@203c31
+2009-04-07 20:36:14,558  INFO org.latte.scripting.Javascript - entry:key=[B@4fc156
+2009-04-07 20:36:14,559  INFO org.latte.scripting.Javascript - P:({title:"test 2", original:"/blog/1/o.jpg", key:"1", tags:"b all", date:"undefined", upload:""})
+2009-04-07 20:36:14,564  INFO org.latte.scripting.Javascript - handled http://localhost:8080/blog/save
+2009-04-07 20:36:14,608  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:36:14,610  INFO org.latte.scripting.Javascript - handled /blog/show/all/1
+2009-04-07 20:36:17,294  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:36:17,297  INFO org.latte.scripting.Javascript - handled /blog/show/all/0
+2009-04-07 20:36:18,190  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:36:18,192  INFO org.latte.scripting.Javascript - handled /blog/show/all/1
+2009-04-07 20:36:20,222  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:36:20,228  INFO org.latte.scripting.Javascript - handled /blog/show/all/0
+2009-04-07 20:36:22,783  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:36:22,786  INFO org.latte.scripting.Javascript - handled /blog/show/all/1
+2009-04-07 20:36:23,432  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:36:23,435  INFO org.latte.scripting.Javascript - handled /blog/show/all/0
+2009-04-07 20:36:24,732  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:36:24,735  INFO org.latte.scripting.Javascript - handled /blog/show/all/1
+2009-04-07 20:36:25,561  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:36:25,562  INFO org.latte.scripting.Javascript - handled /blog/show/all/1
+2009-04-07 20:36:26,708  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:36:26,711  INFO org.latte.scripting.Javascript - handled /blog/show/all/0
+2009-04-07 20:36:27,559  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:36:27,563  INFO org.latte.scripting.Javascript - handled /blog/show/all/1
+2009-04-07 20:36:28,190  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:36:28,193  INFO org.latte.scripting.Javascript - handled /blog/show/all/1
+2009-04-07 20:36:28,731  INFO org.latte.scripting.Javascript - P:({})
+2009-04-07 20:36:28,735  INFO org.latte.scripting.Javascript - handled /blog/show/all/0
+2009-04-07 20:39:02,770  INFO org.latte.scripting.Javascript - connected to imap server
+2009-04-07 20:39:08,521 DEBUG Datastore.js - cache miss: all
+2009-04-07 20:39:08,576 DEBUG Datastore.js - cache miss: 0
+2009-04-07 20:39:08,589 DEBUG Datastore.js - cache miss: _cloud
+2009-04-07 20:39:08,683  INFO org.latte.scripting.Javascript - handled /blog/show/all/0
+2009-04-07 20:39:09,908  INFO org.latte.scripting.Javascript - handled /blog/show/all/0
+2009-04-07 20:39:13,599 DEBUG Datastore.js - cache miss: a
+2009-04-07 20:39:13,616 DEBUG Datastore.js - cache miss: 0
+2009-04-07 20:39:13,621  INFO org.latte.scripting.Javascript - handled /blog/show/a
+2009-04-07 20:39:15,844  INFO org.latte.scripting.Javascript - handled /blog/show/all
+2009-04-07 20:39:17,577 DEBUG Datastore.js - cache miss: b
+2009-04-07 20:39:17,641  INFO org.latte.scripting.Javascript - handled /blog/show/b
+2009-04-07 20:39:18,573 DEBUG Datastore.js - cache miss: c
+2009-04-07 20:39:18,585  INFO org.latte.scripting.Javascript - handled /blog/show/c
+2009-04-07 20:39:19,490  INFO org.latte.scripting.Javascript - handled /blog/show/all
+2009-04-07 20:43:04,248  INFO org.latte.scripting.Javascript - got multipart mail
+2009-04-07 20:43:09,822  INFO org.latte.scripting.Javascript - subject: Bamboo clams redux
+2009-04-07 20:43:09,822  INFO org.latte.scripting.Javascript - body:Food
+2009-04-07 20:43:09,822  INFO org.latte.scripting.Javascript - attachment:/tmp/mail_39883.jpg
+2009-04-07 20:43:09,837 ERROR org.latte.scripting.Javascript - ReferenceError: "params" is not defined.
+2009-04-07 20:43:52,370  INFO org.latte.scripting.Javascript - handled /blog/show/all
+2009-04-07 20:46:04,821  INFO org.latte.scripting.Javascript - got multipart mail
+2009-04-07 20:46:10,072  INFO org.latte.scripting.Javascript - subject: Fresh shrimp rolls
+2009-04-07 20:46:10,074  INFO org.latte.scripting.Javascript - body:Food
+2009-04-07 20:46:10,074  INFO org.latte.scripting.Javascript - attachment:/tmp/mail_39884.jpg
+2009-04-07 20:46:10,076 ERROR org.latte.scripting.Javascript - ReferenceError: "params" is not defined.
+2009-04-07 20:46:43,854  INFO org.latte.scripting.Javascript - connected to imap server
+2009-04-07 20:49:44,957  INFO org.latte.scripting.Javascript - got multipart mail
+2009-04-07 20:49:50,472  INFO org.latte.scripting.Javascript - subject: Yuki-chan
+2009-04-07 20:49:50,473  INFO org.latte.scripting.Javascript - body:Food
+2009-04-07 20:49:50,473  INFO org.latte.scripting.Javascript - attachment:/tmp/mail_28159.jpg
+2009-04-07 20:50:22,483 DEBUG Datastore.js - cache miss: all
+2009-04-07 20:50:22,489 DEBUG Datastore.js - cache miss: 0
+2009-04-07 20:50:22,491 DEBUG Datastore.js - cache miss: _cloud
+2009-04-07 20:50:22,605  INFO org.latte.scripting.Javascript - handled /blog/show/all
+2009-04-07 20:52:43,617  INFO org.latte.scripting.Javascript - connected to imap server
+2009-04-07 20:55:44,915  INFO org.latte.scripting.Javascript - got multipart mail
+2009-04-07 20:55:48,787  INFO org.latte.scripting.Javascript - subject: Soufflé... Almost
+2009-04-07 20:55:48,787  INFO org.latte.scripting.Javascript - body:Food
+2009-04-07 20:55:48,788  INFO org.latte.scripting.Javascript - attachment:/tmp/mail_29977.jpg
+2009-04-07 20:58:56,815  INFO org.latte.scripting.Javascript - connected to imap server
+2009-04-07 20:59:57,638  INFO org.latte.scripting.Javascript - got multipart mail
+2009-04-07 21:00:02,471  INFO org.latte.scripting.Javascript - subject: Chilli ebi
+2009-04-07 21:00:02,471  INFO org.latte.scripting.Javascript - body:Food
+2009-04-07 21:00:02,471  INFO org.latte.scripting.Javascript - attachment:/tmp/mail_2915.jpg
+2009-04-07 21:00:02,472  INFO org.latte.scripting.Javascript - yo
+2009-04-07 21:00:02,472  INFO org.latte.scripting.Javascript - enter
+2009-04-07 21:02:30,985  INFO org.latte.scripting.Javascript - connected to imap server
+2009-04-07 21:03:31,881  INFO org.latte.scripting.Javascript - got multipart mail
+2009-04-07 21:03:37,511  INFO org.latte.scripting.Javascript - subject: Birthday dinner
+2009-04-07 21:03:37,511  INFO org.latte.scripting.Javascript - body:Yuki food
+2009-04-07 21:03:37,512  INFO org.latte.scripting.Javascript - attachment:/tmp/mail_42270.jpg
+2009-04-07 21:03:37,512  INFO org.latte.scripting.Javascript - yo
+2009-04-07 21:03:37,512  INFO org.latte.scripting.Javascript - enter
+2009-04-07 21:03:37,713  INFO org.latte.scripting.Javascript - hit...
+2009-04-07 21:03:37,730 ERROR org.latte.scripting.Javascript - ReferenceError: "session" is not defined.
+2009-04-07 22:15:33,375 ERROR org.latte.scripting.Javascript - JavaException: javax.mail.FolderClosedException: * BYE JavaMail Exception: java.net.SocketException: Connection reset
+2009-04-07 22:27:21,958  INFO org.latte.scripting.Javascript - connected to imap server
+2009-04-07 22:32:36,632  INFO org.latte.scripting.Javascript - connected to imap server
+2009-04-07 22:32:49,678 DEBUG Datastore.js - cache miss: all
+2009-04-07 22:32:49,704 DEBUG Datastore.js - cache miss: 0
+2009-04-07 22:32:49,706 DEBUG Datastore.js - cache miss: _cloud
+2009-04-07 22:32:49,834  INFO org.latte.scripting.Javascript - handled /blog/show/all
+2009-04-07 22:32:50,777  INFO org.latte.scripting.Javascript - handled /blog/show/all
+2009-04-07 22:32:54,776  INFO org.latte.scripting.Javascript - handled /login
+2009-04-07 22:32:56,179  INFO org.latte.scripting.Javascript - handled http://localhost:8080/login/authenticate
+2009-04-07 22:32:56,238  INFO org.latte.scripting.Javascript - handled /blog/show
+2009-04-07 22:32:59,234  INFO org.latte.scripting.Javascript - handled /blog/create
+2009-04-07 22:33:36,207 FATAL org.latte.Main - something went wrong
+java.lang.IllegalArgumentException: org.mozilla.javascript.EvaluatorException: missing ) in parenthetical (/home/esh/workspace/Latte/app/serializer.js#94)
+	at org.latte.scripting.Javascript$1.call(Javascript.java:55)
+	at org.mozilla.javascript.optimizer.OptRuntime.callName(OptRuntime.java:97)
+	at org.mozilla.javascript.gen.c5._c14(/home/esh/workspace/Latte/app/controller/blog.js:72)
+	at org.mozilla.javascript.gen.c5.call(/home/esh/workspace/Latte/app/controller/blog.js)
+	at org.mozilla.javascript.optimizer.OptRuntime.call0(OptRuntime.java:57)
+	at org.mozilla.javascript.gen.c5._c2(/home/esh/workspace/Latte/app/controller/blog.js:3)
+	at org.mozilla.javascript.gen.c5.call(/home/esh/workspace/Latte/app/controller/blog.js)
+	at org.mozilla.javascript.optimizer.OptRuntime.callName(OptRuntime.java:97)
+	at org.mozilla.javascript.gen.c5._c13(/home/esh/workspace/Latte/app/controller/blog.js:71)
+	at org.mozilla.javascript.gen.c5.call(/home/esh/workspace/Latte/app/controller/blog.js)
+	at org.mozilla.javascript.ScriptRuntime.applyOrCall(ScriptRuntime.java:2347)
+	at org.mozilla.javascript.BaseFunction.execIdCall(BaseFunction.java:272)
+	at org.mozilla.javascript.IdFunctionObject.call(IdFunctionObject.java:127)
+	at org.mozilla.javascript.optimizer.OptRuntime.call2(OptRuntime.java:76)
+	at org.mozilla.javascript.gen.c4._c0(/home/esh/workspace/Latte/app/system/dispatcher.js:39)
+	at org.mozilla.javascript.gen.c4.call(/home/esh/workspace/Latte/app/system/dispatcher.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:401)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3003)
+	at org.mozilla.javascript.gen.c4.call(/home/esh/workspace/Latte/app/system/dispatcher.js)
+	at org.mozilla.javascript.gen.c4.exec(/home/esh/workspace/Latte/app/system/dispatcher.js)
+	at org.latte.scripting.Javascript.eval(Javascript.java:84)
+	at org.latte.scripting.Javascript.eval(Javascript.java:92)
+	at org.latte.Main$LatteServlet.dispatch(Main.java:82)
+	at org.latte.Main$LatteServlet.doPost(Main.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:502)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1124)
+	at org.mortbay.servlet.MultiPartFilter.doFilter(MultiPartFilter.java:275)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1115)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:361)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:181)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:757)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:324)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:502)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.content(HttpConnection.java:840)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:657)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:211)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:377)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:228)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:497)
+Caused by: org.mozilla.javascript.EvaluatorException: missing ) in parenthetical (/home/esh/workspace/Latte/app/serializer.js#94)
+	at org.mozilla.javascript.DefaultErrorReporter.runtimeError(DefaultErrorReporter.java:109)
+	at org.mozilla.javascript.DefaultErrorReporter.error(DefaultErrorReporter.java:96)
+	at org.mozilla.javascript.Parser.addError(Parser.java:146)
+	at org.mozilla.javascript.Parser.reportError(Parser.java:160)
+	at org.mozilla.javascript.Parser.mustMatchToken(Parser.java:246)
+	at org.mozilla.javascript.Parser.primaryExpr(Parser.java:2391)
+	at org.mozilla.javascript.Parser.memberExpr(Parser.java:1950)
+	at org.mozilla.javascript.Parser.unaryExpr(Parser.java:1808)
+	at org.mozilla.javascript.Parser.mulExpr(Parser.java:1737)
+	at org.mozilla.javascript.Parser.addExpr(Parser.java:1718)
+	at org.mozilla.javascript.Parser.shiftExpr(Parser.java:1698)
+	at org.mozilla.javascript.Parser.relExpr(Parser.java:1672)
+	at org.mozilla.javascript.Parser.eqExpr(Parser.java:1628)
+	at org.mozilla.javascript.Parser.bitAndExpr(Parser.java:1617)
+	at org.mozilla.javascript.Parser.bitXorExpr(Parser.java:1606)
+	at org.mozilla.javascript.Parser.bitOrExpr(Parser.java:1595)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1583)
+	at org.mozilla.javascript.Parser.orExpr(Parser.java:1571)
+	at org.mozilla.javascript.Parser.condExpr(Parser.java:1554)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1539)
+	at org.mozilla.javascript.Parser.expr(Parser.java:1518)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:1245)
+	at org.mozilla.javascript.Parser.statement(Parser.java:708)
+	at org.mozilla.javascript.Parser.parse(Parser.java:401)
+	at org.mozilla.javascript.Parser.parse(Parser.java:359)
+	at org.mozilla.javascript.Context.compileImpl(Context.java:2254)
+	at org.mozilla.javascript.Context.compileReader(Context.java:1202)
+	at org.latte.scripting.Javascript.<init>(Javascript.java:28)
+	at org.latte.scripting.ScriptCache.get(ScriptCache.java:26)
+	at org.latte.scripting.Javascript$1.call(Javascript.java:52)
+	... 41 more
+2009-04-07 22:34:54,817  INFO org.latte.scripting.Javascript - creating new model
+2009-04-07 22:34:54,847 DEBUG Datastore.js - cache miss: c
+2009-04-07 22:34:54,854 DEBUG Datastore.js - cache miss: d
+2009-04-07 22:34:54,966 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/d (No such file or directory)
+2009-04-07 22:34:54,968 DEBUG Datastore.js - cache miss: d
+2009-04-07 22:34:54,970 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/d (No such file or directory)
+2009-04-07 22:34:55,169  INFO org.latte.scripting.Javascript - saved public/blog/1/o.jpg
+2009-04-07 22:34:55,170  INFO org.latte.scripting.Javascript - convert -geometry 480x public/blog/1/o.jpg public/blog/1/p.jpg
+2009-04-07 22:35:04,140  INFO org.latte.scripting.Javascript - convert -geometry x80 public/blog/1/o.jpg public/blog/1/t.jpg
+2009-04-07 22:35:08,586  INFO org.latte.scripting.Javascript - convert -crop 80x80+13.5+0 public/blog/1/t.jpg public/blog/1/t.jpg
+2009-04-07 22:35:08,621 DEBUG Datastore.js - cache miss: 1
+2009-04-07 22:35:08,625 FATAL org.latte.Main - something went wrong
+org.mozilla.javascript.JavaScriptException: java.util.ConcurrentModificationException: 1 has been concurrently modified (/home/esh/workspace/Latte/app/system/filedatastore.js#51)
+	at org.mozilla.javascript.gen.c2._c3(/home/esh/workspace/Latte/app/system/filedatastore.js:51)
+	at org.mozilla.javascript.gen.c2.call(/home/esh/workspace/Latte/app/system/filedatastore.js)
+	at org.mozilla.javascript.optimizer.OptRuntime.call2(OptRuntime.java:76)
+	at org.mozilla.javascript.gen.c16._c1(/home/esh/workspace/Latte/app/serializer.js:91)
+	at org.mozilla.javascript.gen.c16.call(/home/esh/workspace/Latte/app/serializer.js)
+	at org.mozilla.javascript.optimizer.OptRuntime.callN(OptRuntime.java:86)
+	at org.mozilla.javascript.gen.c5._c14(/home/esh/workspace/Latte/app/controller/blog.js:72)
+	at org.mozilla.javascript.gen.c5.call(/home/esh/workspace/Latte/app/controller/blog.js)
+	at org.mozilla.javascript.optimizer.OptRuntime.call0(OptRuntime.java:57)
+	at org.mozilla.javascript.gen.c5._c2(/home/esh/workspace/Latte/app/controller/blog.js:3)
+	at org.mozilla.javascript.gen.c5.call(/home/esh/workspace/Latte/app/controller/blog.js)
+	at org.mozilla.javascript.optimizer.OptRuntime.callName(OptRuntime.java:97)
+	at org.mozilla.javascript.gen.c5._c13(/home/esh/workspace/Latte/app/controller/blog.js:71)
+	at org.mozilla.javascript.gen.c5.call(/home/esh/workspace/Latte/app/controller/blog.js)
+	at org.mozilla.javascript.ScriptRuntime.applyOrCall(ScriptRuntime.java:2347)
+	at org.mozilla.javascript.BaseFunction.execIdCall(BaseFunction.java:272)
+	at org.mozilla.javascript.IdFunctionObject.call(IdFunctionObject.java:127)
+	at org.mozilla.javascript.optimizer.OptRuntime.call2(OptRuntime.java:76)
+	at org.mozilla.javascript.gen.c4._c0(/home/esh/workspace/Latte/app/system/dispatcher.js:39)
+	at org.mozilla.javascript.gen.c4.call(/home/esh/workspace/Latte/app/system/dispatcher.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:401)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3003)
+	at org.mozilla.javascript.gen.c4.call(/home/esh/workspace/Latte/app/system/dispatcher.js)
+	at org.mozilla.javascript.gen.c4.exec(/home/esh/workspace/Latte/app/system/dispatcher.js)
+	at org.latte.scripting.Javascript.eval(Javascript.java:84)
+	at org.latte.scripting.Javascript.eval(Javascript.java:92)
+	at org.latte.Main$LatteServlet.dispatch(Main.java:82)
+	at org.latte.Main$LatteServlet.doPost(Main.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:502)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1124)
+	at org.mortbay.servlet.MultiPartFilter.doFilter(MultiPartFilter.java:275)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1115)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:361)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:181)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:757)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:324)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:502)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.content(HttpConnection.java:840)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:657)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:211)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:377)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:228)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:497)
+2009-04-07 22:35:54,501  INFO org.latte.scripting.Javascript - connected to imap server
+2009-04-07 22:35:59,985 FATAL org.latte.Main - something went wrong
+org.mozilla.javascript.EcmaError: TypeError: Cannot call method "apply" of undefined (/home/esh/workspace/Latte/app/system/dispatcher.js#39)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3557)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3535)
+	at org.mozilla.javascript.ScriptRuntime.typeError(ScriptRuntime.java:3563)
+	at org.mozilla.javascript.ScriptRuntime.typeError2(ScriptRuntime.java:3582)
+	at org.mozilla.javascript.ScriptRuntime.undefCallError(ScriptRuntime.java:3601)
+	at org.mozilla.javascript.ScriptRuntime.getPropFunctionAndThis(ScriptRuntime.java:2160)
+	at org.mozilla.javascript.gen.c4._c0(/home/esh/workspace/Latte/app/system/dispatcher.js:39)
+	at org.mozilla.javascript.gen.c4.call(/home/esh/workspace/Latte/app/system/dispatcher.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:401)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3003)
+	at org.mozilla.javascript.gen.c4.call(/home/esh/workspace/Latte/app/system/dispatcher.js)
+	at org.mozilla.javascript.gen.c4.exec(/home/esh/workspace/Latte/app/system/dispatcher.js)
+	at org.latte.scripting.Javascript.eval(Javascript.java:84)
+	at org.latte.scripting.Javascript.eval(Javascript.java:92)
+	at org.latte.Main$LatteServlet.dispatch(Main.java:82)
+	at org.latte.Main$LatteServlet.doGet(Main.java:76)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:502)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1124)
+	at org.mortbay.servlet.MultiPartFilter.doFilter(MultiPartFilter.java:90)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1115)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:361)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:181)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:757)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:324)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:502)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:826)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:523)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:211)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:377)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:228)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:497)
+2009-04-07 22:36:04,073  INFO org.latte.scripting.Javascript - handled /login
+2009-04-07 22:36:05,579  INFO org.latte.scripting.Javascript - handled http://localhost:8080/login/authenticate
+2009-04-07 22:36:05,582 DEBUG Datastore.js - cache miss: all
+2009-04-07 22:36:05,611 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/all (No such file or directory)
+2009-04-07 22:36:05,660 ERROR org.latte.scripting.Javascript - undefined not defined
+2009-04-07 22:36:08,742  INFO org.latte.scripting.Javascript - handled /blog/create
+2009-04-07 22:36:23,659  INFO org.latte.scripting.Javascript - creating new model
+2009-04-07 22:36:23,659 DEBUG Datastore.js - cache miss: all
+2009-04-07 22:36:23,661 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/all (No such file or directory)
+2009-04-07 22:36:23,663 DEBUG Datastore.js - cache miss: _cloud
+2009-04-07 22:36:23,688 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/_cloud (No such file or directory)
+2009-04-07 22:36:23,689 DEBUG Datastore.js - cache miss: a
+2009-04-07 22:36:23,691 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/a (No such file or directory)
+2009-04-07 22:36:23,691 DEBUG Datastore.js - cache miss: a
+2009-04-07 22:36:23,693 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/a (No such file or directory)
+2009-04-07 22:36:23,747 DEBUG Datastore.js - cache miss: all
+2009-04-07 22:36:23,749 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/all (No such file or directory)
+2009-04-07 22:36:23,749 DEBUG Datastore.js - cache miss: all
+2009-04-07 22:36:23,751 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/all (No such file or directory)
+2009-04-07 22:36:23,752 DEBUG Datastore.js - cache miss: _cloud
+2009-04-07 22:36:23,754 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/_cloud (No such file or directory)
+2009-04-07 22:36:24,033  INFO org.latte.scripting.Javascript - saved public/blog/0/o.jpg
+2009-04-07 22:36:24,034  INFO org.latte.scripting.Javascript - convert -geometry 480x public/blog/0/o.jpg public/blog/0/p.jpg
+2009-04-07 22:36:25,429  INFO org.latte.scripting.Javascript - convert -geometry x80 public/blog/0/o.jpg public/blog/0/t.jpg
+2009-04-07 22:36:26,028  INFO org.latte.scripting.Javascript - convert -crop 80x80+13.5+0 public/blog/0/t.jpg public/blog/0/t.jpg
+2009-04-07 22:36:26,286 DEBUG Datastore.js - cache miss: 0
+2009-04-07 22:36:26,292 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/0 (No such file or directory)
+2009-04-07 22:36:26,294  INFO org.latte.scripting.Javascript - handled http://localhost:8080/blog/save
+2009-04-07 22:36:26,372 DEBUG Datastore.js - cache miss: 0
+2009-04-07 22:36:26,410  INFO org.latte.scripting.Javascript - handled /blog/show/all/0
+2009-04-07 22:36:34,693  INFO org.latte.scripting.Javascript - handled /blog/edit/0
+2009-04-07 22:36:39,254 DEBUG Datastore.js - cache miss: b
+2009-04-07 22:36:39,256 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/b (No such file or directory)
+2009-04-07 22:36:39,257 DEBUG Datastore.js - cache miss: b
+2009-04-07 22:36:39,259 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/b (No such file or directory)
+2009-04-07 22:36:39,348 FATAL org.latte.Main - something went wrong
+org.mozilla.javascript.EcmaError: TypeError: Cannot find function getAbsolutePath in object . (/home/esh/workspace/Latte/app/serializer.js#68)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3557)
+	at org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3535)
+	at org.mozilla.javascript.ScriptRuntime.typeError(ScriptRuntime.java:3563)
+	at org.mozilla.javascript.ScriptRuntime.typeError2(ScriptRuntime.java:3582)
+	at org.mozilla.javascript.ScriptRuntime.notFunctionError(ScriptRuntime.java:3646)
+	at org.mozilla.javascript.ScriptRuntime.getPropFunctionAndThis(ScriptRuntime.java:2186)
+	at org.mozilla.javascript.optimizer.OptRuntime.callProp0(OptRuntime.java:117)
+	at org.mozilla.javascript.gen.c11._c1(/home/esh/workspace/Latte/app/serializer.js:68)
+	at org.mozilla.javascript.gen.c11.call(/home/esh/workspace/Latte/app/serializer.js)
+	at org.mozilla.javascript.optimizer.OptRuntime.callN(OptRuntime.java:86)
+	at org.mozilla.javascript.gen.c5._c14(/home/esh/workspace/Latte/app/controller/blog.js:72)
+	at org.mozilla.javascript.gen.c5.call(/home/esh/workspace/Latte/app/controller/blog.js)
+	at org.mozilla.javascript.optimizer.OptRuntime.call0(OptRuntime.java:57)
+	at org.mozilla.javascript.gen.c5._c2(/home/esh/workspace/Latte/app/controller/blog.js:3)
+	at org.mozilla.javascript.gen.c5.call(/home/esh/workspace/Latte/app/controller/blog.js)
+	at org.mozilla.javascript.optimizer.OptRuntime.callName(OptRuntime.java:97)
+	at org.mozilla.javascript.gen.c5._c13(/home/esh/workspace/Latte/app/controller/blog.js:71)
+	at org.mozilla.javascript.gen.c5.call(/home/esh/workspace/Latte/app/controller/blog.js)
+	at org.mozilla.javascript.ScriptRuntime.applyOrCall(ScriptRuntime.java:2347)
+	at org.mozilla.javascript.BaseFunction.execIdCall(BaseFunction.java:272)
+	at org.mozilla.javascript.IdFunctionObject.call(IdFunctionObject.java:127)
+	at org.mozilla.javascript.optimizer.OptRuntime.call2(OptRuntime.java:76)
+	at org.mozilla.javascript.gen.c4._c0(/home/esh/workspace/Latte/app/system/dispatcher.js:39)
+	at org.mozilla.javascript.gen.c4.call(/home/esh/workspace/Latte/app/system/dispatcher.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:401)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3003)
+	at org.mozilla.javascript.gen.c4.call(/home/esh/workspace/Latte/app/system/dispatcher.js)
+	at org.mozilla.javascript.gen.c4.exec(/home/esh/workspace/Latte/app/system/dispatcher.js)
+	at org.latte.scripting.Javascript.eval(Javascript.java:84)
+	at org.latte.scripting.Javascript.eval(Javascript.java:92)
+	at org.latte.Main$LatteServlet.dispatch(Main.java:82)
+	at org.latte.Main$LatteServlet.doPost(Main.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:502)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1124)
+	at org.mortbay.servlet.MultiPartFilter.doFilter(MultiPartFilter.java:275)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1115)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:361)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:181)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:757)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:324)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:502)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.content(HttpConnection.java:840)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:657)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:211)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:377)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:228)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:497)
+2009-04-07 22:38:06,199  INFO org.latte.scripting.Javascript - handled /blog/edit/0
+2009-04-07 22:38:15,457  INFO org.latte.scripting.Javascript - handled http://localhost:8080/blog/save
+2009-04-07 22:38:15,532  INFO org.latte.scripting.Javascript - handled /blog/show/all/0
+2009-04-07 22:40:58,753  INFO org.latte.scripting.Javascript - connected to imap server
+2009-04-07 22:41:33,557  INFO org.latte.scripting.Javascript - connected to imap server
+2009-04-07 22:43:34,571  INFO org.latte.scripting.Javascript - got multipart mail
+2009-04-07 22:43:39,324  INFO org.latte.scripting.Javascript - subject: Isaac jammin
+2009-04-07 22:43:39,325  INFO org.latte.scripting.Javascript - body:Friends
+2009-04-07 22:43:39,325  INFO org.latte.scripting.Javascript - attachment:/tmp/mail_49292.jpg
+2009-04-07 22:43:39,474  INFO org.latte.scripting.Javascript - creating new model
+2009-04-07 22:43:39,476 DEBUG Datastore.js - cache miss: all
+2009-04-07 22:43:39,554 DEBUG Datastore.js - cache miss: _cloud
+2009-04-07 22:43:39,568 DEBUG Datastore.js - cache miss: friends
+2009-04-07 22:43:39,617 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/friends (No such file or directory)
+2009-04-07 22:43:39,617 DEBUG Datastore.js - cache miss: friends
+2009-04-07 22:43:39,619 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/friends (No such file or directory)
+2009-04-07 22:43:39,649 ERROR org.latte.scripting.Javascript - ReferenceError: "params" is not defined.
+2009-04-07 22:44:53,887  INFO org.latte.scripting.Javascript - connected to imap server
+2009-04-07 22:47:56,638  INFO org.latte.scripting.Javascript - got multipart mail
+2009-04-07 22:49:34,283  INFO org.latte.scripting.Javascript - subject: hong kong skyline
+2009-04-07 22:49:34,283  INFO org.latte.scripting.Javascript - body:hongkong
+2009-04-07 22:49:34,283  INFO org.latte.scripting.Javascript - attachment:/tmp/mail_28568.JPG
+2009-04-07 22:49:34,432  INFO org.latte.scripting.Javascript - creating new model
+2009-04-07 22:49:34,433 DEBUG Datastore.js - cache miss: all
+2009-04-07 22:49:34,440 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/all (No such file or directory)
+2009-04-07 22:49:34,443 DEBUG Datastore.js - cache miss: _cloud
+2009-04-07 22:49:34,444 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/_cloud (No such file or directory)
+2009-04-07 22:49:34,445 DEBUG Datastore.js - cache miss: hongkong
+2009-04-07 22:49:34,447 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/hongkong (No such file or directory)
+2009-04-07 22:49:34,447 DEBUG Datastore.js - cache miss: hongkong
+2009-04-07 22:49:34,452 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/hongkong (No such file or directory)
+2009-04-07 22:49:34,455 DEBUG Datastore.js - cache miss: all
+2009-04-07 22:49:34,456 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/all (No such file or directory)
+2009-04-07 22:49:34,462 DEBUG Datastore.js - cache miss: all
+2009-04-07 22:49:34,478 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/all (No such file or directory)
+2009-04-07 22:49:34,522 DEBUG Datastore.js - cache miss: _cloud
+2009-04-07 22:49:34,524 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/_cloud (No such file or directory)
+2009-04-07 22:49:34,635  INFO org.latte.scripting.Javascript - saved public/blog/0/o.jpg
+2009-04-07 22:49:34,636  INFO org.latte.scripting.Javascript - convert -geometry 480x public/blog/0/o.jpg public/blog/0/p.jpg
+2009-04-07 22:49:40,937  INFO org.latte.scripting.Javascript - convert -geometry x80 public/blog/0/o.jpg public/blog/0/t.jpg
+2009-04-07 22:49:44,852  INFO org.latte.scripting.Javascript - convert -crop 80x80+20+0 public/blog/0/t.jpg public/blog/0/t.jpg
+2009-04-07 22:49:44,887 DEBUG Datastore.js - cache miss: 0
+2009-04-07 22:49:44,889 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/0 (No such file or directory)
+2009-04-07 22:50:11,696 DEBUG Datastore.js - cache miss: 0
+2009-04-07 22:50:11,756  INFO org.latte.scripting.Javascript - handled /blog/show/all/0
+2009-04-07 22:50:22,711  INFO org.latte.scripting.Javascript - handled /blog/show/all
+2009-04-07 22:52:00,365  INFO org.latte.scripting.Javascript - got multipart mail
+2009-04-07 22:52:05,981  INFO org.latte.scripting.Javascript - subject: My dearest friends
+2009-04-07 22:52:05,981  INFO org.latte.scripting.Javascript - body:Friends
+2009-04-07 22:52:05,987  INFO org.latte.scripting.Javascript - attachment:/tmp/mail_28569.jpg
+2009-04-07 22:52:05,988  INFO org.latte.scripting.Javascript - creating new model
+2009-04-07 22:52:05,999 DEBUG Datastore.js - cache miss: friends
+2009-04-07 22:52:06,002 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/friends (No such file or directory)
+2009-04-07 22:52:06,002 DEBUG Datastore.js - cache miss: friends
+2009-04-07 22:52:06,007 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/friends (No such file or directory)
+2009-04-07 22:52:06,029  INFO org.latte.scripting.Javascript - saved public/blog/1/o.jpg
+2009-04-07 22:52:06,030  INFO org.latte.scripting.Javascript - convert -geometry 480x public/blog/1/o.jpg public/blog/1/p.jpg
+2009-04-07 22:52:06,652  INFO org.latte.scripting.Javascript - convert -geometry x80 public/blog/1/o.jpg public/blog/1/t.jpg
+2009-04-07 22:52:06,926  INFO org.latte.scripting.Javascript - convert -crop 80x80+13.5+0 public/blog/1/t.jpg public/blog/1/t.jpg
+2009-04-07 22:52:06,956 DEBUG Datastore.js - cache miss: 1
+2009-04-07 22:52:06,957 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data/1 (No such file or directory)
+2009-04-07 22:52:31,271  INFO org.latte.scripting.Javascript - connected to imap server
+2009-04-07 22:52:36,451 DEBUG Datastore.js - cache miss: all
+2009-04-07 22:52:36,522 DEBUG Datastore.js - cache miss: 0
+2009-04-07 22:52:36,526 DEBUG Datastore.js - cache miss: _cloud
+2009-04-07 22:52:36,615  INFO org.latte.scripting.Javascript - handled /blog/show/all
+2009-04-07 22:52:37,914  INFO org.latte.scripting.Javascript - handled /blog/show/all
+2009-04-07 22:52:39,875 DEBUG Datastore.js - cache miss: 1
+2009-04-07 22:52:39,944  INFO org.latte.scripting.Javascript - handled /blog/show/all/1
+2009-04-07 22:52:42,994 DEBUG Datastore.js - cache miss: 
+2009-04-07 22:52:43,015 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data (Is a directory)
+2009-04-07 22:52:43,019 ERROR org.latte.scripting.Javascript -  not found
+2009-04-07 22:52:45,315 DEBUG Datastore.js - cache miss: 
+2009-04-07 22:52:45,318 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data (Is a directory)
+2009-04-07 22:52:45,322 ERROR org.latte.scripting.Javascript -  not found
+2009-04-07 22:52:52,360 DEBUG Datastore.js - cache miss: 
+2009-04-07 22:52:52,363 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data (Is a directory)
+2009-04-07 22:52:52,365 ERROR org.latte.scripting.Javascript -  not found
+2009-04-07 22:52:56,540  INFO org.latte.scripting.Javascript - handled /blog/show/all
+2009-04-07 22:52:59,001 DEBUG Datastore.js - cache miss: 
+2009-04-07 22:52:59,002 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data (Is a directory)
+2009-04-07 22:52:59,006 ERROR org.latte.scripting.Javascript -  not found
+2009-04-07 22:53:23,911 DEBUG Datastore.js - cache miss: 
+2009-04-07 22:53:23,914 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data (Is a directory)
+2009-04-07 22:53:23,915 ERROR org.latte.scripting.Javascript -  not found
+2009-04-07 22:54:41,253 DEBUG Datastore.js - cache miss: 
+2009-04-07 22:54:41,255 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data (Is a directory)
+2009-04-07 22:54:41,255 ERROR org.latte.scripting.Javascript -  not found
+2009-04-07 22:54:43,394 DEBUG Datastore.js - cache miss: 
+2009-04-07 22:54:43,395 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data (Is a directory)
+2009-04-07 22:54:43,396 ERROR org.latte.scripting.Javascript -  not defined
+2009-04-07 22:54:45,604  INFO org.latte.scripting.Javascript - handled /blog/show
+2009-04-07 22:54:47,017 DEBUG Datastore.js - cache miss: 
+2009-04-07 22:54:47,026 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data (Is a directory)
+2009-04-07 22:54:47,029 ERROR org.latte.scripting.Javascript -  not defined
+2009-04-07 22:55:13,221 DEBUG Datastore.js - cache miss: 
+2009-04-07 22:55:13,222 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data (Is a directory)
+2009-04-07 22:55:13,223 ERROR org.latte.scripting.Javascript -  not defined
+2009-04-07 22:55:31,772  INFO org.latte.scripting.Javascript - asdf
+2009-04-07 22:55:31,773 DEBUG Datastore.js - cache miss: 
+2009-04-07 22:55:31,776 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data (Is a directory)
+2009-04-07 22:55:31,786 ERROR org.latte.scripting.Javascript -  not defined
+2009-04-07 22:55:47,589  INFO org.latte.scripting.Javascript - asdf
+2009-04-07 22:55:47,591  INFO org.latte.scripting.Javascript - handled /blog/show/
+2009-04-07 22:56:07,039  INFO org.latte.scripting.Javascript - handled /blog/show/
+2009-04-07 22:56:09,300  INFO org.latte.scripting.Javascript - handled /blog/show/all
+2009-04-07 22:56:11,134 DEBUG Datastore.js - cache miss: 
+2009-04-07 22:56:11,137 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data (Is a directory)
+2009-04-07 22:56:11,138 ERROR org.latte.scripting.Javascript -  not found
+2009-04-07 22:56:12,868 DEBUG Datastore.js - cache miss: 
+2009-04-07 22:56:12,875 ERROR Datastore.js - JavaException: java.io.FileNotFoundException: data (Is a directory)
+2009-04-07 22:56:12,965 ERROR org.latte.scripting.Javascript -  not found
+2009-04-07 22:56:39,232 FATAL org.latte.Main - something went wrong
+java.lang.IllegalArgumentException: org.mozilla.javascript.EvaluatorException: syntax error (/home/esh/workspace/Latte/app/controller/blog.js#26)
+	at org.latte.scripting.Javascript$1.call(Javascript.java:55)
+	at org.mozilla.javascript.optimizer.OptRuntime.callName(OptRuntime.java:97)
+	at org.mozilla.javascript.gen.c4._c0(/home/esh/workspace/Latte/app/system/dispatcher.js:6)
+	at org.mozilla.javascript.gen.c4.call(/home/esh/workspace/Latte/app/system/dispatcher.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:401)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3003)
+	at org.mozilla.javascript.gen.c4.call(/home/esh/workspace/Latte/app/system/dispatcher.js)
+	at org.mozilla.javascript.gen.c4.exec(/home/esh/workspace/Latte/app/system/dispatcher.js)
+	at org.latte.scripting.Javascript.eval(Javascript.java:84)
+	at org.latte.scripting.Javascript.eval(Javascript.java:92)
+	at org.latte.Main$LatteServlet.dispatch(Main.java:82)
+	at org.latte.Main$LatteServlet.doGet(Main.java:76)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:502)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1124)
+	at org.mortbay.servlet.MultiPartFilter.doFilter(MultiPartFilter.java:90)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1115)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:361)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:181)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:757)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:324)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:502)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:826)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:523)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:211)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:377)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:228)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:497)
+Caused by: org.mozilla.javascript.EvaluatorException: syntax error (/home/esh/workspace/Latte/app/controller/blog.js#26)
+	at org.mozilla.javascript.DefaultErrorReporter.runtimeError(DefaultErrorReporter.java:109)
+	at org.mozilla.javascript.DefaultErrorReporter.error(DefaultErrorReporter.java:96)
+	at org.mozilla.javascript.Parser.addError(Parser.java:146)
+	at org.mozilla.javascript.Parser.reportError(Parser.java:160)
+	at org.mozilla.javascript.Parser.primaryExpr(Parser.java:2464)
+	at org.mozilla.javascript.Parser.memberExpr(Parser.java:1950)
+	at org.mozilla.javascript.Parser.unaryExpr(Parser.java:1808)
+	at org.mozilla.javascript.Parser.mulExpr(Parser.java:1737)
+	at org.mozilla.javascript.Parser.addExpr(Parser.java:1718)
+	at org.mozilla.javascript.Parser.shiftExpr(Parser.java:1698)
+	at org.mozilla.javascript.Parser.relExpr(Parser.java:1672)
+	at org.mozilla.javascript.Parser.eqExpr(Parser.java:1628)
+	at org.mozilla.javascript.Parser.bitAndExpr(Parser.java:1617)
+	at org.mozilla.javascript.Parser.bitXorExpr(Parser.java:1606)
+	at org.mozilla.javascript.Parser.bitOrExpr(Parser.java:1595)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1583)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1586)
+	at org.mozilla.javascript.Parser.orExpr(Parser.java:1571)
+	at org.mozilla.javascript.Parser.condExpr(Parser.java:1554)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1539)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1545)
+	at org.mozilla.javascript.Parser.expr(Parser.java:1518)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:1201)
+	at org.mozilla.javascript.Parser.statement(Parser.java:708)
+	at org.mozilla.javascript.Parser.parseFunctionBody(Parser.java:463)
+	at org.mozilla.javascript.Parser.function(Parser.java:592)
+	at org.mozilla.javascript.Parser.parseFunctionBody(Parser.java:460)
+	at org.mozilla.javascript.Parser.function(Parser.java:592)
+	at org.mozilla.javascript.Parser.primaryExpr(Parser.java:2231)
+	at org.mozilla.javascript.Parser.memberExpr(Parser.java:1950)
+	at org.mozilla.javascript.Parser.unaryExpr(Parser.java:1808)
+	at org.mozilla.javascript.Parser.mulExpr(Parser.java:1737)
+	at org.mozilla.javascript.Parser.addExpr(Parser.java:1718)
+	at org.mozilla.javascript.Parser.shiftExpr(Parser.java:1698)
+	at org.mozilla.javascript.Parser.relExpr(Parser.java:1672)
+	at org.mozilla.javascript.Parser.eqExpr(Parser.java:1628)
+	at org.mozilla.javascript.Parser.bitAndExpr(Parser.java:1617)
+	at org.mozilla.javascript.Parser.bitXorExpr(Parser.java:1606)
+	at org.mozilla.javascript.Parser.bitOrExpr(Parser.java:1595)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1583)
+	at org.mozilla.javascript.Parser.orExpr(Parser.java:1571)
+	at org.mozilla.javascript.Parser.condExpr(Parser.java:1554)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1539)
+	at org.mozilla.javascript.Parser.expr(Parser.java:1518)
+	at org.mozilla.javascript.Parser.primaryExpr(Parser.java:2388)
+	at org.mozilla.javascript.Parser.memberExpr(Parser.java:1950)
+	at org.mozilla.javascript.Parser.unaryExpr(Parser.java:1808)
+	at org.mozilla.javascript.Parser.mulExpr(Parser.java:1737)
+	at org.mozilla.javascript.Parser.addExpr(Parser.java:1718)
+	at org.mozilla.javascript.Parser.shiftExpr(Parser.java:1698)
+	at org.mozilla.javascript.Parser.relExpr(Parser.java:1672)
+	at org.mozilla.javascript.Parser.eqExpr(Parser.java:1628)
+	at org.mozilla.javascript.Parser.bitAndExpr(Parser.java:1617)
+	at org.mozilla.javascript.Parser.bitXorExpr(Parser.java:1606)
+	at org.mozilla.javascript.Parser.bitOrExpr(Parser.java:1595)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1583)
+	at org.mozilla.javascript.Parser.orExpr(Parser.java:1571)
+	at org.mozilla.javascript.Parser.condExpr(Parser.java:1554)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1539)
+	at org.mozilla.javascript.Parser.expr(Parser.java:1518)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:1245)
+	at org.mozilla.javascript.Parser.statement(Parser.java:708)
+	at org.mozilla.javascript.Parser.parse(Parser.java:401)
+	at org.mozilla.javascript.Parser.parse(Parser.java:359)
+	at org.mozilla.javascript.Context.compileImpl(Context.java:2254)
+	at org.mozilla.javascript.Context.compileReader(Context.java:1202)
+	at org.latte.scripting.Javascript.<init>(Javascript.java:28)
+	at org.latte.scripting.ScriptCache.get(ScriptCache.java:26)
+	at org.latte.scripting.Javascript$1.call(Javascript.java:52)
+	... 29 more
+2009-04-07 22:56:40,647 FATAL org.latte.Main - something went wrong
+java.lang.IllegalArgumentException: org.mozilla.javascript.EvaluatorException: syntax error (/home/esh/workspace/Latte/app/controller/blog.js#26)
+	at org.latte.scripting.Javascript$1.call(Javascript.java:55)
+	at org.mozilla.javascript.optimizer.OptRuntime.callName(OptRuntime.java:97)
+	at org.mozilla.javascript.gen.c4._c0(/home/esh/workspace/Latte/app/system/dispatcher.js:6)
+	at org.mozilla.javascript.gen.c4.call(/home/esh/workspace/Latte/app/system/dispatcher.js)
+	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:401)
+	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3003)
+	at org.mozilla.javascript.gen.c4.call(/home/esh/workspace/Latte/app/system/dispatcher.js)
+	at org.mozilla.javascript.gen.c4.exec(/home/esh/workspace/Latte/app/system/dispatcher.js)
+	at org.latte.scripting.Javascript.eval(Javascript.java:84)
+	at org.latte.scripting.Javascript.eval(Javascript.java:92)
+	at org.latte.Main$LatteServlet.dispatch(Main.java:82)
+	at org.latte.Main$LatteServlet.doGet(Main.java:76)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:502)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1124)
+	at org.mortbay.servlet.MultiPartFilter.doFilter(MultiPartFilter.java:90)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1115)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:361)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:181)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:757)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:324)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:502)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:826)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:523)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:211)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:377)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:228)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:497)
+Caused by: org.mozilla.javascript.EvaluatorException: syntax error (/home/esh/workspace/Latte/app/controller/blog.js#26)
+	at org.mozilla.javascript.DefaultErrorReporter.runtimeError(DefaultErrorReporter.java:109)
+	at org.mozilla.javascript.DefaultErrorReporter.error(DefaultErrorReporter.java:96)
+	at org.mozilla.javascript.Parser.addError(Parser.java:146)
+	at org.mozilla.javascript.Parser.reportError(Parser.java:160)
+	at org.mozilla.javascript.Parser.primaryExpr(Parser.java:2464)
+	at org.mozilla.javascript.Parser.memberExpr(Parser.java:1950)
+	at org.mozilla.javascript.Parser.unaryExpr(Parser.java:1808)
+	at org.mozilla.javascript.Parser.mulExpr(Parser.java:1737)
+	at org.mozilla.javascript.Parser.addExpr(Parser.java:1718)
+	at org.mozilla.javascript.Parser.shiftExpr(Parser.java:1698)
+	at org.mozilla.javascript.Parser.relExpr(Parser.java:1672)
+	at org.mozilla.javascript.Parser.eqExpr(Parser.java:1628)
+	at org.mozilla.javascript.Parser.bitAndExpr(Parser.java:1617)
+	at org.mozilla.javascript.Parser.bitXorExpr(Parser.java:1606)
+	at org.mozilla.javascript.Parser.bitOrExpr(Parser.java:1595)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1583)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1586)
+	at org.mozilla.javascript.Parser.orExpr(Parser.java:1571)
+	at org.mozilla.javascript.Parser.condExpr(Parser.java:1554)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1539)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1545)
+	at org.mozilla.javascript.Parser.expr(Parser.java:1518)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:1201)
+	at org.mozilla.javascript.Parser.statement(Parser.java:708)
+	at org.mozilla.javascript.Parser.parseFunctionBody(Parser.java:463)
+	at org.mozilla.javascript.Parser.function(Parser.java:592)
+	at org.mozilla.javascript.Parser.parseFunctionBody(Parser.java:460)
+	at org.mozilla.javascript.Parser.function(Parser.java:592)
+	at org.mozilla.javascript.Parser.primaryExpr(Parser.java:2231)
+	at org.mozilla.javascript.Parser.memberExpr(Parser.java:1950)
+	at org.mozilla.javascript.Parser.unaryExpr(Parser.java:1808)
+	at org.mozilla.javascript.Parser.mulExpr(Parser.java:1737)
+	at org.mozilla.javascript.Parser.addExpr(Parser.java:1718)
+	at org.mozilla.javascript.Parser.shiftExpr(Parser.java:1698)
+	at org.mozilla.javascript.Parser.relExpr(Parser.java:1672)
+	at org.mozilla.javascript.Parser.eqExpr(Parser.java:1628)
+	at org.mozilla.javascript.Parser.bitAndExpr(Parser.java:1617)
+	at org.mozilla.javascript.Parser.bitXorExpr(Parser.java:1606)
+	at org.mozilla.javascript.Parser.bitOrExpr(Parser.java:1595)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1583)
+	at org.mozilla.javascript.Parser.orExpr(Parser.java:1571)
+	at org.mozilla.javascript.Parser.condExpr(Parser.java:1554)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1539)
+	at org.mozilla.javascript.Parser.expr(Parser.java:1518)
+	at org.mozilla.javascript.Parser.primaryExpr(Parser.java:2388)
+	at org.mozilla.javascript.Parser.memberExpr(Parser.java:1950)
+	at org.mozilla.javascript.Parser.unaryExpr(Parser.java:1808)
+	at org.mozilla.javascript.Parser.mulExpr(Parser.java:1737)
+	at org.mozilla.javascript.Parser.addExpr(Parser.java:1718)
+	at org.mozilla.javascript.Parser.shiftExpr(Parser.java:1698)
+	at org.mozilla.javascript.Parser.relExpr(Parser.java:1672)
+	at org.mozilla.javascript.Parser.eqExpr(Parser.java:1628)
+	at org.mozilla.javascript.Parser.bitAndExpr(Parser.java:1617)
+	at org.mozilla.javascript.Parser.bitXorExpr(Parser.java:1606)
+	at org.mozilla.javascript.Parser.bitOrExpr(Parser.java:1595)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1583)
+	at org.mozilla.javascript.Parser.orExpr(Parser.java:1571)
+	at org.mozilla.javascript.Parser.condExpr(Parser.java:1554)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1539)
+	at org.mozilla.javascript.Parser.expr(Parser.java:1518)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:1245)
+	at org.mozilla.javascript.Parser.statement(Parser.java:708)
+	at org.mozilla.javascript.Parser.parse(Parser.java:401)
+	at org.mozilla.javascript.Parser.parse(Parser.java:359)
+	at org.mozilla.javascript.Context.compileImpl(Context.java:2254)
+	at org.mozilla.javascript.Context.compileReader(Context.java:1202)
+	at org.latte.scripting.Javascript.<init>(Javascript.java:28)
+	at org.latte.scripting.ScriptCache.get(ScriptCache.java:26)
+	at org.latte.scripting.Javascript$1.call(Javascript.java:52)
+	... 29 more
+2009-04-07 22:56:48,634  INFO org.latte.scripting.Javascript - handled /blog/show/all/
+2009-04-07 22:56:50,622  INFO org.latte.scripting.Javascript - handled /blog/show/all
+2009-04-07 22:56:52,430 DEBUG Datastore.js - cache miss: 0
+2009-04-07 22:56:52,433  INFO org.latte.scripting.Javascript - handled /blog/show/all/0
+2009-04-07 22:56:54,468  INFO org.latte.scripting.Javascript - handled /blog/show/all/1
+2009-04-07 23:00:01,813  INFO org.latte.scripting.Javascript - handled /blog/show/all/1

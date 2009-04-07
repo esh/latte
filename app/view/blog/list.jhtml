@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+    <link href="/css/default.css" media="screen" rel="Stylesheet" type="text/css"/>
+    <title>chan@sikho.ca - listing</title>
+  </head>
+  <body>
+    <%
+	params["models"].forEach(function(model) {
+        log.info(model.title)
+        echo(model.title)
+        echo(" ")
+        echo("<a href=\"/blog/show/" + model.key + "\">show</a>")
+        echo(" ")
+        echo("<a href=\"/blog/edit/" + model.key + "\">edit</a>")
+        echo(" ")
+        echo("<a href=\"/blog/remove/" + model.key + "\">remove</a>")
+        echo("<br/>")
+    })
+    %>
+  </body>
+</html>

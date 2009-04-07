@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+		<meta name="viewport" content="width=462"/>
+		<title>chan@sikho.ca</title>
+		<link href="/css/default.css" media="screen" rel="Stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<div id="description">       
+        	<h1>Ed:</b> <%= params["model"].title; %></h1>
+        	<b>posted:</b> <%= params["model"].date; %><br/>
+        	<b>tagged as:</b>
+        	<%        		
+				params["cloud"].forEach(function(tag) {				
+					echo("<a href=\"/blog/show/");
+					echo(tag);
+					echo("\"");
+					if(tag in params["tags"]) echo(" id=\"tagged\"");
+					echo("/>");
+					echo(tag);
+					echo("</a>");
+					echo(" ");
+				});
+			%>
+			<br/>
+		</div>
+		
+		<div id="preview">
+			<%
+			echo("<a href=\"" + params["model"].original + "\">");
+			echo("<img src=\"/blog/" + params["model"].key + "/p.jpg\"/>");
+			echo("</a>");
+			%>
+		</div>
+    
+		<div id="stream">
+			<%
+			params["thumbs"].forEach(function(thumb) {
+				echo("<a href=\"/blog/show/" + params["type"] + "/" + thumb + "\">");
+				echo("<img src=\"/blog/" + thumb + "/t.jpg\"/>");
+				echo("</a>\n");
+			});
+			%>
+		</div>
+	</body>
+</html>

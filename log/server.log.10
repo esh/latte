@@ -1,0 +1,1341 @@
+2009-02-27 08:57:01,171  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-27 08:57:01,262  INFO org.latte.controller.Controller - handled /blog/thumbs/all,0,0
+2009-02-27 08:57:01,990  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-27 08:57:02,033  INFO org.latte.controller.Controller - handled /blog/thumbs/all,0,1
+2009-02-27 08:57:02,860  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-27 08:57:02,904  INFO org.latte.controller.Controller - handled /blog/thumbs/all,0,2
+2009-02-27 08:57:03,634  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-27 08:57:03,806  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-02-27 08:57:03,964  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-27 08:57:03,990  INFO org.latte.controller.Controller - handled /blog/thumbs/all,2,0
+2009-02-28 20:24:33,912  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:24:34,027  INFO org.latte.cache.FileCache - cache miss: app/view/blog/show.jhtml
+2009-02-28 20:24:34,179  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-02-28 20:24:34,404  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:24:34,546  INFO org.latte.controller.Controller - handled /blog/thumbs/all,2,0
+2009-02-28 20:24:35,662  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:24:35,930  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-02-28 20:24:36,001  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:24:36,030  INFO org.latte.controller.Controller - handled /blog/thumbs/all,2,0
+2009-02-28 20:25:19,504  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:25:19,541  INFO org.latte.cache.FileCache - cache miss: app/view/blog/show.jhtml
+2009-02-28 20:25:19,626  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-02-28 20:25:19,722  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:25:19,837  INFO org.latte.controller.Controller - handled /blog/thumbs/all,2,0
+2009-02-28 20:26:35,026  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:26:35,046  INFO org.latte.cache.FileCache - cache miss: app/view/blog/show.jhtml
+2009-02-28 20:26:35,118  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-02-28 20:26:35,338  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:26:35,364  INFO org.latte.controller.Controller - handled /blog/thumbs/all,2,0
+2009-02-28 20:27:58,425  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:27:58,548  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-02-28 20:27:58,756  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:27:58,784  INFO org.latte.controller.Controller - handled /blog/thumbs/all,1,0
+2009-02-28 20:28:21,138  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:28:21,221  INFO org.latte.cache.FileCache - cache miss: app/view/blog/show.jhtml
+2009-02-28 20:28:21,310  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-02-28 20:28:21,545  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:28:21,589  INFO org.latte.controller.Controller - handled /blog/thumbs/all,1,0
+2009-02-28 20:28:33,124  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:28:33,337  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-02-28 20:28:33,599  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:28:33,627  INFO org.latte.controller.Controller - handled /blog/thumbs/all,0,0
+2009-02-28 20:28:35,147  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:28:35,194  INFO org.latte.controller.Controller - handled /blog/thumbs/all,0,1
+2009-02-28 20:28:36,252  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:28:36,304  INFO org.latte.controller.Controller - handled /blog/thumbs/all,0,2
+2009-02-28 20:28:41,032  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:28:41,254  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-02-28 20:28:41,426  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:28:41,456  INFO org.latte.controller.Controller - handled /blog/thumbs/all,1,0
+2009-02-28 20:28:44,120  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:28:44,334  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-02-28 20:28:44,460  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:28:44,490  INFO org.latte.controller.Controller - handled /blog/thumbs/all,2,0
+2009-02-28 20:28:47,412  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:28:47,648  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-02-28 20:28:47,717  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 20:28:47,747  INFO org.latte.controller.Controller - handled /blog/thumbs/all,2,0
+2009-02-28 21:06:13,452  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:06:13,534  INFO org.latte.controller.Controller - handled /blog/show/soup
+2009-02-28 21:06:13,754  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:06:13,785  INFO org.latte.controller.Controller - handled /blog/thumbs/soup,1,0
+2009-02-28 21:06:15,120  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:06:15,300  INFO org.latte.controller.Controller - handled /blog/show/steamed
+2009-02-28 21:06:15,412  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:06:15,444  INFO org.latte.controller.Controller - handled /blog/thumbs/steamed,2,0
+2009-02-28 21:06:16,902  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:06:17,186  INFO org.latte.controller.Controller - handled /blog/show/all
+2009-02-28 21:06:17,295  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:06:17,331  INFO org.latte.controller.Controller - handled /blog/thumbs/all,2,0
+2009-02-28 21:06:20,184  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:06:20,410  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-02-28 21:06:20,521  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:06:20,554  INFO org.latte.controller.Controller - handled /blog/thumbs/all,0,0
+2009-02-28 21:06:23,161  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:06:23,213  INFO org.latte.controller.Controller - handled /blog/thumbs/all,0,1
+2009-02-28 21:06:23,826  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:06:23,925  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-02-28 21:06:24,157  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:06:24,267  INFO org.latte.controller.Controller - handled /blog/thumbs/all,1,0
+2009-02-28 21:06:25,342  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:06:25,546  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-02-28 21:06:25,724  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:06:25,758  INFO org.latte.controller.Controller - handled /blog/thumbs/all,2,0
+2009-02-28 21:07:23,384  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:07:23,618  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-02-28 21:07:23,858  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:07:24,024  INFO org.latte.controller.Controller - handled /blog/thumbs/all,2,0
+2009-02-28 21:07:30,700  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:07:30,701  INFO org.latte.cache.FileCache - cache miss: app/controller/about.js
+2009-02-28 21:07:30,725  INFO org.latte.cache.FileCache - cache miss: app/view/about/me.jhtml
+2009-02-28 21:07:30,725  INFO org.latte.controller.Controller - handled /about/me
+2009-02-28 21:07:35,499  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:07:35,626  INFO org.latte.cache.FileCache - cache miss: app/view/about/latte.jhtml
+2009-02-28 21:07:35,626  INFO org.latte.controller.Controller - handled /about/latte
+2009-02-28 21:09:57,857  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:09:57,902  INFO org.latte.cache.FileCache - cache miss: app/view/blog/show.jhtml
+2009-02-28 21:09:58,093  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-02-28 21:09:58,343  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:09:58,438  INFO org.latte.cache.FileCache - cache miss: app/view/blog/thumbs.jhtml
+2009-02-28 21:09:58,451  INFO org.latte.cache.FileCache - cache miss: db/blog/0
+2009-02-28 21:09:58,453  INFO org.latte.cache.FileCache - cache miss: db/blog/2
+2009-02-28 21:09:58,462  INFO org.latte.controller.Controller - handled /blog/thumbs/all,1,0
+2009-02-28 21:10:01,491  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:10:01,779  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-02-28 21:10:02,133  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 21:10:02,189  INFO org.latte.controller.Controller - handled /blog/thumbs/all,0,0
+2009-02-28 22:08:17,140  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:08:17,186  INFO org.latte.controller.Controller - handled /blog/thumbs/all,0,1
+2009-02-28 22:08:17,946  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:08:18,211  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-02-28 22:08:18,321  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:08:18,357  INFO org.latte.controller.Controller - handled /blog/thumbs/all,1,0
+2009-02-28 22:14:45,942  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:14:45,942  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-02-28 22:14:46,070  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-02-28 22:14:46,148  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:14:46,184  INFO org.latte.controller.Controller - handled /blog/thumbs/all,1,0
+2009-02-28 22:14:55,063  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:14:55,362  INFO org.latte.controller.Controller - handled /blog/show/gay,1
+2009-02-28 22:14:55,479  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:14:57,613  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:14:57,805  INFO org.latte.controller.Controller - handled /blog/show/gay,1
+2009-02-28 22:14:57,903  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:17:03,063  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:17:03,065  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-02-28 22:17:32,450  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:17:32,452  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-02-28 22:17:32,487  INFO org.latte.controller.Controller - handled /blog/show/gay,1
+2009-02-28 22:17:45,757  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:17:57,625  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:17:57,626  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-02-28 22:17:57,777  INFO org.latte.controller.Controller - handled /blog/show/gay
+2009-02-28 22:19:04,512  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:19:04,513  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-02-28 22:19:04,585  INFO org.latte.controller.Controller - handled /blog/show/gay
+2009-02-28 22:19:06,887  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:19:06,957  INFO org.latte.controller.Controller - handled /blog/show/gay,0
+2009-02-28 22:19:09,180  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:19:09,495  INFO org.latte.controller.Controller - handled /blog/show
+2009-02-28 22:19:09,682  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:19:09,771  INFO org.latte.controller.Controller - handled /blog/thumbs/all,2,0
+2009-02-28 22:56:31,060  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:56:31,061  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-02-28 22:57:40,197  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:57:40,198  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-02-28 22:57:40,262  INFO js - hey
+2009-02-28 22:59:03,048  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:59:03,049  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-02-28 22:59:03,098  INFO org.latte.cache.FileCache - cache miss: app/view/blog/show.jhtml
+2009-02-28 22:59:36,488  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 22:59:36,489  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-02-28 22:59:36,535  INFO js - hey hey
+2009-02-28 23:00:09,982  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:00:09,983  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-02-28 23:00:10,038  INFO org.latte.cache.FileCache - cache miss: app/view/blog/show.jhtml
+2009-02-28 23:00:10,268  INFO org.latte.controller.Controller - handled /blog/show
+2009-02-28 23:00:25,226  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:00:25,254  INFO org.latte.cache.FileCache - cache miss: app/view/blog/show.jhtml
+2009-02-28 23:00:25,468  INFO org.latte.controller.Controller - handled /blog/show
+2009-02-28 23:01:06,168  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:01:06,217  INFO org.latte.cache.FileCache - cache miss: app/view/blog/show.jhtml
+2009-02-28 23:01:13,112  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:01:13,187  INFO org.latte.cache.FileCache - cache miss: app/view/blog/show.jhtml
+2009-02-28 23:01:24,906  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:01:24,946  INFO org.latte.cache.FileCache - cache miss: app/view/blog/show.jhtml
+2009-02-28 23:01:25,182  INFO org.latte.controller.Controller - handled /blog/show
+2009-02-28 23:01:32,983  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:01:33,114  INFO org.latte.cache.FileCache - cache miss: app/view/blog/show.jhtml
+2009-02-28 23:02:27,274  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:02:27,401  INFO org.latte.cache.FileCache - cache miss: app/view/blog/show.jhtml
+2009-02-28 23:02:27,673  INFO org.latte.controller.Controller - handled /blog/show
+2009-02-28 23:02:57,214  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:02:57,313  INFO org.latte.cache.FileCache - cache miss: app/view/blog/show.jhtml
+2009-02-28 23:02:57,557  INFO org.latte.controller.Controller - handled /blog/show
+2009-02-28 23:04:00,030  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:04:00,278  INFO org.latte.controller.Controller - handled /blog/show
+2009-02-28 23:04:01,517  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:04:01,780  INFO org.latte.controller.Controller - handled /blog/show
+2009-02-28 23:04:07,157  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:04:07,520  INFO org.latte.controller.Controller - handled /blog/show
+2009-02-28 23:05:18,704  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:05:18,989  INFO org.latte.controller.Controller - handled /blog/show
+2009-02-28 23:05:20,266  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:05:20,530  INFO org.latte.controller.Controller - handled /blog/show
+2009-02-28 23:05:25,124  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:05:25,448  INFO org.latte.controller.Controller - handled /blog/show
+2009-02-28 23:05:26,566  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:05:26,724  INFO org.latte.controller.Controller - handled /blog/show
+2009-02-28 23:06:16,829  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:06:17,077  INFO org.latte.controller.Controller - handled /blog/show
+2009-02-28 23:06:20,368  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:06:20,550  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-02-28 23:06:21,974  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:06:22,225  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-02-28 23:06:23,415  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:06:23,523  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-02-28 23:06:27,164  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:06:27,368  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-02-28 23:06:28,300  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:06:28,517  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-02-28 23:06:42,726  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:06:42,865  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-02-28 23:07:55,400  INFO org.latte.cache.FileCache - cache miss: app/autoexec.js
+2009-02-28 23:07:55,405  INFO org.latte.cache.FileCache - cache miss: app/TagCloud.js
+2009-02-28 23:07:55,406  INFO org.latte.cache.FileCache - cache miss: app/PostMaster.js
+2009-02-28 23:07:55,406  INFO org.latte.cache.FileCache - cache miss: app/util/ImageTool.js
+2009-02-28 23:07:55,675  INFO org.latte.cache.FileCache - cache miss: db/blog/0
+2009-02-28 23:07:55,678  INFO org.latte.cache.FileCache - cache miss: db/blog/1
+2009-02-28 23:07:55,682  INFO org.latte.cache.FileCache - cache miss: db/blog/2
+2009-02-28 23:07:55,691  INFO js - refreshed tag mapping
+2009-02-28 23:07:55,691  INFO js - postmaster initialized
+2009-02-28 23:07:55,901  INFO js - hello world
+2009-02-28 23:08:02,824  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-02-28 23:08:02,863  INFO org.latte.cache.FileCache - cache miss: app/controller/root.js
+2009-02-28 23:08:02,902  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-02-28 23:08:02,989  INFO org.latte.cache.FileCache - cache miss: app/view/blog/show.jhtml
+2009-02-28 23:08:03,104  INFO org.latte.controller.Controller - handled /blog/show
+2009-02-28 23:08:03,104  INFO org.latte.controller.Controller - handled /
+2009-03-01 02:33:14,438  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:33:14,520  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-01 02:33:14,521  INFO org.latte.controller.Controller - handled /
+2009-03-01 02:33:15,317  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:33:15,495  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-01 02:33:15,495  INFO org.latte.controller.Controller - handled /
+2009-03-01 02:33:16,156  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:33:16,350  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-01 02:33:16,350  INFO org.latte.controller.Controller - handled /
+2009-03-01 02:47:39,775  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:47:39,786  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-01 02:47:48,728  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:47:48,744  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-01 02:47:50,014  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:47:50,849  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:47:51,927  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:48:21,068  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:48:21,149  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-01 02:48:21,284  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-01 02:48:21,285  INFO org.latte.controller.Controller - handled /
+2009-03-01 02:48:24,491  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:48:36,907  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:48:36,961  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-01 02:48:37,052  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-03-01 02:48:39,271  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:48:39,359  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-03-01 02:48:40,867  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:48:40,938  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-03-01 02:48:42,598  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:48:42,705  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-03-01 02:48:43,693  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:48:43,764  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-03-01 02:48:44,621  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:48:44,671  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-03-01 02:49:26,833  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:49:26,834  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-01 02:49:26,878  INFO js - string
+2009-03-01 02:49:26,904  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-03-01 02:50:11,212  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:50:11,213  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-01 02:50:11,330  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-03-01 02:50:13,583  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:50:13,676  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-03-01 02:50:14,568  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:50:14,752  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-03-01 02:50:15,573  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:50:15,607  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-03-01 02:50:53,538  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:51:37,079  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:51:37,105  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-01 02:52:18,245  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:52:18,318  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-01 02:52:18,400  INFO org.latte.controller.Controller - handled /blog/show/all,asdf
+2009-03-01 02:52:22,482  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:52:22,540  INFO org.latte.controller.Controller - handled /blog/show/all,3
+2009-03-01 02:52:24,353  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 02:52:24,403  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-03-01 03:36:03,797  INFO org.latte.cache.FileCache - cache miss: app/autoexec.js
+2009-03-01 03:36:03,803  INFO org.latte.cache.FileCache - cache miss: app/TagCloud.js
+2009-03-01 03:36:03,803  INFO org.latte.cache.FileCache - cache miss: app/PostMaster.js
+2009-03-01 03:36:03,804  INFO org.latte.cache.FileCache - cache miss: app/util/ImageTool.js
+2009-03-01 03:36:04,148  INFO org.latte.cache.FileCache - cache miss: db/blog/0
+2009-03-01 03:36:04,152  INFO org.latte.cache.FileCache - cache miss: db/blog/1
+2009-03-01 03:36:04,153  INFO org.latte.cache.FileCache - cache miss: db/blog/2
+2009-03-01 03:36:04,161  INFO js - refreshed tag mapping
+2009-03-01 03:36:04,162  INFO js - postmaster initialized
+2009-03-01 03:36:04,177  INFO js - hello world
+2009-03-01 03:43:31,172  INFO org.latte.cache.FileCache - cache miss: app/autoexec.js
+2009-03-01 03:43:31,177  INFO org.latte.cache.FileCache - cache miss: app/TagCloud.js
+2009-03-01 03:43:31,178  INFO org.latte.cache.FileCache - cache miss: app/PostMaster.js
+2009-03-01 03:43:31,178  INFO org.latte.cache.FileCache - cache miss: app/util/ImageTool.js
+2009-03-01 03:43:31,445  INFO org.latte.cache.FileCache - cache miss: db/blog/0
+2009-03-01 03:43:31,449  INFO org.latte.cache.FileCache - cache miss: db/blog/1
+2009-03-01 03:43:31,450  INFO org.latte.cache.FileCache - cache miss: db/blog/2
+2009-03-01 03:43:31,458  INFO js - refreshed tag mapping
+2009-03-01 03:43:31,459  INFO js - postmaster initialized
+2009-03-01 03:43:31,697  INFO js - hello world
+2009-03-01 03:43:34,901  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 03:43:34,936  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-01 03:43:58,021  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 03:43:58,022  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-01 03:43:58,141  INFO org.latte.cache.FileCache - cache miss: app/view/blog/show.jhtml
+2009-03-01 03:43:58,216  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-03-01 03:44:13,212  INFO org.latte.cache.FileCache - cache miss: app/autoexec.js
+2009-03-01 03:44:13,218  INFO org.latte.cache.FileCache - cache miss: app/TagCloud.js
+2009-03-01 03:44:13,219  INFO org.latte.cache.FileCache - cache miss: app/PostMaster.js
+2009-03-01 03:44:13,219  INFO org.latte.cache.FileCache - cache miss: app/util/ImageTool.js
+2009-03-01 03:44:13,511  INFO org.latte.cache.FileCache - cache miss: db/blog/0
+2009-03-01 03:44:13,514  INFO org.latte.cache.FileCache - cache miss: db/blog/1
+2009-03-01 03:44:13,518  INFO org.latte.cache.FileCache - cache miss: db/blog/2
+2009-03-01 03:44:13,527  INFO js - refreshed tag mapping
+2009-03-01 03:44:13,527  INFO js - postmaster initialized
+2009-03-01 03:44:13,805  INFO js - hello world
+2009-03-01 03:44:33,318  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 03:44:33,355  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-01 03:44:33,443  INFO org.latte.cache.FileCache - cache miss: app/view/blog/show.jhtml
+2009-03-01 03:44:33,514  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-03-01 03:45:15,551  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 03:45:15,672  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-03-01 03:45:17,908  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 03:45:18,154  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-03-01 03:45:20,230  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 03:45:20,320  INFO org.latte.controller.Controller - handled /blog/show/steamed
+2009-03-01 03:45:23,921  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 03:45:23,993  INFO org.latte.controller.Controller - handled /blog/show/soup
+2009-03-01 03:46:54,814  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 03:46:54,815  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-01 03:46:54,845  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-03-01 03:46:57,338  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 03:46:57,388  INFO org.latte.controller.Controller - handled /blog/show/steamed
+2009-03-01 03:47:11,835  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 03:47:11,836  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-01 03:47:11,874  INFO org.latte.controller.Controller - handled /blog/show/steamed
+2009-03-01 03:47:15,018  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 03:47:15,100  INFO org.latte.controller.Controller - handled /blog/show/seafood
+2009-03-01 03:47:15,925  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 03:47:15,980  INFO org.latte.controller.Controller - handled /blog/show/soup
+2009-03-01 03:47:18,124  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-01 03:47:18,175  INFO org.latte.controller.Controller - handled /blog/show/all
+2009-03-03 06:02:16,336  INFO org.latte.cache.FileCache - cache miss: app/autoexec.js
+2009-03-03 06:02:16,342  INFO org.latte.cache.FileCache - cache miss: app/TagCloud.js
+2009-03-03 06:02:16,343  INFO org.latte.cache.FileCache - cache miss: app/PostMaster.js
+2009-03-03 06:02:16,343  INFO org.latte.cache.FileCache - cache miss: app/util/ImageTool.js
+2009-03-03 06:02:16,612  INFO org.latte.cache.FileCache - cache miss: db/blog/0
+2009-03-03 06:02:16,616  INFO org.latte.cache.FileCache - cache miss: db/blog/1
+2009-03-03 06:02:16,617  INFO org.latte.cache.FileCache - cache miss: db/blog/2
+2009-03-03 06:02:16,625  INFO js - refreshed tag mapping
+2009-03-03 06:02:16,625  INFO js - postmaster initialized
+2009-03-03 06:02:16,841  INFO js - hello world
+2009-03-03 06:02:19,504  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:02:19,538  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-03 06:02:19,601  INFO org.latte.controller.Controller - blocked /blog/
+2009-03-03 06:02:23,584  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:02:23,604  INFO org.latte.cache.FileCache - cache miss: app/controller/root.js
+2009-03-03 06:02:23,736  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-03 06:02:23,737  INFO org.latte.controller.Controller - handled /
+2009-03-03 06:02:39,373  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:02:45,591  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:02:45,783  INFO org.latte.cache.FileCache - cache miss: app/view/blog/show.jhtml
+2009-03-03 06:02:45,856  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-03-03 06:03:51,269  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:03:51,372  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-03 06:03:51,372  INFO org.latte.controller.Controller - handled /
+2009-03-03 06:04:07,002  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:04:07,071  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-03 06:04:07,204  INFO js - all
+2009-03-03 06:04:07,205  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-03 06:04:07,205  INFO org.latte.controller.Controller - handled /
+2009-03-03 06:04:46,679  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:04:46,689  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-03 06:04:46,714  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-03 06:04:46,714  INFO org.latte.controller.Controller - handled /
+2009-03-03 06:05:14,591  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:05:14,596  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-03 06:05:14,619  INFO js - eh?
+2009-03-03 06:05:14,619  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-03 06:05:14,619  INFO org.latte.controller.Controller - handled /
+2009-03-03 06:05:31,731  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:05:31,732  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-03 06:05:31,843  INFO org.latte.controller.Controller - handled /blog/show/all
+2009-03-03 06:06:04,894  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:06:04,909  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-03 06:06:04,935  INFO js - all:undefined
+2009-03-03 06:06:05,070  INFO org.latte.controller.Controller - handled /blog/show/all
+2009-03-03 06:06:11,263  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:06:11,286  INFO js - undefined:undefined
+2009-03-03 06:06:11,286  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-03 06:06:11,286  INFO org.latte.controller.Controller - handled /
+2009-03-03 06:06:27,220  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:06:27,227  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-03 06:06:27,262  INFO js - undefined:undefined
+2009-03-03 06:06:27,263  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-03 06:06:27,263  INFO org.latte.controller.Controller - handled /
+2009-03-03 06:06:47,612  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:06:47,613  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-03 06:06:47,627  INFO js - all:undefined
+2009-03-03 06:06:47,644  INFO org.latte.controller.Controller - handled /blog/show/all
+2009-03-03 06:07:08,069  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:07:08,070  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-03 06:07:08,137  INFO js - all:undefined
+2009-03-03 06:07:08,138  INFO js - all
+2009-03-03 06:07:08,162  INFO org.latte.controller.Controller - handled /blog/show/all
+2009-03-03 06:07:12,304  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:07:12,449  INFO js - undefined:undefined
+2009-03-03 06:07:12,458  INFO js - all
+2009-03-03 06:07:12,459  INFO org.latte.controller.Controller - handled /blog/show/
+2009-03-03 06:07:45,374  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:07:45,375  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-03 06:07:45,395  INFO js - undefined:undefined
+2009-03-03 06:07:45,395  INFO js - all
+2009-03-03 06:07:45,412  INFO js - 
+2009-03-03 06:07:45,412  INFO org.latte.controller.Controller - handled /blog/show/
+2009-03-03 06:07:52,764  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:07:52,898  INFO js - all:undefined
+2009-03-03 06:07:52,899  INFO js - all
+2009-03-03 06:07:52,900  INFO js - org.mozilla.javascript.NativeArray@1878144
+2009-03-03 06:07:52,963  INFO org.latte.controller.Controller - handled /blog/show/all
+2009-03-03 06:08:16,123  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:08:16,124  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-03 06:08:16,143  INFO js - all:undefined
+2009-03-03 06:08:16,202  INFO org.latte.controller.Controller - handled /blog/show/all
+2009-03-03 06:08:19,176  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:08:19,198  INFO js - undefined:undefined
+2009-03-03 06:08:19,218  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-03 06:08:19,218  INFO org.latte.controller.Controller - handled /
+2009-03-03 06:08:20,926  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:08:21,184  INFO js - undefined:undefined
+2009-03-03 06:08:21,254  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-03 06:08:21,255  INFO org.latte.controller.Controller - handled /
+2009-03-03 06:08:22,092  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:08:22,210  INFO js - undefined:undefined
+2009-03-03 06:08:22,244  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-03 06:08:22,245  INFO org.latte.controller.Controller - handled /
+2009-03-03 06:08:35,469  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 06:08:35,495  INFO org.latte.cache.FileCache - cache miss: app/controller/blog.js
+2009-03-03 06:08:35,571  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-03 06:08:35,572  INFO org.latte.controller.Controller - handled /
+2009-03-03 06:45:51,317  INFO org.latte.cache.FileCache - cache miss: app/autoexec.js
+2009-03-03 06:45:51,318  INFO org.latte.cache.FileCache - cache miss: app/TagCloud.js
+2009-03-03 06:45:51,319  INFO org.latte.cache.FileCache - cache miss: app/PostMaster.js
+2009-03-03 06:45:51,319  INFO org.latte.cache.FileCache - cache miss: app/util/ImageTool.js
+2009-03-03 06:45:51,609  INFO org.latte.cache.FileCache - cache miss: db/blog/0
+2009-03-03 06:45:51,611  INFO org.latte.cache.FileCache - cache miss: db/blog/1
+2009-03-03 06:45:51,615  INFO org.latte.cache.FileCache - cache miss: db/blog/2
+2009-03-03 06:45:51,624  INFO js - refreshed tag mapping
+2009-03-03 06:45:51,625  INFO js - postmaster initialized
+2009-03-03 06:45:51,798  INFO js - hello world
+2009-03-03 07:54:45,351  INFO org.latte.util.LRUCache - cache miss: app/TagCloud.js
+2009-03-03 07:54:45,354  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-03 07:54:45,355  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-03 07:54:45,440 ERROR org.latte.Main - autoexec.js failed
+org.mozilla.javascript.EvaluatorException: illegal character (js#1)
+	at org.mozilla.javascript.DefaultErrorReporter.runtimeError(DefaultErrorReporter.java:109)
+	at org.mozilla.javascript.DefaultErrorReporter.error(DefaultErrorReporter.java:96)
+	at org.mozilla.javascript.Parser.addError(Parser.java:146)
+	at org.mozilla.javascript.TokenStream.getToken(TokenStream.java:824)
+	at org.mozilla.javascript.Parser.peekToken(Parser.java:172)
+	at org.mozilla.javascript.Parser.parse(Parser.java:384)
+	at org.mozilla.javascript.Parser.parse(Parser.java:338)
+	at org.mozilla.javascript.Context.compileImpl(Context.java:2252)
+	at org.mozilla.javascript.Context.compileString(Context.java:1240)
+	at org.mozilla.javascript.Context.compileString(Context.java:1229)
+	at org.mozilla.javascript.Context.evaluateString(Context.java:1085)
+	at org.latte.scripting.Job.run(Job.java:79)
+	at org.latte.scripting.JobRunner.run(JobRunner.java:20)
+	at org.latte.Main$LatteServlet.<init>(Main.java:97)
+	at org.latte.Main.<init>(Main.java:63)
+	at org.latte.Main.main(Main.java:46)
+2009-03-03 07:58:02,681  INFO org.latte.util.LRUCache - cache miss: app/TagCloud.js
+2009-03-03 08:00:47,913  INFO org.latte.util.LRUCache - cache miss: app/TagCloud.js
+2009-03-03 08:00:47,915  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-03 08:00:47,915  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-03 08:00:48,187  INFO org.latte.util.LRUCache - cache miss: db/blog/0
+2009-03-03 08:00:48,275  INFO org.latte.cache.FileCache - cache miss: db/blog/0
+2009-03-03 08:00:48,276  INFO org.latte.util.LRUCache - cache miss: db/blog/1
+2009-03-03 08:00:48,278  INFO org.latte.cache.FileCache - cache miss: db/blog/1
+2009-03-03 08:00:48,278  INFO org.latte.util.LRUCache - cache miss: db/blog/2
+2009-03-03 08:00:48,282  INFO org.latte.cache.FileCache - cache miss: db/blog/2
+2009-03-03 08:00:48,293  INFO js - refreshed tag mapping
+2009-03-03 08:00:48,293  INFO js - postmaster initialized
+2009-03-03 08:00:48,395  INFO js - hello world
+2009-03-03 08:00:54,066  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 08:00:54,105  INFO org.latte.util.LRUCache - cache miss: app/controller/root.js
+2009-03-03 08:00:54,151  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-03 08:00:54,255  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-03 08:00:54,381  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-03 08:00:54,381  INFO org.latte.controller.Controller - handled /
+2009-03-03 08:01:01,109  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 08:01:01,110  INFO org.latte.util.LRUCache - cache miss: app/controller/root.js
+2009-03-03 08:01:01,150  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-03 08:01:01,336  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-03 08:01:01,420  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-03 08:01:01,421  INFO org.latte.controller.Controller - handled /
+2009-03-03 08:01:02,785  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 08:01:02,786  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-03 08:01:02,983  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-03 08:01:03,022  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-03-03 08:01:04,237  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 08:01:04,238  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-03 08:01:04,403  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-03 08:01:04,519  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-03-03 08:01:05,296  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 08:01:05,309  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-03 08:01:05,370  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-03 08:01:05,439  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-03-03 08:01:12,517  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 08:01:12,518  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-03 08:01:12,616  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-03 08:01:12,683  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-03-03 08:01:28,207  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 08:01:28,208  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-03 08:01:28,242  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-03 08:01:28,328  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-03-03 08:01:34,802  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 08:01:34,802  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-03 08:01:34,838  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-03 08:01:34,870  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-03-03 08:03:33,659  INFO org.latte.util.LRUCache - cache miss: app/TagCloud.js
+2009-03-03 08:03:33,661  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-03 08:03:33,661  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-03 08:03:33,888  INFO org.latte.util.LRUCache - cache miss: db/blog/0
+2009-03-03 08:03:33,927  INFO org.latte.cache.FileCache - cache miss: db/blog/0
+2009-03-03 08:03:33,927  INFO org.latte.util.LRUCache - cache miss: db/blog/1
+2009-03-03 08:03:33,932  INFO org.latte.cache.FileCache - cache miss: db/blog/1
+2009-03-03 08:03:33,932  INFO org.latte.util.LRUCache - cache miss: db/blog/2
+2009-03-03 08:03:33,934  INFO org.latte.cache.FileCache - cache miss: db/blog/2
+2009-03-03 08:03:33,973  INFO js - refreshed tag mapping
+2009-03-03 08:03:33,974  INFO js - postmaster initialized
+2009-03-03 08:03:34,118  INFO js - hello world
+2009-03-03 08:03:35,625  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 08:03:35,645  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-03 08:03:35,688  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-03 08:03:35,714  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-03-03 08:03:42,246  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 08:03:42,482  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-03-03 09:02:57,726  INFO org.latte.util.LRUCache - cache miss: app/TagCloud.js
+2009-03-03 09:02:57,750  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-03 09:02:57,751  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-03 09:02:58,088  INFO org.latte.util.LRUCache - cache miss: db/blog/0
+2009-03-03 09:02:58,206  INFO org.latte.cache.FileCache - cache miss: db/blog/0
+2009-03-03 09:02:58,207  INFO org.latte.util.LRUCache - cache miss: db/blog/1
+2009-03-03 09:02:58,222  INFO org.latte.cache.FileCache - cache miss: db/blog/1
+2009-03-03 09:02:58,222  INFO org.latte.util.LRUCache - cache miss: db/blog/2
+2009-03-03 09:02:58,235  INFO org.latte.cache.FileCache - cache miss: db/blog/2
+2009-03-03 09:02:58,248  INFO js - refreshed tag mapping
+2009-03-03 09:02:58,248  INFO js - postmaster initialized
+2009-03-03 09:02:58,439  INFO js - hello world
+2009-03-03 09:03:36,818  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 09:03:36,852  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-03 09:03:36,936  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-03 09:03:36,978  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-03-03 09:03:43,453  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 09:03:43,512  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-03-03 09:03:59,640  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 09:03:59,640  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-03 09:03:59,726  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-03-03 09:04:09,473  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 09:04:09,583  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-03-03 09:04:21,987  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 09:04:21,988  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-03 09:04:22,152  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-03-03 09:17:11,995  INFO org.latte.util.LRUCache - cache miss: app/TagCloud.js
+2009-03-03 09:17:11,997  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-03 09:17:11,997  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-03 09:17:12,296  INFO org.latte.util.LRUCache - cache miss: db/blog/0
+2009-03-03 09:17:12,345  INFO org.latte.cache.FileCache - cache miss: db/blog/0
+2009-03-03 09:17:12,346  INFO org.latte.util.LRUCache - cache miss: db/blog/1
+2009-03-03 09:17:12,378  INFO org.latte.cache.FileCache - cache miss: db/blog/1
+2009-03-03 09:17:12,378  INFO org.latte.util.LRUCache - cache miss: db/blog/2
+2009-03-03 09:17:12,389  INFO org.latte.cache.FileCache - cache miss: db/blog/2
+2009-03-03 09:17:12,400  INFO js - refreshed tag mapping
+2009-03-03 09:17:12,401  INFO js - postmaster initialized
+2009-03-03 09:17:12,532  INFO js - hello world
+2009-03-03 09:17:21,057  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 09:17:21,086  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-03 09:17:21,155  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-03 09:17:21,205  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-03-03 09:17:27,221  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 09:17:27,370  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-03-03 09:24:19,214  INFO org.latte.util.LRUCache - cache miss: app/TagCloud.js
+2009-03-03 09:24:19,216  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-03 09:24:19,217  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-03 09:24:19,447  INFO org.latte.util.LRUCache - cache miss: db/blog/0
+2009-03-03 09:24:19,497  INFO org.latte.cache.FileCache - cache miss: db/blog/0
+2009-03-03 09:24:19,514  INFO org.latte.util.LRUCache - cache miss: db/blog/1
+2009-03-03 09:24:19,516  INFO org.latte.cache.FileCache - cache miss: db/blog/1
+2009-03-03 09:24:19,517  INFO org.latte.util.LRUCache - cache miss: db/blog/2
+2009-03-03 09:24:19,528  INFO org.latte.cache.FileCache - cache miss: db/blog/2
+2009-03-03 09:24:19,537  INFO js - refreshed tag mapping
+2009-03-03 09:24:19,538  INFO js - postmaster initialized
+2009-03-03 09:24:19,635  INFO js - hello world
+2009-03-03 09:24:21,551  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 09:24:21,581  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-03 09:24:21,636  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-03 09:24:21,685  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-03-03 09:24:22,122  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 09:24:22,240  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-03-03 09:24:22,729  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 09:24:22,860  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-03-03 09:24:23,228  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 09:24:23,300  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-03-03 09:24:23,655  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 09:24:23,727  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-03-03 09:24:32,838  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 09:24:32,967  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-03-03 09:24:33,558  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-03 09:24:33,739  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-03-04 08:33:34,817  INFO org.latte.util.LRUCache - cache miss: app/TagCloud.js
+2009-03-04 08:33:34,841  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-04 08:33:34,842  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-04 08:33:35,157  INFO org.latte.util.LRUCache - cache miss: db/blog/0
+2009-03-04 08:33:35,249  INFO org.latte.cache.FileCache - cache miss: db/blog/0
+2009-03-04 08:33:35,250  INFO org.latte.util.LRUCache - cache miss: db/blog/1
+2009-03-04 08:33:35,258  INFO org.latte.cache.FileCache - cache miss: db/blog/1
+2009-03-04 08:33:35,259  INFO org.latte.util.LRUCache - cache miss: db/blog/2
+2009-03-04 08:33:35,271  INFO org.latte.cache.FileCache - cache miss: db/blog/2
+2009-03-04 08:33:35,283  INFO js - refreshed tag mapping
+2009-03-04 08:33:35,284  INFO js - postmaster initialized
+2009-03-04 08:33:35,500  INFO js - hello world
+2009-03-04 08:33:43,883  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-04 08:33:43,913  INFO org.latte.util.LRUCache - cache miss: app/controller/root.js
+2009-03-04 08:33:43,955  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-04 08:33:44,003  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-04 08:33:44,036  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-04 08:33:44,037  INFO org.latte.controller.Controller - handled /
+2009-03-04 08:33:54,150  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-04 08:33:54,341  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-03-04 08:33:55,427  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-04 08:33:55,598  INFO org.latte.controller.Controller - handled /blog/show/all,2
+2009-03-04 08:33:56,675  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-04 08:33:56,831  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-03-04 08:36:30,198  INFO org.latte.util.LRUCache - cache miss: app/TagCloud.js
+2009-03-04 08:36:30,200  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-04 08:36:30,201  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-04 08:36:30,477  INFO org.latte.util.LRUCache - cache miss: db/blog/0
+2009-03-04 08:36:30,526  INFO org.latte.cache.FileCache - cache miss: db/blog/0
+2009-03-04 08:36:30,526  INFO org.latte.util.LRUCache - cache miss: db/blog/1
+2009-03-04 08:36:30,546  INFO org.latte.cache.FileCache - cache miss: db/blog/1
+2009-03-04 08:36:30,547  INFO org.latte.util.LRUCache - cache miss: db/blog/2
+2009-03-04 08:36:30,558  INFO org.latte.cache.FileCache - cache miss: db/blog/2
+2009-03-04 08:36:30,566  INFO js - refreshed tag mapping
+2009-03-04 08:36:30,573  INFO js - postmaster initialized
+2009-03-04 08:36:30,669  INFO js - hello world
+2009-03-04 08:39:27,682  INFO org.latte.util.LRUCache - cache miss: app/TagCloud.js
+2009-03-04 08:39:27,684  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-04 08:39:27,685  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-04 08:39:27,904  INFO org.latte.util.LRUCache - cache miss: db/blog/0
+2009-03-04 08:39:27,937  INFO org.latte.cache.FileCache - cache miss: db/blog/0
+2009-03-04 08:39:27,938  INFO org.latte.util.LRUCache - cache miss: db/blog/1
+2009-03-04 08:39:27,941  INFO org.latte.cache.FileCache - cache miss: db/blog/1
+2009-03-04 08:39:27,941  INFO org.latte.util.LRUCache - cache miss: db/blog/2
+2009-03-04 08:39:27,942  INFO org.latte.cache.FileCache - cache miss: db/blog/2
+2009-03-04 08:39:28,002  INFO js - refreshed tag mapping
+2009-03-04 08:39:28,003  INFO js - postmaster initialized
+2009-03-04 08:39:28,084  INFO js - hello world
+2009-03-04 08:55:22,636  INFO org.latte.util.LRUCache - cache miss: app/TagCloud.js
+2009-03-04 08:55:22,638  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-04 08:55:22,639  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-04 08:55:22,859  INFO org.latte.util.LRUCache - cache miss: db/blog/0
+2009-03-04 08:55:22,901  INFO org.latte.cache.FileCache - cache miss: db/blog/0
+2009-03-04 08:55:22,901  INFO org.latte.util.LRUCache - cache miss: db/blog/1
+2009-03-04 08:55:22,903  INFO org.latte.cache.FileCache - cache miss: db/blog/1
+2009-03-04 08:55:22,904  INFO org.latte.util.LRUCache - cache miss: db/blog/2
+2009-03-04 08:55:22,908  INFO org.latte.cache.FileCache - cache miss: db/blog/2
+2009-03-04 08:55:22,948  INFO js - refreshed tag mapping
+2009-03-04 08:55:23,051  INFO js - hello world
+2009-03-04 08:55:27,659  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-04 08:55:27,684  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-04 08:55:27,734  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-04 08:55:27,799  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-03-04 08:55:29,438  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-04 08:55:29,571  INFO org.latte.controller.Controller - handled /blog/show/all,1
+2009-03-05 06:15:49,205  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-05 06:15:49,207  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-05 06:15:49,322 ERROR org.latte.Main - autoexec.js failed
+org.mozilla.javascript.EvaluatorException: missing ) after condition (js#91)
+	at org.mozilla.javascript.DefaultErrorReporter.runtimeError(DefaultErrorReporter.java:109)
+	at org.mozilla.javascript.DefaultErrorReporter.error(DefaultErrorReporter.java:96)
+	at org.mozilla.javascript.Parser.addError(Parser.java:146)
+	at org.mozilla.javascript.Parser.reportError(Parser.java:160)
+	at org.mozilla.javascript.Parser.mustMatchToken(Parser.java:246)
+	at org.mozilla.javascript.Parser.condition(Parser.java:668)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:744)
+	at org.mozilla.javascript.Parser.statement(Parser.java:708)
+	at org.mozilla.javascript.Parser.parseFunctionBody(Parser.java:463)
+	at org.mozilla.javascript.Parser.function(Parser.java:592)
+	at org.mozilla.javascript.Parser.primaryExpr(Parser.java:2231)
+	at org.mozilla.javascript.Parser.memberExpr(Parser.java:1950)
+	at org.mozilla.javascript.Parser.unaryExpr(Parser.java:1808)
+	at org.mozilla.javascript.Parser.mulExpr(Parser.java:1737)
+	at org.mozilla.javascript.Parser.addExpr(Parser.java:1718)
+	at org.mozilla.javascript.Parser.shiftExpr(Parser.java:1698)
+	at org.mozilla.javascript.Parser.relExpr(Parser.java:1672)
+	at org.mozilla.javascript.Parser.eqExpr(Parser.java:1628)
+	at org.mozilla.javascript.Parser.bitAndExpr(Parser.java:1617)
+	at org.mozilla.javascript.Parser.bitXorExpr(Parser.java:1606)
+	at org.mozilla.javascript.Parser.bitOrExpr(Parser.java:1595)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1583)
+	at org.mozilla.javascript.Parser.orExpr(Parser.java:1571)
+	at org.mozilla.javascript.Parser.condExpr(Parser.java:1554)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1539)
+	at org.mozilla.javascript.Parser.argumentList(Parser.java:1905)
+	at org.mozilla.javascript.Parser.memberExprTail(Parser.java:2045)
+	at org.mozilla.javascript.Parser.memberExpr(Parser.java:1953)
+	at org.mozilla.javascript.Parser.unaryExpr(Parser.java:1808)
+	at org.mozilla.javascript.Parser.mulExpr(Parser.java:1737)
+	at org.mozilla.javascript.Parser.addExpr(Parser.java:1718)
+	at org.mozilla.javascript.Parser.shiftExpr(Parser.java:1698)
+	at org.mozilla.javascript.Parser.relExpr(Parser.java:1672)
+	at org.mozilla.javascript.Parser.eqExpr(Parser.java:1628)
+	at org.mozilla.javascript.Parser.bitAndExpr(Parser.java:1617)
+	at org.mozilla.javascript.Parser.bitXorExpr(Parser.java:1606)
+	at org.mozilla.javascript.Parser.bitOrExpr(Parser.java:1595)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1583)
+	at org.mozilla.javascript.Parser.orExpr(Parser.java:1571)
+	at org.mozilla.javascript.Parser.condExpr(Parser.java:1554)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1539)
+	at org.mozilla.javascript.Parser.expr(Parser.java:1518)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:1201)
+	at org.mozilla.javascript.Parser.statement(Parser.java:708)
+	at org.mozilla.javascript.Parser.parseFunctionBody(Parser.java:463)
+	at org.mozilla.javascript.Parser.function(Parser.java:592)
+	at org.mozilla.javascript.Parser.parseFunctionBody(Parser.java:460)
+	at org.mozilla.javascript.Parser.function(Parser.java:592)
+	at org.mozilla.javascript.Parser.primaryExpr(Parser.java:2231)
+	at org.mozilla.javascript.Parser.memberExpr(Parser.java:1950)
+	at org.mozilla.javascript.Parser.unaryExpr(Parser.java:1808)
+	at org.mozilla.javascript.Parser.mulExpr(Parser.java:1737)
+	at org.mozilla.javascript.Parser.addExpr(Parser.java:1718)
+	at org.mozilla.javascript.Parser.shiftExpr(Parser.java:1698)
+	at org.mozilla.javascript.Parser.relExpr(Parser.java:1672)
+	at org.mozilla.javascript.Parser.eqExpr(Parser.java:1628)
+	at org.mozilla.javascript.Parser.bitAndExpr(Parser.java:1617)
+	at org.mozilla.javascript.Parser.bitXorExpr(Parser.java:1606)
+	at org.mozilla.javascript.Parser.bitOrExpr(Parser.java:1595)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1583)
+	at org.mozilla.javascript.Parser.orExpr(Parser.java:1571)
+	at org.mozilla.javascript.Parser.condExpr(Parser.java:1554)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1539)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1545)
+	at org.mozilla.javascript.Parser.expr(Parser.java:1518)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:1201)
+	at org.mozilla.javascript.Parser.statement(Parser.java:708)
+	at org.mozilla.javascript.Parser.parse(Parser.java:401)
+	at org.mozilla.javascript.Parser.parse(Parser.java:338)
+	at org.mozilla.javascript.Context.compileImpl(Context.java:2252)
+	at org.mozilla.javascript.Context.compileString(Context.java:1240)
+	at org.mozilla.javascript.Context.compileString(Context.java:1229)
+	at org.mozilla.javascript.Context.evaluateString(Context.java:1085)
+	at org.latte.scripting.JavascriptRunner.run(JavascriptRunner.java:79)
+	at org.latte.Main$LatteServlet.<init>(Main.java:95)
+	at org.latte.Main.<init>(Main.java:60)
+	at org.latte.Main.main(Main.java:43)
+2009-03-05 06:16:15,767  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-05 06:16:15,768  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-05 06:16:15,861 ERROR org.latte.Main - autoexec.js failed
+org.mozilla.javascript.EvaluatorException: invalid return (js#49)
+	at org.mozilla.javascript.DefaultErrorReporter.runtimeError(DefaultErrorReporter.java:109)
+	at org.mozilla.javascript.DefaultErrorReporter.error(DefaultErrorReporter.java:96)
+	at org.mozilla.javascript.Parser.addError(Parser.java:146)
+	at org.mozilla.javascript.Parser.reportError(Parser.java:160)
+	at org.mozilla.javascript.Parser.returnOrYield(Parser.java:1291)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:1126)
+	at org.mozilla.javascript.Parser.statement(Parser.java:708)
+	at org.mozilla.javascript.Parser.parse(Parser.java:401)
+	at org.mozilla.javascript.Parser.parse(Parser.java:338)
+	at org.mozilla.javascript.Context.compileImpl(Context.java:2252)
+	at org.mozilla.javascript.Context.compileString(Context.java:1240)
+	at org.mozilla.javascript.Context.compileString(Context.java:1229)
+	at org.mozilla.javascript.Context.evaluateString(Context.java:1085)
+	at org.latte.scripting.JavascriptRunner.run(JavascriptRunner.java:79)
+	at org.latte.Main$LatteServlet.<init>(Main.java:95)
+	at org.latte.Main.<init>(Main.java:60)
+	at org.latte.Main.main(Main.java:43)
+2009-03-05 06:16:38,821  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-05 06:16:38,822  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-05 06:16:38,952 ERROR org.latte.Main - autoexec.js failed
+org.mozilla.javascript.EvaluatorException: invalid return (js#49)
+	at org.mozilla.javascript.DefaultErrorReporter.runtimeError(DefaultErrorReporter.java:109)
+	at org.mozilla.javascript.DefaultErrorReporter.error(DefaultErrorReporter.java:96)
+	at org.mozilla.javascript.Parser.addError(Parser.java:146)
+	at org.mozilla.javascript.Parser.reportError(Parser.java:160)
+	at org.mozilla.javascript.Parser.returnOrYield(Parser.java:1291)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:1126)
+	at org.mozilla.javascript.Parser.statement(Parser.java:708)
+	at org.mozilla.javascript.Parser.parse(Parser.java:401)
+	at org.mozilla.javascript.Parser.parse(Parser.java:338)
+	at org.mozilla.javascript.Context.compileImpl(Context.java:2252)
+	at org.mozilla.javascript.Context.compileString(Context.java:1240)
+	at org.mozilla.javascript.Context.compileString(Context.java:1229)
+	at org.mozilla.javascript.Context.evaluateString(Context.java:1085)
+	at org.latte.scripting.JavascriptRunner.run(JavascriptRunner.java:79)
+	at org.latte.Main$LatteServlet.<init>(Main.java:95)
+	at org.latte.Main.<init>(Main.java:60)
+	at org.latte.Main.main(Main.java:43)
+2009-03-05 06:16:59,325  INFO js - hello world
+2009-03-05 06:17:42,999  INFO js - hello world
+2009-03-05 06:18:19,776  INFO js - hello world
+2009-03-05 06:18:57,075  INFO js - hello world
+2009-03-05 06:18:57,082  INFO js - asdf:1
+2009-03-05 06:18:57,082  INFO js - asdf:2
+2009-03-05 06:18:57,083  INFO js - asdf:3
+2009-03-05 06:19:22,618  INFO js - hello world
+2009-03-05 06:21:52,741  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-05 06:21:52,743  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-05 06:21:52,871 ERROR org.latte.Main - autoexec.js failed
+org.mozilla.javascript.EvaluatorException: missing ) after condition (js#91)
+	at org.mozilla.javascript.DefaultErrorReporter.runtimeError(DefaultErrorReporter.java:109)
+	at org.mozilla.javascript.DefaultErrorReporter.error(DefaultErrorReporter.java:96)
+	at org.mozilla.javascript.Parser.addError(Parser.java:146)
+	at org.mozilla.javascript.Parser.reportError(Parser.java:160)
+	at org.mozilla.javascript.Parser.mustMatchToken(Parser.java:246)
+	at org.mozilla.javascript.Parser.condition(Parser.java:668)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:744)
+	at org.mozilla.javascript.Parser.statement(Parser.java:708)
+	at org.mozilla.javascript.Parser.parseFunctionBody(Parser.java:463)
+	at org.mozilla.javascript.Parser.function(Parser.java:592)
+	at org.mozilla.javascript.Parser.primaryExpr(Parser.java:2231)
+	at org.mozilla.javascript.Parser.memberExpr(Parser.java:1950)
+	at org.mozilla.javascript.Parser.unaryExpr(Parser.java:1808)
+	at org.mozilla.javascript.Parser.mulExpr(Parser.java:1737)
+	at org.mozilla.javascript.Parser.addExpr(Parser.java:1718)
+	at org.mozilla.javascript.Parser.shiftExpr(Parser.java:1698)
+	at org.mozilla.javascript.Parser.relExpr(Parser.java:1672)
+	at org.mozilla.javascript.Parser.eqExpr(Parser.java:1628)
+	at org.mozilla.javascript.Parser.bitAndExpr(Parser.java:1617)
+	at org.mozilla.javascript.Parser.bitXorExpr(Parser.java:1606)
+	at org.mozilla.javascript.Parser.bitOrExpr(Parser.java:1595)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1583)
+	at org.mozilla.javascript.Parser.orExpr(Parser.java:1571)
+	at org.mozilla.javascript.Parser.condExpr(Parser.java:1554)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1539)
+	at org.mozilla.javascript.Parser.argumentList(Parser.java:1905)
+	at org.mozilla.javascript.Parser.memberExprTail(Parser.java:2045)
+	at org.mozilla.javascript.Parser.memberExpr(Parser.java:1953)
+	at org.mozilla.javascript.Parser.unaryExpr(Parser.java:1808)
+	at org.mozilla.javascript.Parser.mulExpr(Parser.java:1737)
+	at org.mozilla.javascript.Parser.addExpr(Parser.java:1718)
+	at org.mozilla.javascript.Parser.shiftExpr(Parser.java:1698)
+	at org.mozilla.javascript.Parser.relExpr(Parser.java:1672)
+	at org.mozilla.javascript.Parser.eqExpr(Parser.java:1628)
+	at org.mozilla.javascript.Parser.bitAndExpr(Parser.java:1617)
+	at org.mozilla.javascript.Parser.bitXorExpr(Parser.java:1606)
+	at org.mozilla.javascript.Parser.bitOrExpr(Parser.java:1595)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1583)
+	at org.mozilla.javascript.Parser.orExpr(Parser.java:1571)
+	at org.mozilla.javascript.Parser.condExpr(Parser.java:1554)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1539)
+	at org.mozilla.javascript.Parser.expr(Parser.java:1518)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:1201)
+	at org.mozilla.javascript.Parser.statement(Parser.java:708)
+	at org.mozilla.javascript.Parser.parseFunctionBody(Parser.java:463)
+	at org.mozilla.javascript.Parser.function(Parser.java:592)
+	at org.mozilla.javascript.Parser.parseFunctionBody(Parser.java:460)
+	at org.mozilla.javascript.Parser.function(Parser.java:592)
+	at org.mozilla.javascript.Parser.primaryExpr(Parser.java:2231)
+	at org.mozilla.javascript.Parser.memberExpr(Parser.java:1950)
+	at org.mozilla.javascript.Parser.unaryExpr(Parser.java:1808)
+	at org.mozilla.javascript.Parser.mulExpr(Parser.java:1737)
+	at org.mozilla.javascript.Parser.addExpr(Parser.java:1718)
+	at org.mozilla.javascript.Parser.shiftExpr(Parser.java:1698)
+	at org.mozilla.javascript.Parser.relExpr(Parser.java:1672)
+	at org.mozilla.javascript.Parser.eqExpr(Parser.java:1628)
+	at org.mozilla.javascript.Parser.bitAndExpr(Parser.java:1617)
+	at org.mozilla.javascript.Parser.bitXorExpr(Parser.java:1606)
+	at org.mozilla.javascript.Parser.bitOrExpr(Parser.java:1595)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1583)
+	at org.mozilla.javascript.Parser.orExpr(Parser.java:1571)
+	at org.mozilla.javascript.Parser.condExpr(Parser.java:1554)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1539)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1545)
+	at org.mozilla.javascript.Parser.expr(Parser.java:1518)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:1201)
+	at org.mozilla.javascript.Parser.statement(Parser.java:708)
+	at org.mozilla.javascript.Parser.parse(Parser.java:401)
+	at org.mozilla.javascript.Parser.parse(Parser.java:338)
+	at org.mozilla.javascript.Context.compileImpl(Context.java:2252)
+	at org.mozilla.javascript.Context.compileString(Context.java:1240)
+	at org.mozilla.javascript.Context.compileString(Context.java:1229)
+	at org.mozilla.javascript.Context.evaluateString(Context.java:1085)
+	at org.latte.scripting.JavascriptRunner.run(JavascriptRunner.java:79)
+	at org.latte.Main$LatteServlet.<init>(Main.java:95)
+	at org.latte.Main.<init>(Main.java:60)
+	at org.latte.Main.main(Main.java:43)
+2009-03-05 06:22:24,877  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-05 06:22:24,879  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-05 06:22:25,138  INFO js - hello world
+2009-03-05 06:22:49,223  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-05 06:22:49,224  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-05 06:22:49,321 ERROR org.latte.Main - autoexec.js failed
+org.mozilla.javascript.EvaluatorException: missing ) after condition (js#91)
+	at org.mozilla.javascript.DefaultErrorReporter.runtimeError(DefaultErrorReporter.java:109)
+	at org.mozilla.javascript.DefaultErrorReporter.error(DefaultErrorReporter.java:96)
+	at org.mozilla.javascript.Parser.addError(Parser.java:146)
+	at org.mozilla.javascript.Parser.reportError(Parser.java:160)
+	at org.mozilla.javascript.Parser.mustMatchToken(Parser.java:246)
+	at org.mozilla.javascript.Parser.condition(Parser.java:668)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:744)
+	at org.mozilla.javascript.Parser.statement(Parser.java:708)
+	at org.mozilla.javascript.Parser.parseFunctionBody(Parser.java:463)
+	at org.mozilla.javascript.Parser.function(Parser.java:592)
+	at org.mozilla.javascript.Parser.primaryExpr(Parser.java:2231)
+	at org.mozilla.javascript.Parser.memberExpr(Parser.java:1950)
+	at org.mozilla.javascript.Parser.unaryExpr(Parser.java:1808)
+	at org.mozilla.javascript.Parser.mulExpr(Parser.java:1737)
+	at org.mozilla.javascript.Parser.addExpr(Parser.java:1718)
+	at org.mozilla.javascript.Parser.shiftExpr(Parser.java:1698)
+	at org.mozilla.javascript.Parser.relExpr(Parser.java:1672)
+	at org.mozilla.javascript.Parser.eqExpr(Parser.java:1628)
+	at org.mozilla.javascript.Parser.bitAndExpr(Parser.java:1617)
+	at org.mozilla.javascript.Parser.bitXorExpr(Parser.java:1606)
+	at org.mozilla.javascript.Parser.bitOrExpr(Parser.java:1595)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1583)
+	at org.mozilla.javascript.Parser.orExpr(Parser.java:1571)
+	at org.mozilla.javascript.Parser.condExpr(Parser.java:1554)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1539)
+	at org.mozilla.javascript.Parser.argumentList(Parser.java:1905)
+	at org.mozilla.javascript.Parser.memberExprTail(Parser.java:2045)
+	at org.mozilla.javascript.Parser.memberExpr(Parser.java:1953)
+	at org.mozilla.javascript.Parser.unaryExpr(Parser.java:1808)
+	at org.mozilla.javascript.Parser.mulExpr(Parser.java:1737)
+	at org.mozilla.javascript.Parser.addExpr(Parser.java:1718)
+	at org.mozilla.javascript.Parser.shiftExpr(Parser.java:1698)
+	at org.mozilla.javascript.Parser.relExpr(Parser.java:1672)
+	at org.mozilla.javascript.Parser.eqExpr(Parser.java:1628)
+	at org.mozilla.javascript.Parser.bitAndExpr(Parser.java:1617)
+	at org.mozilla.javascript.Parser.bitXorExpr(Parser.java:1606)
+	at org.mozilla.javascript.Parser.bitOrExpr(Parser.java:1595)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1583)
+	at org.mozilla.javascript.Parser.orExpr(Parser.java:1571)
+	at org.mozilla.javascript.Parser.condExpr(Parser.java:1554)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1539)
+	at org.mozilla.javascript.Parser.expr(Parser.java:1518)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:1201)
+	at org.mozilla.javascript.Parser.statement(Parser.java:708)
+	at org.mozilla.javascript.Parser.parseFunctionBody(Parser.java:463)
+	at org.mozilla.javascript.Parser.function(Parser.java:592)
+	at org.mozilla.javascript.Parser.parseFunctionBody(Parser.java:460)
+	at org.mozilla.javascript.Parser.function(Parser.java:592)
+	at org.mozilla.javascript.Parser.primaryExpr(Parser.java:2231)
+	at org.mozilla.javascript.Parser.memberExpr(Parser.java:1950)
+	at org.mozilla.javascript.Parser.unaryExpr(Parser.java:1808)
+	at org.mozilla.javascript.Parser.mulExpr(Parser.java:1737)
+	at org.mozilla.javascript.Parser.addExpr(Parser.java:1718)
+	at org.mozilla.javascript.Parser.shiftExpr(Parser.java:1698)
+	at org.mozilla.javascript.Parser.relExpr(Parser.java:1672)
+	at org.mozilla.javascript.Parser.eqExpr(Parser.java:1628)
+	at org.mozilla.javascript.Parser.bitAndExpr(Parser.java:1617)
+	at org.mozilla.javascript.Parser.bitXorExpr(Parser.java:1606)
+	at org.mozilla.javascript.Parser.bitOrExpr(Parser.java:1595)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1583)
+	at org.mozilla.javascript.Parser.orExpr(Parser.java:1571)
+	at org.mozilla.javascript.Parser.condExpr(Parser.java:1554)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1539)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1545)
+	at org.mozilla.javascript.Parser.expr(Parser.java:1518)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:1201)
+	at org.mozilla.javascript.Parser.statement(Parser.java:708)
+	at org.mozilla.javascript.Parser.parse(Parser.java:401)
+	at org.mozilla.javascript.Parser.parse(Parser.java:338)
+	at org.mozilla.javascript.Context.compileImpl(Context.java:2252)
+	at org.mozilla.javascript.Context.compileString(Context.java:1240)
+	at org.mozilla.javascript.Context.compileString(Context.java:1229)
+	at org.mozilla.javascript.Context.evaluateString(Context.java:1085)
+	at org.latte.scripting.JavascriptRunner.run(JavascriptRunner.java:79)
+	at org.latte.Main$LatteServlet.<init>(Main.java:95)
+	at org.latte.Main.<init>(Main.java:60)
+	at org.latte.Main.main(Main.java:43)
+2009-03-05 06:23:04,795  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-05 06:23:04,797  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-05 06:23:05,098  INFO js - hello world
+2009-03-05 06:23:58,703  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-05 06:23:58,706  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-05 06:23:58,999  INFO js - hello world
+2009-03-05 06:41:12,940  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-05 06:41:12,941  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-05 06:41:13,057 ERROR org.latte.Main - autoexec.js failed
+org.mozilla.javascript.EvaluatorException: syntax error (js#113)
+	at org.mozilla.javascript.DefaultErrorReporter.runtimeError(DefaultErrorReporter.java:109)
+	at org.mozilla.javascript.DefaultErrorReporter.error(DefaultErrorReporter.java:96)
+	at org.mozilla.javascript.Parser.addError(Parser.java:146)
+	at org.mozilla.javascript.Parser.reportError(Parser.java:160)
+	at org.mozilla.javascript.Parser.primaryExpr(Parser.java:2464)
+	at org.mozilla.javascript.Parser.memberExpr(Parser.java:1950)
+	at org.mozilla.javascript.Parser.unaryExpr(Parser.java:1808)
+	at org.mozilla.javascript.Parser.mulExpr(Parser.java:1737)
+	at org.mozilla.javascript.Parser.addExpr(Parser.java:1718)
+	at org.mozilla.javascript.Parser.shiftExpr(Parser.java:1698)
+	at org.mozilla.javascript.Parser.relExpr(Parser.java:1672)
+	at org.mozilla.javascript.Parser.eqExpr(Parser.java:1628)
+	at org.mozilla.javascript.Parser.bitAndExpr(Parser.java:1617)
+	at org.mozilla.javascript.Parser.bitXorExpr(Parser.java:1606)
+	at org.mozilla.javascript.Parser.bitOrExpr(Parser.java:1595)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1583)
+	at org.mozilla.javascript.Parser.orExpr(Parser.java:1571)
+	at org.mozilla.javascript.Parser.condExpr(Parser.java:1554)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1539)
+	at org.mozilla.javascript.Parser.expr(Parser.java:1518)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:1245)
+	at org.mozilla.javascript.Parser.statement(Parser.java:708)
+	at org.mozilla.javascript.Parser.parseFunctionBody(Parser.java:463)
+	at org.mozilla.javascript.Parser.function(Parser.java:592)
+	at org.mozilla.javascript.Parser.parseFunctionBody(Parser.java:460)
+	at org.mozilla.javascript.Parser.function(Parser.java:592)
+	at org.mozilla.javascript.Parser.primaryExpr(Parser.java:2231)
+	at org.mozilla.javascript.Parser.memberExpr(Parser.java:1950)
+	at org.mozilla.javascript.Parser.unaryExpr(Parser.java:1808)
+	at org.mozilla.javascript.Parser.mulExpr(Parser.java:1737)
+	at org.mozilla.javascript.Parser.addExpr(Parser.java:1718)
+	at org.mozilla.javascript.Parser.shiftExpr(Parser.java:1698)
+	at org.mozilla.javascript.Parser.relExpr(Parser.java:1672)
+	at org.mozilla.javascript.Parser.eqExpr(Parser.java:1628)
+	at org.mozilla.javascript.Parser.bitAndExpr(Parser.java:1617)
+	at org.mozilla.javascript.Parser.bitXorExpr(Parser.java:1606)
+	at org.mozilla.javascript.Parser.bitOrExpr(Parser.java:1595)
+	at org.mozilla.javascript.Parser.andExpr(Parser.java:1583)
+	at org.mozilla.javascript.Parser.orExpr(Parser.java:1571)
+	at org.mozilla.javascript.Parser.condExpr(Parser.java:1554)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1539)
+	at org.mozilla.javascript.Parser.assignExpr(Parser.java:1545)
+	at org.mozilla.javascript.Parser.expr(Parser.java:1518)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:1201)
+	at org.mozilla.javascript.Parser.statement(Parser.java:708)
+	at org.mozilla.javascript.Parser.parse(Parser.java:401)
+	at org.mozilla.javascript.Parser.parse(Parser.java:338)
+	at org.mozilla.javascript.Context.compileImpl(Context.java:2252)
+	at org.mozilla.javascript.Context.compileString(Context.java:1240)
+	at org.mozilla.javascript.Context.compileString(Context.java:1229)
+	at org.mozilla.javascript.Context.evaluateString(Context.java:1085)
+	at org.latte.scripting.JavascriptRunner.run(JavascriptRunner.java:79)
+	at org.latte.Main$LatteServlet.<init>(Main.java:95)
+	at org.latte.Main.<init>(Main.java:60)
+	at org.latte.Main.main(Main.java:43)
+2009-03-05 06:41:39,990  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-05 06:41:39,993  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-05 06:41:40,321  INFO js - hello world
+2009-03-05 06:41:58,847  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:41:58,856  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 06:41:58,893  INFO org.latte.controller.Controller - blocked /blog/
+2009-03-05 06:42:03,942  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:42:03,943  INFO org.latte.util.LRUCache - cache miss: app/controller/root.js
+2009-03-05 06:42:04,013  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 06:42:04,014  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 06:42:04,016  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-05 06:42:04,016  INFO org.latte.controller.Controller - handled /
+2009-03-05 06:42:09,191  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:42:09,192  INFO org.latte.util.LRUCache - cache miss: app/controller/login.js
+2009-03-05 06:42:09,259  INFO org.latte.util.LRUCache - cache miss: app/view/login/login.jhtml
+2009-03-05 06:42:09,309  INFO org.latte.controller.Controller - handled /login/doit
+2009-03-05 06:42:09,309  INFO org.latte.controller.Controller - handled /login
+2009-03-05 06:42:10,845  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:42:10,867  INFO org.latte.controller.Controller - handled /login/doit
+2009-03-05 06:42:10,893  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:42:10,920  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 06:42:10,920  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 06:42:10,929  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-05 06:42:15,053  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:42:15,113  INFO org.latte.util.LRUCache - cache miss: app/view/blog/form.jhtml
+2009-03-05 06:42:15,187  INFO org.latte.controller.Controller - handled /blog/create
+2009-03-05 06:43:44,623  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:43:44,663  INFO js - creating new model
+2009-03-05 06:43:44,663  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 06:43:44,766  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 06:45:30,775  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:45:30,958  INFO js - creating new model
+2009-03-05 06:45:30,959  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 06:45:30,959  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 06:47:17,399  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-05 06:47:17,400  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-05 06:47:17,679  INFO js - hello world
+2009-03-05 06:47:32,259  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:47:32,267  INFO org.latte.util.LRUCache - cache miss: app/controller/login.js
+2009-03-05 06:47:32,327  INFO org.latte.util.LRUCache - cache miss: app/view/login/login.jhtml
+2009-03-05 06:47:32,329  INFO org.latte.controller.Controller - handled /login/doit
+2009-03-05 06:47:32,329  INFO org.latte.controller.Controller - handled /login
+2009-03-05 06:47:33,755  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:47:33,780  INFO org.latte.controller.Controller - handled /login/doit
+2009-03-05 06:47:33,802  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:47:33,802  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 06:47:33,841  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 06:47:33,842  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 06:47:33,843  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-05 06:47:37,120  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:47:37,143  INFO org.latte.util.LRUCache - cache miss: app/view/blog/form.jhtml
+2009-03-05 06:47:37,176  INFO org.latte.controller.Controller - handled /blog/create
+2009-03-05 06:48:25,321  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-05 06:48:25,322  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-05 06:48:25,580  INFO js - hello world
+2009-03-05 06:48:26,621  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:48:26,630  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 06:48:26,667  INFO org.latte.controller.Controller - blocked /blog/create
+2009-03-05 06:48:29,844  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:48:29,845  INFO org.latte.util.LRUCache - cache miss: app/controller/login.js
+2009-03-05 06:48:30,016  INFO org.latte.util.LRUCache - cache miss: app/view/login/login.jhtml
+2009-03-05 06:48:30,018  INFO org.latte.controller.Controller - handled /login/doit
+2009-03-05 06:48:30,018  INFO org.latte.controller.Controller - handled /login
+2009-03-05 06:48:31,559  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:48:31,596  INFO org.latte.controller.Controller - handled /login/doit
+2009-03-05 06:48:31,598  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:48:31,714  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 06:48:31,715  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 06:48:31,716  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-05 06:48:53,193  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:48:53,345  INFO org.latte.util.LRUCache - cache miss: app/view/blog/form.jhtml
+2009-03-05 06:48:53,408  INFO org.latte.controller.Controller - handled /blog/create
+2009-03-05 06:50:03,308  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:50:03,559  INFO js - creating new model
+2009-03-05 06:50:03,559  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 06:50:03,587  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 06:50:03,588  INFO org.latte.util.LRUCache - cache miss: food
+2009-03-05 06:53:28,947  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-05 06:53:28,948  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-05 06:53:29,248  INFO js - hello world
+2009-03-05 06:54:56,363  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:54:56,371  INFO org.latte.util.LRUCache - cache miss: app/controller/login.js
+2009-03-05 06:54:56,424  INFO org.latte.util.LRUCache - cache miss: app/view/login/login.jhtml
+2009-03-05 06:54:56,426  INFO org.latte.controller.Controller - handled /login/doit
+2009-03-05 06:54:56,426  INFO org.latte.controller.Controller - handled /login
+2009-03-05 06:54:57,679  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:54:57,704  INFO org.latte.controller.Controller - handled /login/doit
+2009-03-05 06:54:57,729  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:54:57,730  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 06:54:57,753  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 06:54:57,754  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 06:54:57,756  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-05 06:55:01,297  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:55:01,359  INFO org.latte.util.LRUCache - cache miss: app/view/blog/form.jhtml
+2009-03-05 06:55:01,428  INFO org.latte.controller.Controller - handled /blog/create
+2009-03-05 06:55:42,428  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:55:42,632  INFO js - creating new model
+2009-03-05 06:55:42,633  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 06:55:42,637  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 06:55:42,638  INFO org.latte.util.LRUCache - cache miss: food
+2009-03-05 06:55:42,640  INFO org.latte.util.LRUCache - cache miss: food
+2009-03-05 06:55:43,099  INFO org.latte.util.LRUCache - cache miss: steamed
+2009-03-05 06:55:43,099  INFO org.latte.util.LRUCache - cache miss: steamed
+2009-03-05 06:55:43,101  INFO org.latte.util.LRUCache - cache miss: seafood
+2009-03-05 06:55:43,101  INFO org.latte.util.LRUCache - cache miss: seafood
+2009-03-05 06:55:43,102  INFO org.latte.util.LRUCache - cache miss: crab
+2009-03-05 06:55:43,102  INFO org.latte.util.LRUCache - cache miss: crab
+2009-03-05 06:55:43,124  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 06:55:43,125  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 06:55:43,126  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 06:55:43,127  INFO org.latte.util.LRUCache - cache miss: 0
+2009-03-05 06:55:43,279  INFO js - saved public/blog/0/o.jpg
+2009-03-05 06:55:43,285  INFO js - convert -geometry 480x public/blog/0/o.jpg public/blog/0/p.jpg
+2009-03-05 06:55:54,445  INFO js - convert -geometry x80 public/blog/0/o.jpg public/blog/0/t.jpg
+2009-03-05 06:56:02,223  INFO js - convert -crop 80x80+13.5+0 public/blog/0/t.jpg public/blog/0/t.jpg
+2009-03-05 06:56:02,300  INFO org.latte.controller.Controller - handled /blog/save
+2009-03-05 06:56:02,341  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 06:56:02,377  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 06:56:02,455  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 06:56:02,523  INFO org.latte.controller.Controller - handled /blog/show/all,undefined
+2009-03-05 07:07:41,427  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:07:41,428  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 07:07:41,483  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 07:07:41,486  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 07:07:41,508  INFO org.latte.controller.Controller - handled /blog/show/all
+2009-03-05 07:07:43,247  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:07:43,334  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 07:07:43,336  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 07:07:43,351  INFO org.latte.controller.Controller - handled /blog/show/all
+2009-03-05 07:09:02,373  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:09:02,373  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 07:09:02,404  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 07:09:02,406  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 07:09:02,408  INFO org.latte.controller.Controller - handled /blog/show/all
+2009-03-05 07:11:21,296  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:11:21,327  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 07:11:21,329  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 07:11:21,331  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-03-05 07:11:22,843  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:11:22,880  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 07:11:22,882  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 07:11:22,884  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-03-05 07:14:46,091  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-05 07:14:46,092  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-05 07:14:46,367  INFO js - hello world
+2009-03-05 07:14:50,846  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:14:50,883  INFO org.latte.util.LRUCache - cache miss: app/controller/login.js
+2009-03-05 07:14:50,974  INFO org.latte.util.LRUCache - cache miss: app/view/login/login.jhtml
+2009-03-05 07:14:50,976  INFO org.latte.controller.Controller - handled /login/doit
+2009-03-05 07:14:50,977  INFO org.latte.controller.Controller - handled /login
+2009-03-05 07:14:52,250  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:14:52,347  INFO org.latte.controller.Controller - handled /login/doit
+2009-03-05 07:14:52,348  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:14:52,348  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 07:14:52,447  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 07:14:52,448  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 07:14:52,450  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-05 07:14:57,143  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:14:57,168  INFO org.latte.util.LRUCache - cache miss: app/view/blog/form.jhtml
+2009-03-05 07:17:26,040  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:17:53,318  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:17:53,319  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 07:17:53,328  INFO org.latte.controller.Controller - handled /blog/create
+2009-03-05 07:17:58,414  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:17:58,415  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 07:18:22,205  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:18:22,206  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 07:18:23,505  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:18:33,277  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:18:33,278  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 07:18:34,339  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:19:14,972  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:19:14,973  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 07:19:23,893  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:19:23,894  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 07:19:32,834  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:19:32,835  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 07:19:32,843  INFO org.latte.controller.Controller - handled /blog/create
+2009-03-05 07:19:50,128  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:19:50,128  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 07:19:50,138  INFO js - wtf
+2009-03-05 07:19:50,139  INFO org.latte.controller.Controller - handled /blog/create
+2009-03-05 07:20:14,371  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:20:14,371  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 07:20:14,394  INFO org.latte.util.LRUCache - cache miss: app/view/blog/form.jhtml
+2009-03-05 07:20:33,142  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:20:33,159  INFO org.latte.util.LRUCache - cache miss: app/view/blog/form.jhtml
+2009-03-05 07:20:33,173  INFO org.latte.controller.Controller - handled /blog/create
+2009-03-05 07:21:13,238  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:21:13,271  INFO js - creating new model
+2009-03-05 07:21:13,271  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 07:21:13,274  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 07:21:13,324  INFO org.latte.util.LRUCache - cache miss: test
+2009-03-05 07:21:13,324  INFO org.latte.util.LRUCache - cache miss: test
+2009-03-05 07:21:13,754  INFO org.latte.model.FileDataStore - put: test
+2009-03-05 07:21:13,755  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 07:21:13,755  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 07:21:13,756  INFO org.latte.model.FileDataStore - put: all
+2009-03-05 07:21:13,756  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 07:21:13,757  INFO org.latte.model.FileDataStore - put: cloud
+2009-03-05 07:21:13,759  INFO org.latte.util.LRUCache - cache miss: 0
+2009-03-05 07:21:13,768  INFO org.latte.model.FileDataStore - put: 0
+2009-03-05 07:21:13,797  INFO js - saved public/blog/0/o.jpg
+2009-03-05 07:21:13,802  INFO js - convert -geometry 480x public/blog/0/o.jpg public/blog/0/p.jpg
+2009-03-05 07:21:23,657  INFO js - convert -geometry x80 public/blog/0/o.jpg public/blog/0/t.jpg
+2009-03-05 07:21:28,957  INFO js - convert -crop 80x80+13.5+0 public/blog/0/t.jpg public/blog/0/t.jpg
+2009-03-05 07:21:29,230  INFO org.latte.controller.Controller - handled /blog/save
+2009-03-05 07:21:29,271  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:21:29,350  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 07:21:29,359  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 07:21:29,368  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-03-05 07:30:19,217  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-05 07:30:19,219  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-05 07:30:19,478  INFO js - hello world
+2009-03-05 07:30:25,338  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:30:25,347  INFO org.latte.util.LRUCache - cache miss: app/controller/login.js
+2009-03-05 07:30:25,405  INFO org.latte.util.LRUCache - cache miss: app/view/login/login.jhtml
+2009-03-05 07:30:25,407  INFO org.latte.controller.Controller - handled /login/doit
+2009-03-05 07:30:25,407  INFO org.latte.controller.Controller - handled /login
+2009-03-05 07:30:26,979  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:30:27,119  INFO org.latte.controller.Controller - handled /login/doit
+2009-03-05 07:30:27,120  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:30:27,162  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 07:30:27,336  INFO org.latte.util.LRUCache - cache miss: cloud
+2009-03-05 07:30:27,502  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 07:30:27,514  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-05 07:32:25,070  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-05 07:32:25,072  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-05 07:32:25,359  INFO js - hello world
+2009-03-05 07:32:29,830  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:32:29,855  INFO org.latte.util.LRUCache - cache miss: app/controller/root.js
+2009-03-05 07:32:29,867  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 07:32:58,594  INFO org.latte.util.LRUCache - cache miss: app/PostMaster.js
+2009-03-05 07:32:58,595  INFO org.latte.util.LRUCache - cache miss: app/util/ImageTool.js
+2009-03-05 07:32:58,915  INFO js - hello world
+2009-03-05 07:33:01,350  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:33:01,375  INFO org.latte.util.LRUCache - cache miss: app/controller/root.js
+2009-03-05 07:33:01,418  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 07:33:01,508  INFO org.latte.util.LRUCache - cache miss: _cloud
+2009-03-05 07:33:01,524  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 07:33:01,555  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-05 07:33:01,581  INFO org.latte.controller.Controller - handled /
+2009-03-05 07:33:04,119  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:33:04,186  INFO org.latte.util.LRUCache - cache miss: app/controller/login.js
+2009-03-05 07:33:04,232  INFO org.latte.util.LRUCache - cache miss: app/view/login/login.jhtml
+2009-03-05 07:33:04,234  INFO org.latte.controller.Controller - handled /login/doit
+2009-03-05 07:33:04,234  INFO org.latte.controller.Controller - handled /login
+2009-03-05 07:33:05,788  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:33:05,866  INFO org.latte.controller.Controller - handled /login/doit
+2009-03-05 07:33:05,871  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:33:05,998  INFO org.latte.util.LRUCache - cache miss: _cloud
+2009-03-05 07:33:05,998  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 07:33:06,047  INFO org.latte.controller.Controller - handled /blog/show
+2009-03-05 07:33:09,998  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:33:10,065  INFO org.latte.util.LRUCache - cache miss: app/view/blog/form.jhtml
+2009-03-05 07:33:10,102  INFO org.latte.controller.Controller - handled /blog/create
+2009-03-05 07:33:51,151  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:33:51,334  INFO js - creating new model
+2009-03-05 07:33:51,334  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 07:33:51,339  INFO org.latte.util.LRUCache - cache miss: _cloud
+2009-03-05 07:33:51,340  INFO org.latte.util.LRUCache - cache miss: test
+2009-03-05 07:33:51,341  INFO js - pushed 0
+2009-03-05 07:33:51,341  INFO org.latte.util.LRUCache - cache miss: test
+2009-03-05 07:33:51,666  INFO org.latte.model.FileDataStore - put: test
+2009-03-05 07:33:51,667  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 07:33:51,667  INFO js - pushed 0
+2009-03-05 07:33:51,667  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 07:33:51,669  INFO org.latte.model.FileDataStore - put: all
+2009-03-05 07:33:51,669  INFO org.latte.util.LRUCache - cache miss: _cloud
+2009-03-05 07:33:51,690  INFO org.latte.model.FileDataStore - put: _cloud
+2009-03-05 07:33:51,691  INFO org.latte.util.LRUCache - cache miss: 0
+2009-03-05 07:33:51,695  INFO org.latte.model.FileDataStore - put: 0
+2009-03-05 07:33:51,811  INFO js - saved public/blog/0/o.jpg
+2009-03-05 07:33:51,817  INFO js - convert -geometry 480x public/blog/0/o.jpg public/blog/0/p.jpg
+2009-03-05 07:34:01,599  INFO js - convert -geometry x80 public/blog/0/o.jpg public/blog/0/t.jpg
+2009-03-05 07:34:07,716  INFO js - convert -crop 80x80+13.5+0 public/blog/0/t.jpg public/blog/0/t.jpg
+2009-03-05 07:34:07,827  INFO org.latte.controller.Controller - handled /blog/save
+2009-03-05 07:34:07,867  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:34:08,034  INFO org.latte.util.LRUCache - cache miss: _cloud
+2009-03-05 07:34:08,116  INFO org.latte.util.LRUCache - cache miss: all
+2009-03-05 07:34:08,133  INFO org.latte.util.LRUCache - cache miss: 0
+2009-03-05 07:34:08,140  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-05 07:34:33,781  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:34:59,660  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:34:59,729  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 07:34:59,826  INFO js - yo
+2009-03-05 07:35:26,991  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:35:26,992  INFO org.latte.util.LRUCache - cache miss: app/controller/blog.js
+2009-03-05 07:36:43,469  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:36:43,501  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-05 07:36:43,504  INFO js - yo
+2009-03-05 07:37:00,725  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:37:00,758  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-05 07:37:00,786  INFO js - yo
+2009-03-05 07:37:11,979  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:37:12,128  INFO js - yo
+2009-03-05 07:37:34,079  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:37:34,100  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-05 07:37:54,962  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:38:12,275  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:38:12,357  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-05 07:38:13,621  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:38:22,043  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:38:52,165  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:38:52,246  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-05 07:39:21,358  INFO org.latte.Main - accepted connection from: 127.0.0.1
+2009-03-05 07:39:21,451  INFO org.latte.util.LRUCache - cache miss: app/view/blog/show.jhtml
+2009-03-05 07:39:21,527  INFO org.latte.controller.Controller - handled /blog/show/all,0
+2009-03-05 07:40:24,722  INFO org.latte.Main - accepted connection from: 127.0.0.1
