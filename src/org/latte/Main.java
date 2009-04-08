@@ -65,6 +65,11 @@ public class Main  {
 	}
 	
 	class LatteServlet extends DefaultServlet {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 5876743891237403945L;
+
 		@Override
 		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {			
 			dispatch(request, response);

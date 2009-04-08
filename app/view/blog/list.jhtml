@@ -10,7 +10,6 @@
   <body>
     <%
 	params["models"].forEach(function(model) {
-        log.info(model.title)
         echo(model.title)
         echo(" ")
         echo("<a href=\"/blog/show/" + model.key + "\">show</a>")
