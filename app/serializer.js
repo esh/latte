@@ -11,7 +11,11 @@
 		// get a key		
 		var all = ds.get("all");
 		if(all == null) key = 0;
-		else key = all.keys[all.keys.length - 1] + 1;
+		else {
+			all.keys.sort(function(a,b) { return a - b })
+			log.info("incrementing " + all.keys[all.keys.length - 1])
+			key = all.keys[all.keys.length - 1] + 1;
+		}
 		
 		model.tags = new Array();
 		
