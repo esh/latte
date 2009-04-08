@@ -1,6 +1,7 @@
 .classpath
 .project
 .setting
+latte.properties
 data
 public/blog
 log
