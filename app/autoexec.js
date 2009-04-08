@@ -1,3 +1,4 @@
+register("config", config)
 register("ds", require("system/filedatastore.js")(config.getProperty("db-cache-size")))
 
 require("system/mailbox.js")(

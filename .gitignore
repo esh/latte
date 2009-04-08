@@ -1,2 +1,8 @@
+.classpath
+.project
+.setting
 data
 public/blog
+log
+lib/latte.jar
+bin
