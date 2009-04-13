@@ -2,6 +2,7 @@
 	require("util/common.js")
 	require("util/imageutils.js")
 	
+	log.info("saving model")
 	var model;
 
     if(key == null) {

@@ -23,7 +23,7 @@
 		}
 
 		// get the specified key or get the last key in the cloud
-		params["model"] = key != undefined && key != "" ? ds.get(key) : ds.get(params["thumbs"][params["thumbs"].length - 1]);
+		params["model"] = key != undefined && key != "" ? ds.get(key) : ds.get(params["thumbs"][0]);
 		if(params["model"] == null) {
 			return ["error", key + " not found"]	
 		}
