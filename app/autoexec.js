@@ -8,6 +8,3 @@ require("system/mailbox.js")(
 	function(subject, body, attachment) {
 		require("twitter.js")(require("serializer.js")(null, subject, attachment, body))
 	})
-
-	
-require("twitter.js")(ds.get("6"))
