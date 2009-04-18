@@ -59,7 +59,7 @@ public class JHTML implements Script {
 		}
 	}
 	
-	public JHTML(Scriptable parent, File file, ScriptCache loader) throws Exception {
+	public JHTML(Scriptable parent, File file, ScriptLoader loader) throws Exception {
 		this.lastModified = file.lastModified();
 
 		byte[] buffer = new byte[(int)file.length()];

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.latte.scripting.Javascript;
-import org.latte.scripting.ScriptCache;
+import org.latte.scripting.ScriptLoader;
 import org.latte.util.Tuple;
 import org.mortbay.jetty.Handler;
 import org.mortbay.jetty.Server;
@@ -25,7 +25,7 @@ import org.mortbay.servlet.MultiPartFilter;
 public class Main  {
 	private static final Logger LOG = Logger.getLogger(Main.class);
 
-	private ScriptCache loader;
+	private ScriptLoader loader;
 	
 	/**
 	 * @param args
@@ -44,7 +44,7 @@ public class Main  {
 		config.load(new FileInputStream("latte.properties"));
 
 		// load latte core components
-		loader = new ScriptCache();			
+		loader = new ScriptLoader();			
 		((Javascript)loader.get("autoexec.js")).eval(new Tuple[] { new Tuple<String, Object>("config", config) });		
 		
 		// start the server

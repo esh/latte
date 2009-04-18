@@ -6,6 +6,12 @@ Array.prototype.subtract = function(t) {
 	});
 }
 
+Array.prototype.map = function(fn) {
+	for(var i = 0 ; i < this.length ; i++) {
+		this[i] = fn(this[i])
+	}
+}
+
 String.prototype.trim = function() {
 	return this.replace(/^\s+|\s+$/g, "");
 }

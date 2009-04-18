@@ -13,12 +13,12 @@ import org.mozilla.javascript.Scriptable;
 public class Javascript implements Script {
 	private final static Logger LOG = Logger.getLogger(Javascript.class);
 	private final long lastModified;
-	private final ScriptCache loader;
+	private final ScriptLoader loader;
 	private final Scriptable parent;
 	
 	private final org.mozilla.javascript.Script script;
 	
-	public Javascript(Scriptable parent, File file, ScriptCache loader) throws Exception {
+	public Javascript(Scriptable parent, File file, ScriptLoader loader) throws Exception {
 		this.lastModified = file.lastModified();
 		this.loader = loader;
 		this.parent = parent;
@@ -31,7 +31,7 @@ public class Javascript implements Script {
 		}
 	}
 	
-	public Javascript(Scriptable parent, String content, ScriptCache loader) throws Exception {
+	public Javascript(Scriptable parent, String content, ScriptLoader loader) throws Exception {
 		this.lastModified = -1;
 		this.loader = loader;
 		this.parent = parent;

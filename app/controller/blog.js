@@ -22,22 +22,19 @@
 			return ["error", type + " not defined"]
 		}
 
-		// get the specified key or get the last key in the cloud
-		params["model"] = key != undefined && key != "" ? ds.get(key) : ds.get(params["thumbs"][0]);
+		// get the specified key or get the first key in the cloud
+		params["model"] = key != undefined && key != "" ? ds.get(key) : ds.get(params["thumbs"][0])
 		if(params["model"] == null) {
 			return ["error", key + " not found"]	
 		}
 	
-		params["tags"] = new Object();
-		params["model"].tags.forEach(function(tag) {
-			params["tags"][tag] = tag;
-		});
+		params["tags"] = params["model"].tags.slice()
 		
 		params["cloud"] = new Array();
 		for(var tag in ds.get("_cloud").keys) {
 			params["cloud"].push(tag);
 		}
-		params["cloud"].sort();
+		params["cloud"].sort()
 			
 		return ["ok", render("view/blog/show.jhtml")]
 	}
