@@ -14,16 +14,8 @@ h1,h2 {
 	margin-bottom: 6px;
 }
 
-#nav {
-	width: 314px;
-	float: left;
-	padding:0px 3px 0px 3px;
-	margin-top: 6px;
-	text-align: left;
-}
-
 #main {
-	width: 314px;
+	width: 480px;
 	float: left;
 	padding:0px 3px 0px 3px;
 	margin-top: 6px;
@@ -31,14 +23,14 @@ h1,h2 {
 }
 
 #main img {
-	width: 314px;
+	width: 474;
 	margin-top: 5px;
 	padding: 0;
 	border: 0;
 }
 
 #stream {
-	width: 316px;
+	width: 474px;
 	float: left;
 	padding:0px 2px 0px 2px;
 	margin-top: 5px;

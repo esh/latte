@@ -4,21 +4,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
-		<meta name="viewport" content="width=320"/>
+		<meta name="viewport" content="width=480"/>
 		<title>chan@sikho.ca</title>
 		<link href="/css/default.css" media="screen" rel="Stylesheet" type="text/css"/>
 	</head>
 	<body>
 		<div id="main">
-        	<%
-        		require("util/common.js")
-        		params["cloud"].map(function(e) {
-        			return "<a href=\"/blog/show/" + e + "\">" + e + "</a>"
-        		})
-        		echo(params["cloud"].join(" "))
-			%>
-			<h1>"<%= params["model"].title; %>"</h1>
-			
+			<h1><%= params["model"].title; %></h1>
+			<a href="<%= params["model"].original %>">
+				<img  src="/blog/<%= params["model"].key.toString() %>/p.jpg"/>
+			</a>
         	<b>posted:</b> <%= params["model"].date; %><br/>
         	<b>tags:</b>
         	<%
@@ -30,12 +25,19 @@
 				echo(params["tags"].join(" "))
 			%>
 			
-			<a href="<%= params["model"].original %>">
-				<img  src="/blog/<%= params["model"].key.toString() %>/p.jpg"/>
-			</a>
+        	<%
+        	/*
+        		require("util/common.js")
+        		params["cloud"].map(function(e) {
+        			return "<option " + e == params["type"] ? "selected=\"true\">" : ">" + "<a href=\"/blog/show/" + e + "\">" + e + "</a>"
+        		})
+        		echo(params["cloud"].join(" "))
+        		*/
+			%>
+
 		</div>
 		<div id="stream">
-			<h2>tagged as <%= params["type"] %></h2>
+			<h1>tagged as <%= params["type"] %></h1>
 			<%
 			params["thumbs"].forEach(function(thumb) {
 				echo("<a href=\"/blog/show/" + params["type"] + "/" + thumb + "\">");
