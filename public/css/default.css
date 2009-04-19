@@ -9,21 +9,29 @@ a {
 	color: #404040;
 }
 
-h1,h2 {
+#heading {
+	font-size: 25px;
 	margin-top: 6px;
 	margin-bottom: 6px;
 }
 
 #main {
-	width: 480px;
+	width: 472px;
 	float: left;
-	padding:0px 3px 0px 3px;
-	margin-top: 6px;
+	padding:4px 4px 0px 4px;
 	text-align: left;
 }
 
+#main div {
+	width: 466px;
+	text-align: center;
+	background-color: grey;
+	padding: 3px 3px 3px 3px;
+	margin: 0;
+}
+
 #main img {
-	width: 474;
+	width: 472px;
 	margin-top: 5px;
 	padding: 0;
 	border: 0;
@@ -32,8 +40,19 @@ h1,h2 {
 #stream {
 	width: 474px;
 	float: left;
-	padding:0px 2px 0px 2px;
-	margin-top: 5px;
+	padding: 4px 3px 0px 3px;
+}
+
+#stream div {
+	text-align: center;
+	width: 466px;
+	background-color: grey;
+	padding: 3px 3px 3px 3px;
+	margin: 0 1px 3px 1px;
+}
+
+#stream select {
+	font-size: 25px;
 }
 
 #stream img {
