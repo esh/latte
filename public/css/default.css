@@ -15,6 +15,11 @@ a {
 	margin-bottom: 6px;
 }
 
+#container {
+	max-width: 960px;
+	margin: auto;
+}
+
 #main {
 	width: 472px;
 	float: left;
@@ -62,4 +67,11 @@ a {
 	width: 77px;
 	height: 77px;
 	float: left;
+}
+
+.hidden {
+	/* for IE */
+	filter:alpha(opacity=0);
+	/* CSS3 standard */
+	opacity:0;
 }
