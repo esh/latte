@@ -2,11 +2,9 @@
 	require("util/common.js")
 	require("util/imageutils.js")
 	
-	log.info("saving model")
 	var model;
 
     if(key == null) {
-    	log.info("creating new model");
     	model = new Object();
     	
 		// get a key		
@@ -14,7 +12,6 @@
 		if(all == null) key = 0;
 		else {
 			all.keys.sort(function(a,b) { return a - b })
-			log.info("incrementing " + all.keys[all.keys.length - 1])
 			key = all.keys[all.keys.length - 1] + 1;
 		}
 		
@@ -76,7 +73,6 @@
 		
 		if(upload.renameTo(new java.io.File(path + "/o" + ext))) {
 			model.original = "/blog/" + key + "/o" + ext;
-			log.info("saved " + path + "/o" + ext);
 			
 			// create preview
 			resize(path + "/o" + ext, path + "/p" + ".jpg", 480);

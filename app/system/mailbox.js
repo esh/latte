@@ -10,7 +10,6 @@
 		throw "invalid inbox";
 	}
 	folder.open(javax.mail.Folder.READ_WRITE);
-	log.info("connected to imap server");
 	
 	// Add messageCountListener to listen for new messages
 	folder.addMessageCountListener(javax.mail.event.MessageCountListener({
@@ -24,7 +23,6 @@
 					var content = msg.getContent();
 					
 					if(content instanceof javax.mail.Multipart) {
-						log.info("got multipart mail");
 						for(var i = 0 ; i < content.getCount() ; i++) {
 							var part = content.getBodyPart(i);
 							
@@ -41,13 +39,8 @@
 							}
 						}
 					} else {
-						log.info("got mail");
 						body = String(content);
 					}
-					
-					log.info("subject: " + subject);
-					log.info("body:" + body);
-					log.info("attachment:" + attachment);
 					
 					handler(subject, body, attachment);
 				});

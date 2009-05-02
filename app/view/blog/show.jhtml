@@ -12,41 +12,44 @@
 		<script src="/js/jquery-1.2.6.min.js" type="text/javascript"></script>
 		<script src="/js/ui.js" type="text/javascript"></script>
 		<div id="container">
+			<div id="header">
+				<div style="float:left;">
+					-_-
+				</div>
+				<div id="navi">
+					tagged as
+					<select onchange="nav(this)">
+						<%
+		        		require("util/common.js")
+		        		params["cloud"].map(function(e) {
+		        			return "<option " + (e == params["type"] ? "selected=\"true\">" : ">") + e + "</option>"
+		        		})
+		        		echo(params["cloud"].join(" "))
+						%>	
+					</select>
+				</div>
+			</div>
+			<div id="title">
+				<h1><%= params["model"].title; %></h1>
+			</div>
 			<div id="main">
-				<div>
-					<span id="heading"><%= params["model"].title; %></span>
-					<br/>
-		        	<b>posted:</b> <%= params["model"].date; %>
-		        	<b>tags:</b>
-	        		<%
-	        		require("util/common.js")
-	        		params["tags"].map(function(e) {
-	        			return "<a href=\"/blog/show/" + e + "\">" + e + "</a>"
-	        		})
-	        		
-					echo(params["tags"].join(" "))
-					%>
-	        	</div>
-	        	
 	        	<a href="<%= params["model"].original %>">
 					<img src="/blog/<%= params["model"].key.toString() %>/p.jpg"/>
 				</a>
+				
+	        	<b>posted:</b> 
+	        	<%= params["model"].date; %>
+	        	<b>tags:</b>
+	    		<%
+	    		require("util/common.js")
+	    		params["tags"].map(function(e) {
+	    			return "<a href=\"/blog/show/" + e + "\">" + e + "</a>"
+	    		})
+	    		
+				echo(params["tags"].join(" "))
+				%>
 			</div>
 			<div id="stream">
-				<div>
-					<span id="heading">
-						tagged as
-						<select onchange="nav(this)">
-							<%
-			        		require("util/common.js")
-			        		params["cloud"].map(function(e) {
-			        			return "<option " + (e == params["type"] ? "selected=\"true\">" : ">") + e + "</option>"
-			        		})
-			        		echo(params["cloud"].join(" "))
-							%>	
-						</select>
-					</span>
-				</div>
 			</div>
 		</div>
 		

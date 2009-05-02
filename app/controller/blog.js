@@ -94,9 +94,7 @@
 			
 			// remove images
 			java.lang.Runtime.getRuntime().exec("rm -rf public/blog/" + key);	
-			
-			log.info("removed model " + key);
-		
+
 			return list()
 		})
 	}

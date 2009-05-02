@@ -42,7 +42,6 @@ case "ok":
 	response.setContentType("text/html")
 	response.setStatus(200)
 	response.getWriter().append(result[1])
-	log.info("handled " + request.getRequestURI())
 	break
 case "error":
 	response.sendError(500)
@@ -54,6 +53,5 @@ case "unauthorized":
 	break
 case "redirect":
 	response.sendRedirect(result[1])
-	log.info("handled " + request.getRequestURL())
 	break
 }

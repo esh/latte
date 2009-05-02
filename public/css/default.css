@@ -9,10 +9,13 @@ a {
 	color: #404040;
 }
 
-#heading {
+select {
 	font-size: 25px;
-	margin-top: 6px;
-	margin-bottom: 6px;
+}
+
+h1 {
+	font-size: 50px;
+	margin: 10px 0px 10px 0px;
 }
 
 #container {
@@ -20,24 +23,33 @@ a {
 	margin: auto;
 }
 
+#header {
+	background-color:red;
+	height: 100px;
+	text-align:left;
+	margin: 0px 4px 0px 4px;
+}
+
+#title {
+	margin: 0px 4px 0px 4px;
+}
+
+#navi {
+	margin-top: 40px;
+	float: right;
+	font-size: 26px;
+	font-weight: bold;
+}
+
 #main {
 	width: 472px;
 	float: left;
-	padding:4px 4px 0px 4px;
+	padding:1px 4px 20px 4px;
 	text-align: left;
-}
-
-#main div {
-	width: 466px;
-	text-align: center;
-	background-color: grey;
-	padding: 3px 3px 3px 3px;
-	margin: 0;
 }
 
 #main img {
 	width: 472px;
-	margin-top: 5px;
 	padding: 0;
 	border: 0;
 }
@@ -45,20 +57,8 @@ a {
 #stream {
 	width: 474px;
 	float: left;
-	padding: 4px 3px 0px 3px;
-}
-
-#stream div {
-	text-align: center;
-	width: 466px;
-	background-color: grey;
-	padding: 3px 3px 3px 3px;
-	margin: 0 1px 3px 1px;
-}
-
-#stream select {
-	font-size: 25px;
-}
+	padding: 0px 3px 0px 3px;
+}   
 
 #stream img {
 	margin: 1px 1px 1px 1px;
