@@ -6,7 +6,7 @@ function fadeIn(s) {
 	$(s).fadeTo("slow", 1.0)
 }
 
-function loadMore(target, offset) {
+function loadMore(target, type, thumbs, offset) {
 	target.remove();
 	
 	var total = Math.min(offset + 24, thumbs.length) 
@@ -22,24 +22,25 @@ function loadMore(target, offset) {
 	if(thumbs.length > total) {
 		$("#stream").append("<div id=\"more\">load more</div>")
 		$("#more").click(function() {
-			loadMore($(this), total)
+			loadMore($(this), type, thumbs, total)
 		})
 	}
 }
 
-function renderThumbs(type, thumbs) {
+function renderThumbs(type, thumbs, current) {
 	var html = ""
-	for(var i = 0 ; i < Math.min(29, thumbs.length) ; i++) {
+	var total = Math.min(thumbs.indexOf(current) + 29, thumbs.length)
+	for(var i = 0 ; i < total ; i++) {
 		html += "<a href=\"/blog/show/" + type + "/" + thumbs[i] + "\">"
 		html += "<img src=\"/blog/" + thumbs[i] + "/t.jpg\"/>"
 		html += "</a>"
 	}
 	$("#stream").append(html)
 
-	if(thumbs.length > 29) {
+	if(thumbs.length > total) {
 		$("#stream").append("<div id=\"more\">load more</div>")	
 		$("#more").click(function() {
-			loadMore($(this), 29)
+			loadMore($(this), type, thumbs, total)
 		})
 	}
 }

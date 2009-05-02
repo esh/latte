@@ -52,9 +52,7 @@
 		</div>
 		
 		<script type="text/javascript">
-			var type = <%= params["type"].toSource() %>;
-			var thumbs = <%= params["thumbs"].toSource() %>;
-			renderThumbs(type,thumbs);
+			renderThumbs(<%= params["type"].toSource() %>,<%= params["thumbs"].toSource() %>, <%= params["model"].key %>);
 		</script>
 		<script type="text/javascript">
 			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
