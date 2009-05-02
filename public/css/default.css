@@ -1,7 +1,10 @@
 body {
+	font-family: helvetica;
+	background-image: url(/img/header.jpg);
+	background-repeat: repeat-x;
+	background-color: white;
 	margin: 0;
 	padding: 0;
-	background: white;
 }
 
 a {
@@ -15,7 +18,7 @@ select {
 
 h1 {
 	font-size: 50px;
-	margin: 10px 0px 10px 0px;
+	margin: 20px 4px 5px 4px;
 }
 
 #container {
@@ -24,10 +27,8 @@ h1 {
 }
 
 #header {
-	background-color:red;
 	height: 100px;
 	text-align:left;
-	margin: 0px 4px 0px 4px;
 }
 
 #title {
@@ -67,6 +68,19 @@ h1 {
 	width: 77px;
 	height: 77px;
 	float: left;
+}
+
+#more {
+	margin: 1px 1px 1px 1px;
+	padding-top: 28px;
+	font-size: 16px;
+	border: 0;
+	width: 77px;
+	height: 49px;
+	background-color: red;
+	text-align:center;
+	float: left;
+	cursor: pointer;
 }
 
 .hidden {

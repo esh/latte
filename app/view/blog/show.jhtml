@@ -13,8 +13,8 @@
 		<script src="/js/ui.js" type="text/javascript"></script>
 		<div id="container">
 			<div id="header">
-				<div style="float:left;">
-					-_-
+				<div style="float:left;margin-left:10px;margin-top:5px;font-size:80px">
+					o_0
 				</div>
 				<div id="navi">
 					tagged as
@@ -29,9 +29,7 @@
 					</select>
 				</div>
 			</div>
-			<div id="title">
-				<h1><%= params["model"].title; %></h1>
-			</div>
+			<h1><%= params["model"].title; %></h1>
 			<div id="main">
 	        	<a href="<%= params["model"].original %>">
 					<img src="/blog/<%= params["model"].key.toString() %>/p.jpg"/>
@@ -54,15 +52,9 @@
 		</div>
 		
 		<script type="text/javascript">
-			var thumbs = <%= params["thumbs"].toSource() %>
-			var html = ""
-			for(var i = 0 ; i < thumbs.length ; i++) {
-				html += "<a href=\"/blog/show/<%= params["type"] %>/" + thumbs[i] + "\">"
-				//html += "<img src=\"/blog/" + thumbs[i] + "/t.jpg\" onload=\"fadeIn(this)\"/>"
-				html += "<img src=\"/blog/" + thumbs[i] + "/t.jpg\"/>"
-				html += "</a>"
-			}
-			$("#stream").append(html)
+			var type = <%= params["type"].toSource() %>;
+			var thumbs = <%= params["thumbs"].toSource() %>;
+			renderThumbs(type,thumbs);
 		</script>
 		<script type="text/javascript">
 			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
