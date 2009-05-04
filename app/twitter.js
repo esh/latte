@@ -14,5 +14,13 @@
 	
 	writer.write("status=" + status.escapeURL())
 	writer.close()
+
+	var br = new java.io.BufferedReader(new java.io.InputStreamReader(uc.getInputStream()))
+  
+	var res
+	while ((res = br.readLine()) != null) {
+		log.debug(res)
+ 	}
+  	br.close() 
 })
 	
