@@ -12,7 +12,7 @@ function loadMore(target, type, thumbs, offset) {
 	var total = Math.min(offset + 24, thumbs.length) 
 	var html = ""
 	for(var i = offset ; i < total ; i++) {
-		html += "<a href=\"/blog/show/" + type + "/" + thumbs[i] + "\">"
+		html += "<a href=\"/" + type + "/" + thumbs[i] + "\">"
 		html += "<img class=\"hidden\" src=\"/blog/" + thumbs[i] + "/t.jpg\" onload=\"fadeIn(this)\"/>"
 		html += "</a>"
 	}
@@ -31,7 +31,7 @@ function renderThumbs(type, thumbs, current) {
 	var html = ""
 	var total = Math.min(thumbs.indexOf(current) + 29, thumbs.length)
 	for(var i = 0 ; i < total ; i++) {
-		html += "<a href=\"/blog/show/" + type + "/" + thumbs[i] + "\">"
+		html += "<a href=\"/" + type + "/" + thumbs[i] + "\">"
 		html += "<img src=\"/blog/" + thumbs[i] + "/t.jpg\"/>"
 		html += "</a>"
 	}

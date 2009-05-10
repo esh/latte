@@ -1,4 +1,10 @@
-var args = String(request.getRequestURI()).substring(1).split("/")
+// rewrite the URL
+var url = String(request.getRequestURI())
+
+var rewriter = require("urlrewrite.js")
+if(rewriter != null) url = rewriter(url)
+
+var args = url.substring(1).split("/")
 
 // get the controller
 var controller = args.shift();

@@ -9,7 +9,7 @@
 	
 	var writer = new java.io.OutputStreamWriter(uc.getOutputStream())
 	
-	var status = "http://chan.sikho.ca/blog/show/all/" + model.key + " - " + model.title
+	var status = "http://www.edomame.com/all/" + model.key + " - " + model.title
 	if(status.length > 140) status.substring(0, 137) + "..."
 	
 	writer.write("status=" + status.escapeURL())

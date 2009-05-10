@@ -5,7 +5,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
 		<meta name="viewport" content="width=480"/>
-		<title>chan@sikho.ca</title>
+		<title>Edomame - a photo blog of Ed's adventures</title>
 		<link href="/css/default.css" media="screen" rel="Stylesheet" type="text/css"/>
 	</head>
 	<body>
@@ -14,7 +14,7 @@
 		<div id="container">
 			<div id="header">
 				<div style="float:left;margin-left:10px;margin-top:5px;font-size:80px">
-					o_0
+					ooo
 				</div>
 				<div id="navi">
 					tagged as
@@ -41,7 +41,7 @@
 	    		<%
 	    		require("util/common.js")
 	    		params["tags"].map(function(e) {
-	    			return "<a href=\"/blog/show/" + e + "\">" + e + "</a>"
+	    			return "<a href=\"/" + e + "\">" + e + "</a>"
 	    		})
 	    		
 				echo(params["tags"].join(" "))
