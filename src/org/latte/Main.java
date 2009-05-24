@@ -14,6 +14,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.latte.scripting.Javascript;
 import org.latte.scripting.ScriptLoader;
+import org.latte.scripting.hostobjects.RequestProxy;
 import org.latte.util.Tuple;
 import org.mortbay.jetty.Handler;
 import org.mortbay.jetty.Server;
@@ -21,6 +22,8 @@ import org.mortbay.jetty.servlet.DefaultServlet;
 import org.mortbay.jetty.servlet.FilterHolder;
 import org.mortbay.jetty.servlet.ServletHolder;
 import org.mortbay.servlet.MultiPartFilter;
+import org.mozilla.javascript.Scriptable;
+import org.mozilla.javascript.ScriptableObject;
 
 public class Main  {
 	private static final Logger LOG = Logger.getLogger(Main.class);
@@ -44,8 +47,8 @@ public class Main  {
 		config.load(new FileInputStream("latte.properties"));
 
 		// load latte core components
-		loader = new ScriptLoader();			
-		((Javascript)loader.get("autoexec.js")).eval(new Tuple[] { new Tuple<String, Object>("config", config) });		
+		loader = new ScriptLoader();
+		((Javascript)loader.get("autoexec.js")).eval(new Tuple[] { new Tuple<String, Object>("config", config)  });		
 		
 		// start the server
 		Server server = new Server(Integer.parseInt(config.getProperty("port")));
@@ -84,9 +87,24 @@ public class Main  {
 		@SuppressWarnings("unchecked")
 		private void dispatch(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			try {
-				((Javascript)loader.get("system/dispatcher.js")).eval(new Tuple[] { 
-						new Tuple<String, Object>("request", request),
-						new Tuple<String, Object>("response", response) });
+				// grab the session
+				Scriptable session;
+				if((session = (Scriptable)request.getSession().getAttribute("latte.session")) == null) {
+					session = new ScriptableObject() {
+						@Override
+						public String getClassName() {
+							return "Session";
+						}
+						
+					};
+					
+					request.getSession().setAttribute("latte.session", session);
+				}
+				
+				((Javascript)loader.get("dispatcher.js")).eval(new Tuple[] { 
+						new Tuple<String, Object>("request", new RequestProxy(request)),
+						new Tuple<String, Object>("response", response),
+						new Tuple<String, Object>("session", session),});
 			} catch(Exception e) {
 				LOG.fatal("something went wrong", e);
 				response.sendError(500);

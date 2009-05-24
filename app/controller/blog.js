@@ -3,15 +3,10 @@
 		if(session["authorized"]) return fn()
 		else return ["unauthorized"]
 	}
-	
-	function create() {
-		return secure(function() {
-			return ["ok", render("view/blog/form.jhtml")]
-		})
-	}
-	
+		
 	function show(type, key) {
-		params["type"] = type == undefined | type == "" ? "all" : type
+		var params = new Object()
+		params["type"] = (type == undefined | type == "") ? "all" : type
 		var t = ds.get(params["type"]);
 		if(t != null) {
 			params["thumbs"] = t.keys
@@ -30,16 +25,26 @@
 	
 		params["tags"] = params["model"].tags.slice()
 		
-		params["cloud"] = new Array();
+		params["cloud"] = new Array()
 		for(var tag in ds.get("_cloud").keys) {
-			params["cloud"].push(tag);
+			params["cloud"].push(tag)
 		}
 		params["cloud"].sort()
 			
 		return ["ok", render("view/blog/show.jhtml")]
 	}
 	
+	function create() {
+		var params = new Object()
+		
+		return secure(function() {	
+			return ["ok", render("view/blog/form.jhtml")]
+		})
+	}
+	
 	function edit(pkey) {
+		var params = new Object()
+		
 		return secure(function() {
 			var model = ds.get(pkey)
 			
@@ -54,10 +59,11 @@
 	}
 	
 	function list() {
-		return secure(function() {
-			params["models"] = new Array()
+		var params = new Array()
+	
+		return secure(function() {	
 			ds.get("all").keys.forEach(function(key) {
-				params["models"].push(ds.get(key))
+				params.push(ds.get(key))
 			})
 			
 			return ["ok", render("view/blog/list.jhtml") ]
@@ -66,34 +72,35 @@
 	
 	function save() {
 		return secure(function() {
-			params["model"] = require("serializer.js")(params["key"], params["title"], params["upload"], params["tags"])
-			return ["redirect", "/blog/show/all/" + params["model"].key]
+			var model = new Object()
+			model = require("serializer.js")(request.params["key"], request.params["title"], request.params["upload"], request.params["tags"])
+			return ["redirect", "/blog/show/all/" + model.key]
 		})
 	}
 	
 	function remove(key) {
 		return secure(function() {
-			var model = ds.get(key);
-			var cloud = ds.get("_cloud");
+			var model = ds.get(key)
+			var cloud = ds.get("_cloud")
 			
 			// remove it from the tag cloud
 			model.tags.forEach(function(tag) {
-				var mapping = ds.get(tag);
-				mapping.keys = mapping.keys.subtract([key]);
-				ds.put(tag, mapping);
+				var mapping = ds.get(tag)
+				mapping.keys = mapping.keys.subtract([key])
+				ds.put(tag, mapping)
 				
 				cloud.keys[tag]--;
 				if(cloud.keys[tag] == 0) {
-					ds.remove(tag);
-					delete cloud.keys[tag];
+					ds.remove(tag)
+					delete cloud.keys[tag]
 				}
 			});
 			
-			ds.put("_cloud", cloud);
-			ds.remove(key);	
+			ds.put("_cloud", cloud)
+			ds.remove(key)
 			
 			// remove images
-			java.lang.Runtime.getRuntime().exec("rm -rf public/blog/" + key);	
+			shell("rm -rf public/blog/" + key)
 
 			return list()
 		})

@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.latte.scripting.hostobjects.HostObjectLoader;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.ContextFactory;
 import org.mozilla.javascript.Scriptable;
@@ -14,9 +13,8 @@ public class ScriptLoader {
 	private final Map<String, Script> mapping = new HashMap<String, Script>();
 	
 	public ScriptLoader() {
-		Context cx = ContextFactory.getGlobal().enterContext();	
+		Context cx = ContextFactory.getGlobal().enterContext();
 		this.parent = cx.initStandardObjects(null, false);
-		HostObjectLoader.load(parent);
 		Context.exit();
 	}
 	

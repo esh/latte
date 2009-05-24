@@ -19,7 +19,7 @@ public class JHTML implements Script {
 	private final Scriptlet[] scriptlets;
 	
 	private interface Scriptlet {
-		public void render(final StringBuilder buffer, Context cx, Scriptable scope);
+		public void render(final StringBuilder buffer, Context cx, Scriptable scope) throws Exception;
 	}
 	
 	private class JSScriptlet implements Scriptlet {
@@ -30,7 +30,7 @@ public class JHTML implements Script {
 		}
 		
 		@SuppressWarnings("unchecked")
-		public void render(final StringBuilder buffer, Context cx, Scriptable scope) {
+		public void render(final StringBuilder buffer, Context cx, Scriptable scope) throws Exception {
 			script.eval(cx,
 						scope,
 						new Tuple[] { new Tuple("echo", new Callable() {

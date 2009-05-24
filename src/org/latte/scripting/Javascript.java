@@ -4,11 +4,15 @@ import java.io.File;
 import java.io.FileReader;
 
 import org.apache.log4j.Logger;
+import org.latte.scripting.hostobjects.Open;
+import org.latte.scripting.hostobjects.RWLock;
+import org.latte.scripting.hostobjects.Shell;
 import org.latte.util.Tuple;
 import org.mozilla.javascript.Callable;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.ContextFactory;
 import org.mozilla.javascript.Scriptable;
+import org.mozilla.javascript.ScriptableObject;
 
 public class Javascript implements Script {
 	private final static Logger LOG = Logger.getLogger(Javascript.class);
@@ -44,7 +48,7 @@ public class Javascript implements Script {
 		}	
 	}
 
-	protected Object eval(Context cx, Scriptable scope, Tuple<String, Object>[] env) {
+	protected Object eval(Context cx, Scriptable scope, Tuple<String, Object>[] env) throws Exception {
 		scope.put("log", scope, LOG);
 		scope.put("require", scope, new Callable() {
 			public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] params) {
@@ -74,6 +78,10 @@ public class Javascript implements Script {
 				}
 			}
 		});
+		scope.put("shell", scope, new Shell());
+		scope.put("open", scope, new Open());
+		
+		ScriptableObject.defineClass(scope, RWLock.class);
 		
 		if(env != null) {
 			for(Tuple<String, Object> binding : env) {
@@ -84,11 +92,13 @@ public class Javascript implements Script {
 		return script.exec(cx, scope);
 	}
 	
-	public Object eval(Tuple<String, Object>[] env) {
+	public Object eval(Tuple<String, Object>[] env) throws Exception {
 		try {
 			Context cx = ContextFactory.getGlobal().enterContext();
 			Scriptable scope = cx.newObject(parent);
-
+			scope.setParentScope(parent);
+			cx.setWrapFactory(new PrimitiveWrapFactory());
+			
 			return eval(cx, scope, env);
 		} finally {
 			Context.exit();

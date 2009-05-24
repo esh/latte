@@ -41,7 +41,7 @@
 	    		<%
 	    		require("util/common.js")
 	    		params["tags"].map(function(e) {
-	    			return "<a href=\"/" + e + "\">" + e + "</a>"
+	    			return "<a href=\"/blog/show/" + e + "\">" + e + "</a>"
 	    		})
 	    		
 				echo(params["tags"].join(" "))

@@ -1,3 +1,13 @@
+if(!Array.indexOf) {
+	// fucking piece of shit IE
+	Array.prototype.indexOf = function(o) {
+		for(var i=0 ; i < this.length ; i++) {
+			if(this[i]==o)  return i;
+		}
+		return -1;
+	}
+}
+
 function nav(s) {
 	window.location = "/blog/show/" + s.options[s.selectedIndex].value
 }
@@ -35,6 +45,7 @@ function renderThumbs(type, thumbs, current) {
 		html += "<img src=\"/blog/" + thumbs[i] + "/t.jpg\"/>"
 		html += "</a>"
 	}
+
 	$("#stream").append(html)
 
 	if(thumbs.length > total) {

@@ -4,15 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
-    <link href="/css/default.css" media="screen" rel="Stylesheet" type="text/css"/>
-    <title>chan@sikho.ca - listing</title>
+    <title>listing</title>
   </head>
   <body>
     <%
-	params["models"].forEach(function(model) {
+	params.forEach(function(model) {
         echo(model.title)
         echo(" ")
-        echo("<a href=\"/blog/show/" + model.key + "\">show</a>")
+        echo("<a href=\"/blog/show/all/" + model.key + "\">show</a>")
         echo(" ")
         echo("<a href=\"/blog/edit/" + model.key + "\">edit</a>")
         echo(" ")

@@ -11,10 +11,12 @@
 	}
 	folder.open(javax.mail.Folder.READ_WRITE);
 	
+	log.info("listening to " + user + "@" + host)
 	// Add messageCountListener to listen for new messages
 	folder.addMessageCountListener(javax.mail.event.MessageCountListener({
 		messagesAdded: function(ev) {
 			try {
+				log.info("got mail")
 				ev.getMessages().forEach(function(msg) {
 					var body;
 					var attachment;	
@@ -42,6 +44,7 @@
 						body = String(content);
 					}
 					
+					log.info("calling handler")
 					handler(subject, body, attachment);
 				});
 			} catch(e) {
