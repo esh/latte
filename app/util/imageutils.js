@@ -7,7 +7,6 @@ function getHeight(path) {
 }
 
 function resize(source, target, width) {
-	log.info(source + " " + target + " " width)
 	shell("convert -geometry " + width + "x " + source + " " + target)
 }
 

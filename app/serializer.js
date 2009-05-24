@@ -74,14 +74,15 @@
 		// delete any old pics in the dir
 		shell("rm " + path + "/*")
 		
-		if(upload.renameTo(new java.io.File(path + "/o" + ext))) {
-			model.original = "/blog/" + key + "/o" + ext;
-			
-			// create preview
-			resize(path + "/o" + ext, path + "/p" + ".jpg", 480)
-			// create thumb
-			generateThumb(path + "/o" + ext, path + "/t" + ".jpg")
-		} else throw exception("could not save: " + upload)
+		// move the file over
+		shell("mv " + upload.getAbsolutePath() + " " + path + "/o" + ext)
+		model.original = "/blog/" + key + "/o" + ext;
+		
+		// create preview
+		resize(path + "/o" + ext, path + "/p" + ".jpg", 480)
+		// create thumb
+		generateThumb(path + "/o" + ext, path + "/t" + ".jpg")
+	
 	}
 		
 	// save the model
