@@ -8,10 +8,7 @@
   </head>
   <body>
     <form action="/blog/save" method="post" enctype="multipart/form-data" style="width: 600px; margin:auto">
-      <%
-      	log.info("makes no sense")
-      	log.info(params)
-      	
+      <%      	
 		if(params["key"] != null) {
            echo('<input type="hidden" name="key" value="' + params["key"] + '"/>\n');
            echo('<input type="hidden" name="date" value="' + params["date"] + '"/>\n');

@@ -1,4 +1,4 @@
-(function(key, title, upload, tags) {
+(function(key, title, path, tags) {
 	require("util/common.js")
 	require("util/imageutils.js")
 	
@@ -7,7 +7,7 @@
     if(key == null) {
     	model = new Object();
     	
-		// get a key	
+		// get a key
 		var all = ds.get("all")
 		
 		if(all == null) key = 0;
@@ -19,12 +19,12 @@
 		model.tags = new Array();
 		
 		shell("mkdir public/blog/" + key)
+		log.debug("create new model: " + key)
 	} else {
 		// fetch old model
 		model = ds.get(key)
+		log.debug("edit model: " + key)
 	}
-	
-	log.info("key: " + key)
 	
 	tags = tags != null ? tags.trim().toLowerCase().split(" ") : new Array()
 	// add default tag
@@ -66,23 +66,22 @@
 	ds.put("_cloud", cloud)
 	
 	// if we got a picture uploaded...
-	if(upload != null && upload instanceof java.io.File) {	
-		var path = upload.getAbsolutePath();
+	if(path != undefined && path != null) {
+		log.debug("using picture: " + path)
 		var ext = path.substring(path.lastIndexOf('.')).toLowerCase();
-		path = "public/blog/" + key;
+		var newPath = "public/blog/" + key;
 		
 		// delete any old pics in the dir
-		shell("rm " + path + "/*")
+		log.debug(shell("rm " + newPath + "/*"))
 		
 		// move the file over
-		shell("mv " + upload.getAbsolutePath() + " " + path + "/o" + ext)
+		shell("mv " + path + " " + newPath + "/o" + ext)
 		model.original = "/blog/" + key + "/o" + ext;
 		
 		// create preview
-		resize(path + "/o" + ext, path + "/p" + ".jpg", 480)
+		log.debug(resize(newPath + "/o" + ext, newPath + "/p" + ".jpg", 480))
 		// create thumb
-		generateThumb(path + "/o" + ext, path + "/t" + ".jpg")
-	
+		log.debug(generateThumb(newPath + "/o" + ext, newPath + "/t" + ".jpg"))
 	}
 		
 	// save the model

@@ -19,7 +19,7 @@ public class RequestProxy extends ScriptableObject {
 							File tmp = (File)request.getAttribute(key);	
 							File file = new File(tmp.getAbsoluteFile() + ((String)value).substring(((String)value).indexOf(".")));
 							tmp.renameTo(file);
-							ScriptableObject.putProperty(this, key, request.getRequestURI());
+							ScriptableObject.putProperty(this, key, file.getAbsolutePath());
 						}
 						else {
 							ScriptableObject.putProperty(this, key, new String((byte[])value));

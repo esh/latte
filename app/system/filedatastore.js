@@ -14,10 +14,8 @@
 			// read from the file system and cache it
 			value = eval(String(open(DATA_ROOT + key).read()))
 			cache.put(key, value)
-			return value;
-		}
-		catch(e) {
-			log.error(e)
+			return value
+		} catch(e) {
 			return null
 		} finally {
 			lock.readUnlock()
@@ -27,8 +25,8 @@
 	function put(key, value) {
 		try {
 			lock.writeLock()
-			var latest = get(key);
-			
+			var latest = get(key)
+
 			// if this is new or the revisions match
 			if(latest == null || latest._rev == value._rev) {
 				// make sure we set a revision
@@ -39,7 +37,7 @@
 				// put it in the cache		
 				cache.put(key, value)
 				
-				open(DATA_ROOT + "/" + key).write(value.toSource())
+				open(DATA_ROOT + key).write(value.toSource())
 			} else {
 				throw key + " has been concurrently modified"
 			}	
@@ -53,7 +51,7 @@
 			lock.writeLock()
 
 			cache.remove(key)
-			open(DATA_ROOT + "/" + key).remove()
+			open(DATA_ROOT + key).remove()
 		} finally {
 			lock.writeUnlock()
 		}

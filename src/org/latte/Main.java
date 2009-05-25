@@ -106,7 +106,7 @@ public class Main  {
 						new Tuple<String, Object>("response", response),
 						new Tuple<String, Object>("session", session),});
 			} catch(Exception e) {
-				LOG.fatal("something went wrong", e);
+				LOG.fatal("", e);
 				response.sendError(500);
 			}
 		}

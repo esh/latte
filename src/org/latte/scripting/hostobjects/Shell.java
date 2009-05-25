@@ -11,9 +11,9 @@ public class Shell implements Callable {
 	public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] params) {
 		if(params != null && params.length == 1 && params[0] instanceof String) {
 			try {
+				StringBuilder sb = new StringBuilder();
 				Process p = Runtime.getRuntime().exec((String)params[0]);
 				
-				StringBuilder sb = new StringBuilder();
 				BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
 				BufferedReader err = new BufferedReader(new InputStreamReader(p.getErrorStream()));
 				

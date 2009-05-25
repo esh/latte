@@ -6,18 +6,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 
-import org.mozilla.javascript.Context;
-import org.mozilla.javascript.Scriptable;
+import org.mozilla.javascript.JavaScriptException;
 
 public class FileProxy {
 	private final File file;
-	private final Context cx;
-	private final Scriptable scope;
 	
-	public FileProxy(Context cx, Scriptable scope, String path) {
-		this.file = new File(path);
-		this.cx = cx;
-		this.scope = scope;
+	public FileProxy(File file) {
+		this.file = file;
 	}
 	
 	public void write(String buf) throws IOException {
@@ -26,7 +21,9 @@ public class FileProxy {
 		out.close();	
 	}
 
-	public String read() throws IOException {
+	public String read() throws Exception {
+		if(!file.exists()) throw new JavaScriptException(file.getAbsoluteFile() + " not found", "open", 0);	
+		
 		byte[] buffer = new byte[(int)file.length()];
 		FileInputStream in = new java.io.FileInputStream(file);
 		in.read(buffer);

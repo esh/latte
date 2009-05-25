@@ -45,7 +45,7 @@
 					}
 					
 					log.info("calling handler")
-					handler(subject, body, attachment);
+					handler(subject, body, attachment.toAbsolutePath())
 				});
 			} catch(e) {
 				log.error(e);
