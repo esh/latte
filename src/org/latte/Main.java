@@ -14,6 +14,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.latte.scripting.Javascript;
 import org.latte.scripting.ScriptLoader;
+import org.latte.scripting.hostobjects.ConfigProxy;
 import org.latte.scripting.hostobjects.RequestProxy;
 import org.latte.util.Tuple;
 import org.mortbay.jetty.Handler;
@@ -48,7 +49,7 @@ public class Main  {
 
 		// load latte core components
 		loader = new ScriptLoader();
-		((Javascript)loader.get("autoexec.js")).eval(new Tuple[] { new Tuple<String, Object>("config", config)  });		
+		((Javascript)loader.get("autoexec.js")).eval(new Tuple[] { new Tuple<String, Object>("config", new ConfigProxy(config))  });		
 		
 		// start the server
 		Server server = new Server(Integer.parseInt(config.getProperty("port")));
@@ -61,7 +62,7 @@ public class Main  {
 		
 		String PUBLIC_ROOT = "public";
 		initParams.put("org.mortbay.jetty.servlet.Default.resourceBase", PUBLIC_ROOT);
-		initParams.put("org.mortbay.jetty.servlet.Default.maxCachedFiles", config.getProperty("static-cache-size"));
+		initParams.put("org.mortbay.jetty.servlet.Default.maxCachedFiles", config.getProperty("staticcachesize"));
 		context.setInitParams(initParams);
 		
 		server.start();

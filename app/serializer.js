@@ -1,6 +1,6 @@
 (function(key, title, path, tags) {
-	require("util/common.js")
-	require("util/imageutils.js")
+	require("utils/common.js")
+	require("utils/imageutils.js")
 	
 	var model;
 

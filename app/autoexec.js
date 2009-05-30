@@ -1,10 +1,10 @@
 register("config", config)
-register("ds", require("system/filedatastore.js")(config.getProperty("db-cache-size")))
+register("ds", require("utils/filedatastore.js")(config.dbcachesize))
 
 require("system/mailbox.js")(
-	config.getProperty("mail-host"), 
-	config.getProperty("mail-user"),
-	config.getProperty("mail-pass"),
+	config.mailhost, 
+	config.mailuser,
+	config.mailpass,
 	function(subject, body, attachment) {
 		require("twitter.js")(require("serializer.js")(null, subject, attachment, body))
 	})

@@ -4,7 +4,7 @@
 	}
 	
 	function login() {
-		if(request.params["passcode"] == config.get("site-pass")) {
+		if(request.params["passcode"] == config.sitepass) {
 			session["authorized"] = true
 			return ["redirect", "/"]
 		} else return ["ok", render("view/admin/password.jhtml")]

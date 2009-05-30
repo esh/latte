@@ -20,7 +20,7 @@
 					tagged as
 					<select onchange="nav(this)">
 						<%
-		        		require("util/common.js")
+		        		require("utils/common.js")
 		        		params["cloud"].map(function(e) {
 		        			return "<option " + (e == params["type"] ? "selected=\"true\">" : ">") + e + "</option>"
 		        		})
@@ -39,7 +39,7 @@
 	        	<%= params["model"].date; %>
 	        	<b>tags:</b>
 	    		<%
-	    		require("util/common.js")
+	    		require("utils/common.js")
 	    		params["tags"].map(function(e) {
 	    			return "<a href=\"/blog/show/" + e + "\">" + e + "</a>"
 	    		})

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileReader;
 
 import org.apache.log4j.Logger;
+import org.latte.scripting.hostobjects.HOpen;
 import org.latte.scripting.hostobjects.Open;
 import org.latte.scripting.hostobjects.RWLock;
 import org.latte.scripting.hostobjects.Shell;
@@ -80,6 +81,7 @@ public class Javascript implements Script {
 		});
 		scope.put("shell", scope, new Shell());
 		scope.put("open", scope, new Open());
+		scope.put("hopen", scope, new HOpen());
 		
 		ScriptableObject.defineClass(scope, RWLock.class);
 		
