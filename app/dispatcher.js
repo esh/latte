@@ -27,7 +27,7 @@ case "error":
 	break
 case "unauthorized":
 	response.sendError(401)
-	log.error("blocked " + request.getRequestURL())
+	log.error("blocked " + request.url)
 	break
 case "redirect":
 	response.sendRedirect(result[1])

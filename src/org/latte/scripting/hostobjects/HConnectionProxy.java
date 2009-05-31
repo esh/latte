@@ -21,8 +21,6 @@ public class HConnectionProxy {
 				uc.setRequestProperty(key.toString(), params.get(key.toString(), params).toString());
 			}
 		}
-		
-		uc.setDoOutput(true);
 	}
 	
 	public void write(String buf) throws IOException {
