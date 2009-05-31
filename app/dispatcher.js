@@ -12,7 +12,6 @@ else controller = require("/controller/" + controller + ".js")()
 var action = args.shift();
 if(action == undefined || action == "") action = "show"
 
-
 // run the controller and process the results
 var result = controller[action].apply(controller, args)
 switch(result[0]) {

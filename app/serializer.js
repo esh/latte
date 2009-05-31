@@ -27,6 +27,7 @@
 	}
 	
 	tags = tags != null ? tags.trim().toLowerCase().split(" ") : new Array()
+	
 	// add default tag
 	if(tags.indexOf("all") == -1) tags.push("all")
 	
@@ -60,8 +61,8 @@
 		
 		if(cloud.keys[n] == undefined) cloud.keys[n] = 1
 		else cloud.keys[n]++
-	});
-
+	})
+	
 	// save the cloud
 	ds.put("_cloud", cloud)
 	

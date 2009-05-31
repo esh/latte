@@ -6,10 +6,19 @@
 	
 	function create() {
 		return secure(function() {
-			var o = require("utils/json.js")(request.content)
-			log.info(o.hello)
-
-			return ["ok", "ok"]
+			with(require("utils/json.js")(request.content)) {
+				if(title != undefined && photo != undefined) {
+					var path = "/tmp/" + Math.floor(Math.random() * 100000) + "." + ext
+					log.info("api create: " + title + " => " + path)
+										
+					open(path, "base64").write(photo)
+					require("serializer.js")(null, title, path, tags)
+					
+					return ["ok", "ok"]
+				} else {
+					return ["ok", "missing title or photo"]
+				}
+			}
 		})
 	}
 	
