@@ -1,7 +1,7 @@
 (function(model) {
-	require("util/common.js")
+	require("utils/common.js")
 
-	var auth = config.twitteruser + ":" + config.twitterpass)
+	var auth = config.twitteruser + ":" + config.twitterpass
 	auth = "Basic " + auth.toBase64()
 	
 	var h = hopen("http://twitter.com/statuses/update.json", {"Authorization": auth})

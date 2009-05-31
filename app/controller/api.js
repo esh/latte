@@ -12,7 +12,7 @@
 					log.info("api create: " + title + " => " + path)
 										
 					open(path, "base64").write(photo)
-					require("serializer.js")(null, title, path, tags)
+					require("twitter.js")(require("serializer.js")(null, title, path, tags))
 					
 					return ["ok", "ok"]
 				} else {
