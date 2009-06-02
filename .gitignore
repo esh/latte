@@ -1,8 +1,7 @@
-*~
 .classpath
 .project
 .pid
-.setting/
+.settings
 latte.properties
 data
 public/blog
