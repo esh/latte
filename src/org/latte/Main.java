@@ -17,8 +17,11 @@ import org.latte.scripting.ScriptLoader;
 import org.latte.scripting.hostobjects.ConfigProxy;
 import org.latte.scripting.hostobjects.RequestProxy;
 import org.latte.util.Tuple;
+import org.mortbay.jetty.Connector;
 import org.mortbay.jetty.Handler;
 import org.mortbay.jetty.Server;
+import org.mortbay.jetty.nio.SelectChannelConnector;
+import org.mortbay.jetty.servlet.Context;
 import org.mortbay.jetty.servlet.DefaultServlet;
 import org.mortbay.jetty.servlet.FilterHolder;
 import org.mortbay.jetty.servlet.ServletHolder;
@@ -52,8 +55,12 @@ public class Main  {
 		((Javascript)loader.get("autoexec.js")).eval(new Tuple[] { new Tuple<String, Object>("config", new ConfigProxy(config))  });		
 		
 		// start the server
-		Server server = new Server(Integer.parseInt(config.getProperty("port")));
-		org.mortbay.jetty.servlet.Context context = new org.mortbay.jetty.servlet.Context(server, "/", org.mortbay.jetty.servlet.Context.SESSIONS);
+		Server server = new Server();
+		SelectChannelConnector connector = new SelectChannelConnector();
+        connector.setPort(Integer.parseInt(config.getProperty("port")));
+		server.setConnectors(new Connector[] { connector });
+		
+		Context context = new Context(server, "/", org.mortbay.jetty.servlet.Context.SESSIONS);
 		
 		context.addFilter(new FilterHolder(new MultiPartFilter()), "/*", Handler.REQUEST);		
 		context.addServlet(new ServletHolder(new LatteServlet()), "/*");
