@@ -11,50 +11,32 @@
 	<body>
 		<script src="/js/jquery-1.2.6.min.js" type="text/javascript"></script>
 		<script src="/js/ui.js" type="text/javascript"></script>
-		<div id="container">
-			<div id="header">
-				<div style="float:left;margin-left:10px;margin-top:5px;font-size:80px">
-					oO
-				</div>
-				<div id="navi">
-					tagged as
-					<select onchange="nav(this)">
-						<%
-		        		require("utils/common.js")
-		        		params["cloud"].map(function(e) {
-		        			return "<option " + (e == params["type"] ? "selected=\"true\">" : ">") + e + "</option>"
-		        		})
-		        		echo(params["cloud"].join(" "))
-						%>	
-					</select>
-				</div>
-			</div>
-			<h1><%= params["model"].title; %></h1>
-			<div id="main">
-	        	<a href="<%= params["model"].original %>">
-					<img src="/blog/<%= params["model"].key.toString() %>/p.jpg"/>
-				</a>
-				
-	        	<b>posted:</b> 
-	        	<%= params["model"].date; %>
-	        	<b>tags:</b>
-	    		<%
-	    		require("utils/common.js")
-	    		params["tags"].map(function(e) {
-	    			return "<a href=\"/" + e + "\">" + e + "</a>"
-	    		})
-	    		
-				echo(params["tags"].join(" "))
-				%>
-			</div>
-			<div id="stream">
-			</div>
+	
+		<div style="text-align:left;position:fixed;left:10px;top:10px">
+			<span style="font-size:80px;margin-right:25px">o0</span>
+			<span style="font-size:25px;font-weight:bold">tagged as</span>
+			<select onchange="nav(this)">
+				<%
+        		require("utils/common.js")
+        		params["cloud"].map(function(e) {
+        			return "<option " + (e == params["type"] ? "selected=\"true\">" : ">") + e + "</option>"
+        		})
+        		echo(params["cloud"].join(" "))
+				%>	
+			</select>
 		</div>
+		<div id="content"/>
 		
 		<script type="text/javascript">
-			renderThumbs(<%= params["type"].toSource() %>,<%= params["thumbs"].toSource() %>, <%= params["model"].key %>);
+			var type = <%= params["type"].toSource() %>
+			var keys = <%= params["keys"].toSource() %>
+			
+			var match = window.location.href.match(/.+#(\d+)?/)
+			load($("#content"), keys, match != null && match[1] != null && keys.indexOf(parseInt(match[1])) >= 0 ? parseInt(match[1]) : keys[keys.length - 1])
+			if(match == null) window.location.hash=keys[keys.length - 1]
 		</script>
-		<script type="text/javascript">
+		
+		<!--script type="text/javascript">
 			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 		</script>
@@ -63,6 +45,6 @@
 				var pageTracker = _gat._getTracker("UA-3839362-1");
 				pageTracker._trackPageview();
 			} catch(err) {}
-		</script>
+		</script-->
 	</body>
 </html>

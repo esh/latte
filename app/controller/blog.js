@@ -4,34 +4,28 @@
 		else return ["unauthorized"]
 	}
 		
-	function show(type, key) {
-		var params = new Object()
-		params["type"] = (type == undefined | type == "") ? "all" : type
-		var t = ds.get(params["type"]);
-		if(t != null) {
-			params["thumbs"] = t.keys
-			params["thumbs"].sort(function(a, b) { return b - a })
-		}
-		
-		if(params["thumbs"] == null || params["thumbs"].length == 0) {
-			return ["error", type + " not defined"]
-		}
-
-		// get the specified key or get the first key in the cloud
-		params["model"] = key != undefined && key != "" ? ds.get(key) : ds.get(params["thumbs"][0])
-		if(params["model"] == null) {
-			return ["error", key + " not found"]	
-		}
+	function detail(key) {
+		if(String(key).match(/\d+/)) return ["ok", ds.get(key).toSource()]
+		else return ["error", "expecting integer"]
+	}
 	
-		params["tags"] = params["model"].tags.slice()
+	function show(type) {
+		var params = new Object()
 		
-		params["cloud"] = new Array()
-		for(var tag in ds.get("_cloud").keys) {
-			params["cloud"].push(tag)
-		}
-		params["cloud"].sort()
+		return function() {
+			params["type"] = (type == undefined | type == "") ? "all" : type
+			var t = ds.get(params["type"]);
+			if(t != null) { 
+				params["keys"] = t.keys
+			} else return ["error", type + " not defined"]
+		
+			params["cloud"] = new Array()
+			for(var tag in ds.get("_cloud").keys) {
+				params["cloud"].push(tag)
+			}		
 			
-		return ["ok", render("view/blog/show.jhtml")]
+			return ["ok", render("view/blog/show.jhtml")]
+		}()
 	}
 	
 	function create() {
@@ -108,6 +102,7 @@
 	
 	return {
 		show: show,
+		detail: detail,
 		list: list,
 		edit: edit,
 		remove: remove,

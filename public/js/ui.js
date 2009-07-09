@@ -1,5 +1,5 @@
 if(!Array.indexOf) {
-	// fucking piece of shit IE
+	// IE, I hate you I hate you I hate you
 	Array.prototype.indexOf = function(o) {
 		for(var i=0 ; i < this.length ; i++) {
 			if(this[i]==o)  return i;
@@ -16,42 +16,65 @@ function fadeIn(s) {
 	$(s).fadeTo("slow", 1.0)
 }
 
-function loadMore(target, type, thumbs, offset) {
-	target.remove();
+function load(target, keys, anchor) {
+	var NUM_DISPLAYED = 17
+	var start = keys.indexOf(anchor)
+	var end = start	
+	var i = 1
 	
-	var total = Math.min(offset + 24, thumbs.length) 
-	var html = ""
-	for(var i = offset ; i < total ; i++) {
-		html += "<a href=\"/" + type + "/" + thumbs[i] + "\">"
-		html += "<img class=\"hidden\" src=\"/blog/" + thumbs[i] + "/t.jpg\" onload=\"fadeIn(this)\"/>"
-		html += "</a>"
+	for(;;) {
+		if(i < NUM_DISPLAYED && start > 0) {
+			start--
+			i++
+		}
+		if(i < NUM_DISPLAYED && end < keys.length - 1) {
+			end++
+			i++
+		}
+		if(i >= NUM_DISPLAYED || (start == 0 && end == keys.length - 1)) break
+	}
+
+	load(start, end, false)
+	
+	function morePrev() {
+		start = Math.max(start - NUM_DISPLAYED, 0)
+		load(start, end, true)
 	}
 	
-	$("#stream").append(html)
+	function moreNext() {
+		end = Math.min(end + NUM_DISPLAYED, keys.length - 1)
+		load(start, end, true)
+	}
 	
-	if(thumbs.length > total) {
-		$("#stream").append("<div id=\"more\">load more</div>")
-		$("#more").click(function() {
-			loadMore($(this), type, thumbs, total)
+	function load(start, end, fade) {
+		var html = "<table><tr>"
+		if(start > 0) html += "<td><div id=\"morePrev\">load older</div></td>"
+		for(var i = start ; i <= end ; i++) {
+			html += "<td " + (keys[i] == anchor ? "class=\"anchor\"" : "") + "><div id=\"" + keys[i] + "\"><img src=\"/blog/" + keys[i] + "/p.jpg\"/ " + (fade ? "class=\"hidden\" onload=\"fadeIn(this)\"" : "") + "/></div></td>"
+		}
+		if(end < keys.length - 1) html += "<td><div id=\"moreNext\">load newer</div></td>"
+		html += "</tr></table>"
+		target.html(html)
+
+		$("#moreNext").click(function() {
+			moreNext()
 		})
-	}
-}
-
-function renderThumbs(type, thumbs, current) {
-	var html = ""
-	var total = Math.min(thumbs.indexOf(current) + 29, thumbs.length)
-	for(var i = 0 ; i < total ; i++) {
-		html += "<a href=\"/" + type + "/" + thumbs[i] + "\">"
-		html += "<img src=\"/blog/" + thumbs[i] + "/t.jpg\"/>"
-		html += "</a>"
-	}
-
-	$("#stream").append(html)
-
-	if(thumbs.length > total) {
-		$("#stream").append("<div id=\"more\">load more</div>")	
-		$("#more").click(function() {
-			loadMore($(this), type, thumbs, total)
+		$("#morePrev").click(function() {
+			morePrev()
 		})
+		
+		for(var i = start ; i <= end ; i++) {
+			$.getJSON("blog/detail/" + keys[i], function(data) {
+				var html = "<a href=\"" + data.original + "\">" + $("#" + data.key).html() + "</a>"
+				html += "<h1>" + data.title + "</h1>"
+				html += "<h2>" + data.date + "</h2>"
+				html += "Tagged as&nbsp;"
+				$.each(data.tags, function(i, tag) {
+					html += "<a href=\"" + tag + "\">" + tag + "</a>&nbsp;"
+				})
+
+				$("#" + data.key).html(html)
+			})	
+		}
 	}
 }

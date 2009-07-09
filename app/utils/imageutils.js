@@ -6,8 +6,9 @@ function getHeight(path) {
 	return shell("identify -format %h " + path) * 1
 }
 
-function resize(source, target, width) {
-	return shell("convert -geometry " + width + "x " + source + " " + target)
+function resize(source, target, size) {
+	if(getWidth(source) < getHeight(source)) return shell("convert -geometry x" + size + " "  + source + " " + target)
+	else return shell("convert -geometry " + size + "x " + source + " " + target) 
 }
 
 function generateThumb(source, target) {

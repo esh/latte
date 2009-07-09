@@ -80,7 +80,7 @@
 		model.original = "/blog/" + key + "/o" + ext;
 		
 		// create preview
-		log.debug(resize(newPath + "/o" + ext, newPath + "/p" + ".jpg", 480))
+		log.debug(resize(newPath + "/o" + ext, newPath + "/p" + ".jpg", 370))
 		// create thumb
 		log.debug(generateThumb(newPath + "/o" + ext, newPath + "/t" + ".jpg"))
 	}
