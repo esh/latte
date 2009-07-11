@@ -50,7 +50,7 @@ function load(target, keys, anchor) {
 		var html = "<table><tr>"
 		if(start > 0) html += "<td><div id=\"morePrev\">load older</div></td>"
 		for(var i = start ; i <= end ; i++) {
-			html += "<td " + (keys[i] == anchor ? "class=\"anchor\"" : "") + "><div id=\"" + keys[i] + "\"><img src=\"/blog/" + keys[i] + "/p.jpg\"/ " + (fade ? "class=\"hidden\" onload=\"fadeIn(this)\"" : "") + "/></div></td>"
+			html += "<td id=\"" + keys[i] + "\"" + (keys[i] == anchor ? " class=\"anchor\"" : "") + "/>"
 		}
 		if(end < keys.length - 1) html += "<td><div id=\"moreNext\">load newer</div></td>"
 		html += "</tr></table>"
@@ -65,7 +65,7 @@ function load(target, keys, anchor) {
 		
 		for(var i = start ; i <= end ; i++) {
 			$.getJSON("blog/detail/" + keys[i], function(data) {
-				var html = "<a href=\"" + data.original + "\">" + $("#" + data.key).html() + "</a>"
+				var html = "<a href=\"" + data.original + "\"><img src=\"/blog/" + data.key + "/p.jpg\"/ " + (fade ? "class=\"hidden\" onload=\"fadeIn(this)\"" : "") + "/></a>"
 				html += "<h1>" + data.title + "</h1>"
 				html += "<h2>" + data.date + "</h2>"
 				html += "Tagged as&nbsp;"

@@ -5,7 +5,11 @@
 	}
 		
 	function detail(key) {
-		if(String(key).match(/\d+/)) return ["ok", ds.get(key).toSource()]
+		if(String(key).match(/\d+/)) {
+			var model = ds.get(key)
+			if(model != null) return ["ok", model.toSource()]
+			else return ["error", "\"bad key:" + key + "\""]
+		}
 		else return ["error", "expecting integer"]
 	}
 	

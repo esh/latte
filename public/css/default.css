@@ -31,6 +31,13 @@ img {
 	border:0px;
 }
 
+ul {
+	display: inline;
+	list-style-type: none;
+	padding: 5px 5px 5px 5px;
+	vertical-align:top;
+}
+
 td {
 	padding: 5px 5px 5px 5px;
 	vertical-align:top;
