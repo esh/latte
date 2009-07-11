@@ -16,6 +16,10 @@ function fadeIn(s) {
 	$(s).fadeTo("slow", 1.0)
 }
 
+function toAnchor(a) {
+	$.scrollTo($("#" + a), 0)
+}
+
 function load(target, keys, anchor) {
 	var NUM_DISPLAYED = 17
 	var start = keys.indexOf(anchor)
@@ -64,8 +68,11 @@ function load(target, keys, anchor) {
 		})
 		
 		for(var i = start ; i <= end ; i++) {
-			$.getJSON("blog/detail/" + keys[i], function(data) {
-				var html = "<a href=\"" + data.original + "\"><img src=\"/blog/" + data.key + "/p.jpg\"/ " + (fade ? "class=\"hidden\" onload=\"fadeIn(this)\"" : "") + "/></a>"
+			$.getJSON("/blog/detail/" + keys[i], function(data) {
+				var html = "<a href=\"" + data.original + "\">"
+				html += "<img src=\"/blog/" + data.key + "/p.jpg\" " 
+				html += (fade ? "class=\"hidden\" onload=\"fadeIn(this)\"" : "onload=\"toAnchor(" + anchor + ")\"") + "/>"
+				html += "</a>"
 				html += "<h1>" + data.title + "</h1>"
 				html += "<h2>" + data.date + "</h2>"
 				html += "Tagged as&nbsp;"

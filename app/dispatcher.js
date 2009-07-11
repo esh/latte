@@ -16,7 +16,8 @@ if(action == undefined || action == "") action = "show"
 var result = controller[action].apply(controller, args)
 switch(result[0]) {
 case "ok":
-	response.setContentType("text/html")
+	response.setContentType("text/html; charset=UTF-8")
+	response.setCharacterEncoding("UTF-8")
 	response.setStatus(200)
 	response.getWriter().append(result[1])
 	break
