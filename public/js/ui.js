@@ -20,7 +20,7 @@ function toAnchor(a) {
 	$.scrollTo($("#" + a), 0)
 }
 
-function load(target, keys, anchor) {
+function loadUI(target, keys, anchor, admin) {
 	var NUM_DISPLAYED = 17
 	var start = keys.indexOf(anchor)
 	var end = start	
@@ -80,6 +80,13 @@ function load(target, keys, anchor) {
 					html += "<a href=\"" + tag + "\">" + tag + "</a>&nbsp;"
 				})
 
+				if(admin) {
+					html += "<br/>"
+					html += "<a href=\"/blog/edit/" + data.key + "\">edit</a>"
+					html += "&nbsp;"
+					html += "<a href=\"/blog/remove/" + data.key + "\">remove</a>"
+				}
+				
 				$("#" + data.key).html(html)
 			})	
 		}

@@ -32,7 +32,7 @@
 			var keys = <%= params["keys"].toSource() %>
 			var match = window.location.href.match(/.+\/(\d+)?/)
 			var anchor = match != null && match.length >= 2 && keys.indexOf(parseInt(match[1])) >= 0 ? parseInt(match[1]) : keys[keys.length - 1]
-			load($("#content"), keys, anchor)
+			loadUI($("#content"), keys, anchor, <%= params["admin"] %>)
 		</script>
 		
 		<!--script type="text/javascript">

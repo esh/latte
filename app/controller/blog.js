@@ -3,30 +3,18 @@
 		if(session["authorized"]) return fn()
 		else return ["unauthorized"]
 	}
-		
+			
 	function detail(key) {
-		if(String(key).match(/\d+/)) {
-			var model = ds.get(key)
-			if(model != null) return ["ok", model.toSource()]
-			else return ["error", "\"bad key:" + key + "\""]
-		}
-		else return ["error", "expecting integer"]
+		return ["ok", model.post.get(key).toSource()]
 	}
 	
 	function show(type) {
 		var params = new Object()
-		
 		return function() {
 			params["type"] = (type == undefined | type == "") ? "all" : type
-			var t = ds.get(params["type"]);
-			if(t != null) { 
-				params["keys"] = t.keys
-			} else return ["error", type + " not defined"]
-		
-			params["cloud"] = new Array()
-			for(var tag in ds.get("_cloud").keys) {
-				params["cloud"].push(tag)
-			}		
+			params["keys"] = model.tagset.get(params["type"])
+			params["cloud"] = model.tags.get()
+			params["admin"] = session["authorized"] == true
 			
 			return ["ok", render("view/blog/show.jhtml")]
 		}()
@@ -34,7 +22,6 @@
 	
 	function create() {
 		var params = new Object()
-		
 		return secure(function() {	
 			return ["ok", render("view/blog/form.jhtml")]
 		})
@@ -42,10 +29,8 @@
 	
 	function edit(pkey) {
 		var params = new Object()
-		
 		return secure(function() {
-			var model = ds.get(pkey)
-			
+			var model = model.post.get(pkey)
 			params["key"] = model.key
 			params["title"] = model.title
 			params["description"] = model.description
@@ -53,18 +38,6 @@
 			params["tags"] = model.tags.join(" ")
 			
 			return ["ok", render("view/blog/form.jhtml")]
-		})
-	}
-	
-	function list() {
-		var params = new Array()
-	
-		return secure(function() {	
-			ds.get("all").keys.forEach(function(key) {
-				params.push(ds.get(key))
-			})
-			
-			return ["ok", render("view/blog/list.jhtml") ]
 		})
 	}
 	
@@ -107,7 +80,6 @@
 	return {
 		show: show,
 		detail: detail,
-		list: list,
 		edit: edit,
 		remove: remove,
 		create: create,
