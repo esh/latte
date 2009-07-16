@@ -17,5 +17,4 @@ public class Open implements Callable {
 		}
 		else throw new JavaScriptException("expecting string", "open", 0);
 	}
-
 }

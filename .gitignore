@@ -2,7 +2,6 @@
 .project
 .pid
 .settings
-latte.properties
 data
 public/blog
 log
