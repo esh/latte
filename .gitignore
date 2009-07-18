@@ -2,6 +2,7 @@
 .project
 .pid
 .settings
+db
 data
 public/blog
 log
