@@ -43,37 +43,18 @@
 	
 	function save() {
 		return secure(function() {
-			var model = new Object()
-			model = require("serializer.js")(request.params["key"], request.params["title"], request.params["upload"], request.params["tags"])
+			var twit = request.params["key"] == null
+			var model = model.post.persist(request.params["key"], request.params["title"], request.params["upload"], request.params["tags"])
+			if(twit) require("twitter.js")(model)
+			
 			return ["redirect", "/blog/show/all/" + model.key]
 		})
 	}
 	
 	function remove(key) {
 		return secure(function() {
-			var model = ds.get(key)
-			var cloud = ds.get("_cloud")
-			
-			// remove it from the tag cloud
-			model.tags.forEach(function(tag) {
-				var mapping = ds.get(tag)
-				mapping.keys = mapping.keys.subtract([key])
-				ds.put(tag, mapping)
-				
-				cloud.keys[tag]--;
-				if(cloud.keys[tag] == 0) {
-					ds.remove(tag)
-					delete cloud.keys[tag]
-				}
-			});
-			
-			ds.put("_cloud", cloud)
-			ds.remove(key)
-			
-			// remove images
-			shell("rm -rf public/blog/" + key)
-
-			return list()
+			model.post.remove(key)
+			return show()
 		})
 	}
 	

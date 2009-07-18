@@ -12,7 +12,7 @@
 					log.info("api create: " + title + " => " + path)
 										
 					open(path, "base64").write(photo)
-					var model = require("serializer.js")(null, title, path, tags)
+					var model = model.post.persist(null, title, path, tags)
 					if(twit) require("twitter.js")(model)
 					
 					return ["ok", "ok"]

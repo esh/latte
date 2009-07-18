@@ -17,20 +17,21 @@
 	
 	function transaction(fn) {
 		var conn = connect()
-		conn.setAutoCommit(false)
+		//conn.setAutoCommit(false)
+		update(conn, "BEGIN")
 		try {
 			fn({
 				query: query.curry(conn),
 				update: update.curry(conn)
 			})
 					
-			conn.commit()
-			conn.setAutoCommit(true)
+			update(conn, "COMMIT")
+			//conn.setAutoCommit(true)
 		}
 		catch(e) {
 			log.error(e)
 			log.error("rolling back")
-			conn.rollback()
+			//update(conn, "ROLLBACK")
 		}
 	}
 	
