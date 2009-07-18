@@ -7,3 +7,5 @@ register("model", {
 	tags: require("model/tags.js")(sqlds),
 	post: require("model/post.js")(sqlds)
 })
+
+model.post.persist(null, "test title", "test.asdf.jpg", "a b c")
