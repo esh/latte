@@ -47,7 +47,7 @@
 			var post = model.post.persist(request.params["key"], request.params["title"], request.params["upload"], request.params["tags"])
 			if(twit) require("twitter.js")(post)
 			
-			return ["redirect", "/blog/show/all/" + model.key]
+			return ["redirect", "/blog/show/all/" + post.key]
 		})
 	}
 	
