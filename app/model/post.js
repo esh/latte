@@ -36,8 +36,6 @@
 			var ext = path != undefined && path != null && path.trim().length > 0 ? path.substring(path.lastIndexOf('.')).toLowerCase() : null
 			
 		    if(key == null) {
-		    	model = new Object();
-		    	
 				ds.update("INSERT INTO posts (title, orig, timestamp) VALUES('" + escape(title) + "','" + escape(ext) + "','" + new Date().toDateString() + "')")
 				var rs = ds.query("SELECT last_insert_rowid() AS id")
 				if(rs.next()) key = rs.getInt("id")
