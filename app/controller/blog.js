@@ -54,7 +54,8 @@
 	function remove(key) {
 		return secure(function() {
 			model.post.remove(key)
-			return show()
+			//return show()
+			return ["ok", "ok"]
 		})
 	}
 	

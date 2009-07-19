@@ -3,21 +3,27 @@
 	require("utils/imageutils.js")
 		
 	function get(id) {
-		var rs = ds.query("SELECT id, title, orig, timestamp FROM posts WHERE id=" + escape(id))
-		if(rs.next()) {
-			return {
-				key: rs.getInt("id"),
-				title: unescape(rs.getString("title")),
-				original: "/blog/" + rs.getInt("id") + "/o." + rs.getString("orig"),
-				date: rs.getString("timestamp"),
-				tags: function(post) {
-					var rs = ds.query("SELECT name FROM tags WHERE post=" + escape(id))
-					var tags = new Array()
-					while(rs.next()) tags.push(rs.getString("name"))
-					return tags
-				}(id)
-			}
-		} else throw "no such post: " + id
+		var model
+		ds.query("SELECT id, title, orig, timestamp FROM posts WHERE id=" + escape(id), function(rs) {
+			if(rs.next()) {
+				model = {
+					key: rs.getInt("id"),
+					title: unescape(rs.getString("title")),
+					original: "/blog/" + rs.getInt("id") + "/o." + rs.getString("orig"),
+					date: rs.getString("timestamp"),
+					tags: function(post) {
+						var tags = new Array()
+						ds.query("SELECT name FROM tags WHERE post=" + escape(id), function(rs) {
+							while(rs.next()) tags.push(rs.getString("name"))
+						})
+						
+						return tags
+					}(id)
+				}
+			} else throw "no such post: " + id
+		})
+		
+		return model
 	}
 	
 	function persist(key, title, path, tags) {
@@ -76,12 +82,13 @@
 	}
 	
 	function remove(key) {
+		log.info("so busted")
 		ds.transaction(function(ds) {
-			ds.update("DELETE from posts WHERE id=" + key)
 			ds.update("DELETE from tags WHERE post=" + key)
-			
-			// remove images
-			shell("rm -rf public/blog/" + key)
+			log.info("busted1")
+			ds.update("DELETE from posts WHERE id=" + key)
+			log.info("busted2")
+			try {shell("rm -rf public/blog/" + key) } catch(e) {}
 		})
 	}
 	
