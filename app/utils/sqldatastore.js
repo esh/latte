@@ -34,6 +34,8 @@
 			log.error(e)
 			log.error("rolling back")
 			conn.rollback()
+			
+			throw e
 		} finally {
 			conn.close()
 		}

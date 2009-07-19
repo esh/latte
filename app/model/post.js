@@ -49,19 +49,18 @@
 				
 				log.debug("new model: " + key)
 			} else {
-				ds.update("UPDATE posts SET title='" + escape(title) + "',orig='" + ext + "',timestamp='" + new Date().toDateString() + "') WHERE id=" + key)
+				ds.update("UPDATE posts SET title='" + escape(title) + "',orig='" + ext + "',timestamp='" + new Date().toDateString() + "' WHERE id=" + key)
 				ds.update("DELETE from tags WHERE post=" + key)
 				tags.forEach(function(tag) {
 					ds.update("INSERT INTO tags (name, post) VALUES('" + escape(tag) + "'," + key + ")")
 				})
-				
-				shell("rm " + newPath + "/*")	
 			}
 			
 			if(ext != null) {
 				log.debug("using picture: " + path)
 				var newPath = "public/blog/" + key;
-				
+				try { shell("rm " + newPath + "/*") } catch(e) {}
+								
 				// move the file over
 				shell("mv " + path + " " + newPath + "/o" + ext)
 				model.original = "/blog/" + key + "/o" + ext;
@@ -82,12 +81,9 @@
 	}
 	
 	function remove(key) {
-		log.info("so busted")
 		ds.transaction(function(ds) {
 			ds.update("DELETE from tags WHERE post=" + key)
-			log.info("busted1")
 			ds.update("DELETE from posts WHERE id=" + key)
-			log.info("busted2")
 			try {shell("rm -rf public/blog/" + key) } catch(e) {}
 		})
 	}

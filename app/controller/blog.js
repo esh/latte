@@ -30,12 +30,12 @@
 	function edit(pkey) {
 		var params = new Object()
 		return secure(function() {
-			var model = model.post.get(pkey)
-			params["key"] = model.key
-			params["title"] = model.title
-			params["description"] = model.description
-			params["original"] = model.original
-			params["tags"] = model.tags.join(" ")
+			var post = model.post.get(pkey)
+			params["key"] = post.key
+			params["title"] = post.title
+			params["description"] = post.description
+			params["original"] = post.original
+			params["tags"] = post.tags.join(" ")
 			
 			return ["ok", render("view/blog/form.jhtml")]
 		})
@@ -44,8 +44,8 @@
 	function save() {
 		return secure(function() {
 			var twit = request.params["key"] == null
-			var model = model.post.persist(request.params["key"], request.params["title"], request.params["upload"], request.params["tags"])
-			if(twit) require("twitter.js")(model)
+			var post = model.post.persist(request.params["key"], request.params["title"], request.params["upload"], request.params["tags"])
+			if(twit) require("twitter.js")(post)
 			
 			return ["redirect", "/blog/show/all/" + model.key]
 		})
@@ -54,8 +54,7 @@
 	function remove(key) {
 		return secure(function() {
 			model.post.remove(key)
-			//return show()
-			return ["ok", "ok"]
+			return show()
 		})
 	}
 	
