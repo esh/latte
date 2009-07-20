@@ -15,7 +15,6 @@
 			fn(rs)
 		} finally {
 			if(rs != undefined && rs != null) rs.close()
-			conn.close()
 		}
 	}
 	
@@ -42,7 +41,11 @@
 	}
 	
 	return {
-		query: function(sql, fn) { query.curry(connect())(sql, fn) },
+		query: function(sql, fn) {
+			var conn = connect()
+			query.curry(conn)(sql, fn)
+			conn.close() 
+		},
 		transaction: transaction
 	}
 })

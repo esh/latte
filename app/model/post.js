@@ -35,11 +35,16 @@
 			// find the ext
 			var ext = path != undefined && path != null && path.trim().length > 0 ? path.substring(path.lastIndexOf('.')).toLowerCase() : null
 			
-		    if(key == null) {
+		    if(key == null || key == undefined) {
 				ds.update("INSERT INTO posts (title, orig, timestamp) VALUES('" + escape(title) + "','" + escape(ext) + "','" + new Date().toDateString() + "')")
-				var rs = ds.query("SELECT last_insert_rowid() AS id")
-				if(rs.next()) key = rs.getInt("id")
+				ds.query("SELECT last_insert_rowid() AS id", function(rs) {
+					log.debug("getting key")
+					if(rs.next()) key = rs.getInt("id")
+					else throw "impossible exception"
+				})
+								
 				tags.forEach(function(tag) {
+					log.debug(tag + ":" + key)
 					ds.update("INSERT INTO tags (name, post) VALUES('" + escape(tag) + "'," + key + ")")
 				})
 				
