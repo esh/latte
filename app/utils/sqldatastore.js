@@ -2,6 +2,7 @@
 	require("utils/common.js")
 	
 	function connect() {
+		// TODO: database connection pooling here.. maybe
 		return jdbc(jdbcDriver, connectionString)
 	}
 	
