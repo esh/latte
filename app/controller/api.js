@@ -12,8 +12,8 @@
 					log.info("api create: " + title + " => " + path)
 										
 					open(path, "base64").write(photo)
-					var model = model.post.persist(null, title, path, tags)
-					if(twit) require("twitter.js")(model)
+					var post = model.post.persist(null, title, path, tags)
+					if(twit) require("twitter.js")(post)
 					
 					return ["ok", "ok"]
 				} else {
