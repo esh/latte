@@ -31,17 +31,6 @@ img {
 	border:0px;
 }
 
-.thumb {
-	border:0px;
-	margin:1px 1px 1px 1px;
-}
-
-.preview {
-	border:0px;
-	margin:0px;
-	width:246px;
-}
-
 ul {
 	display: inline;
 	list-style-type: none;
@@ -50,12 +39,29 @@ ul {
 }
 
 td {
-	padding: 5px 5px 5px 5px;
+	padding: 0;
+	margin: 0;
 	vertical-align:top;
 }
 
+.thumb {
+        border:0px;
+        margin:1px 1px 1px 1px;
+}
+
+.preview {
+        border:0px;
+        margin:6px 0px 0px 0px;
+        width:246px;
+        cursor:pointer;
+}
+
+.post {
+	padding: 7px 5px 5px 5px;
+}
+
 .focus {
-	background-color: #D0D0D0;
+	padding: 5px 5px 5px 5px;
 	border:2px;
 	border-style:dashed;
 }
@@ -67,5 +73,5 @@ td {
 }
 
 #content {
-	margin-top:105px;
+	margin-top:103px;
 }

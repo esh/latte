@@ -43,9 +43,7 @@ function loadUI(target, keys, focus, admin) {
 		for(var i = start ; i <= end ; i++) {
 			html.push("<td id=\"")
 			html.push(keys[i])
-			html.push("\"")
-			html.push((keys[i] == focus ? " class=\"focus\"" : ""))
-			html.push("/>")
+			html.push("\"/>")
 		}
 		if(end < keys.length - 1) {
 			html.push("<td><div id=\"moreNext\" class=\"preview\">")
@@ -69,6 +67,7 @@ function loadUI(target, keys, focus, admin) {
 		for(var i = start ; i <= end ; i++) {
 			$.getJSON("/blog/detail/" + keys[i], function(data) {
 				var html = new Array()
+				html.push(data.key == focus ? "<div class=\"focus\">" : "<div class=\"post\">")
 				html.push("<a href=\"")
 				html.push(data.original)
 				html.push("\">")
@@ -103,6 +102,7 @@ function loadUI(target, keys, focus, admin) {
 					html.join(data.key)
 					html.join("\">remove</a>")
 				}
+				if(data.key == focus) html.push("</div>")
 				
 				$("#" + data.key).html(html.join(""))
 			})	
