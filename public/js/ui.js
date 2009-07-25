@@ -21,23 +21,10 @@ function toAnchor(a) {
 }
 
 function loadUI(target, keys, anchor, admin) {
-	var NUM_DISPLAYED = 17
-	var start = keys.indexOf(anchor)
-	var end = start	
-	var i = 1
+	var NUM_DISPLAYED = 9
+	var end = Math.min(keys.length - 1, keys.indexOf(anchor) + NUM_DISPLAYED)
+	var start = Math.max(0, end - NUM_DISPLAYED) 	
 	
-	for(;;) {
-		if(i < NUM_DISPLAYED && start > 0) {
-			start--
-			i++
-		}
-		if(i < NUM_DISPLAYED && end < keys.length - 1) {
-			end++
-			i++
-		}
-		if(i >= NUM_DISPLAYED || (start == 0 && end == keys.length - 1)) break
-	}
-
 	load(start, end, false)
 	
 	function morePrev() {
@@ -49,14 +36,23 @@ function loadUI(target, keys, anchor, admin) {
 		end = Math.min(end + NUM_DISPLAYED, keys.length - 1)
 		load(start, end, true)
 	}
+
+	function renderGrid(thumbs) {
+		var html =  ""
+		for(var i = 0 ; i < keys.length ; i++) {
+			html += "<img src=\"/blog/" + thumbs[i] + "/t.jpg\" class=\"thumb\"/>" 
+		}
+
+		return html
+	}
 	
 	function load(start, end, fade) {
 		var html = "<table><tr>"
-		if(start > 0) html += "<td><div id=\"morePrev\">load older</div></td>"
+		if(start > 0) html += "<td><div id=\"morePrev\" class=\"preview\">" + renderGrid(keys.slice(Math.max(0, start - NUM_DISPLAYED),start)) + "<h1>Load More</h1></div></td>"
 		for(var i = start ; i <= end ; i++) {
 			html += "<td id=\"" + keys[i] + "\"" + (keys[i] == anchor ? " class=\"anchor\"" : "") + "/>"
 		}
-		if(end < keys.length - 1) html += "<td><div id=\"moreNext\">load newer</div></td>"
+		if(end < keys.length - 1) html += "<td><div id=\"moreNext\" class=\"preview\">" + renderGrid(keys.slice(end, Math.min(keys.length, end + NUM_DISPLAYED))) + "<h1>Load More</h1></div></td>"
 		html += "</tr></table>"
 		target.html(html)
 

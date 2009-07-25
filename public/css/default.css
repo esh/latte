@@ -31,6 +31,17 @@ img {
 	border:0px;
 }
 
+.thumb {
+	border:0px;
+	margin:1px 1px 1px 1px;
+}
+
+.preview {
+	border:0px;
+	margin:0px;
+	width:246px;
+}
+
 ul {
 	display: inline;
 	list-style-type: none;
