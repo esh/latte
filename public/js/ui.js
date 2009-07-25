@@ -12,29 +12,28 @@ function nav(s) {
 	window.location = "/" + s.options[s.selectedIndex].value
 }
 
-function fadeIn(s) {
-	$(s).fadeTo("slow", 1.0)
+function imgLoaded(fade, target, anchor) {
+	if(fade) $(target).fadeTo("slow", 1.0)
+	$.scrollTo($("#" + anchor), 0)
 }
 
-function toAnchor(a) {
-	$.scrollTo($("#" + a), 0)
-}
-
-function loadUI(target, keys, anchor, admin) {
+function loadUI(target, keys, focus, admin) {
 	var NUM_DISPLAYED = 9
 	var end = Math.min(keys.length - 1, keys.indexOf(anchor) + NUM_DISPLAYED)
 	var start = Math.max(0, end - NUM_DISPLAYED) 	
 	
-	load(start, end, false)
+	load(start, end, false, focus)
 	
 	function morePrev() {
+		var anchor = keys[start]
 		start = Math.max(start - NUM_DISPLAYED, 0)
-		load(start, end, true)
+		load(start, end, true, anchor)
 	}
 	
 	function moreNext() {
+		var anchor = keys[end]
 		end = Math.min(end + NUM_DISPLAYED, keys.length - 1)
-		load(start, end, true)
+		load(start, end, true, anchor)
 	}
 
 	function renderGrid(thumbs) {
@@ -46,7 +45,7 @@ function loadUI(target, keys, anchor, admin) {
 		return html
 	}
 	
-	function load(start, end, fade) {
+	function load(start, end, fade, anchor) {
 		var html = new Array()
 		html.push("<table><tr>")
 		if(start > 0) {
@@ -58,7 +57,7 @@ function loadUI(target, keys, anchor, admin) {
 			html.push("<td id=\"")
 			html.push(keys[i])
 			html.push("\"")
-			html.push((keys[i] == anchor ? " class=\"anchor\"" : ""))
+			html.push((keys[i] == focus ? " class=\"focus\"" : ""))
 			html.push("/>")
 		}
 		if(end < keys.length - 1) {
@@ -85,7 +84,8 @@ function loadUI(target, keys, anchor, admin) {
 				html.push("<img src=\"/blog/")
 				html.push(data.key)
 				html.push("/p.jpg\" ") 
-				html.push(fade ? "class=\"hidden\" onload=\"fadeIn(this)\"" : ("onload=\"toAnchor(" + anchor + ")\""))
+				html.push(fade ? "class=\"hidden\"" : "")
+				html.push("onload=\"imgLoaded(" + fade + ", this, " + anchor + ")\"")
 				html.push("/>")
 				html.push("</a>")
 				html.push("<h1>")

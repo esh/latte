@@ -33,7 +33,7 @@
 			if(tags.indexOf("all") == -1) tags.push("all")
 		
 			// find the ext
-			var ext = path != undefined && path != null && path.trim().length > 0 ? path.substring(path.lastIndexOf('.')).toLowerCase() : null
+			var ext = path != undefined && path != null && path.trim().length > 0 ? path.substring(path.lastIndexOf('.') + 1).toLowerCase() : null
 			
 		    if(key == null || key == undefined) {
 				ds.update("INSERT INTO posts (title, orig, timestamp) VALUES('" + escape(title) + "','" + escape(ext) + "','" + new Date().toDateString() + "')")
@@ -65,7 +65,7 @@
 				try { shell("rm " + newPath + "/*") } catch(e) {}
 								
 				// move the file over
-				shell("mv " + path + " " + newPath + "/o" + ext)
+				shell("mv " + path + " " + newPath + "/o." + ext)
 				model.original = "/blog/" + key + "/o" + ext;
 				
 				// create preview
