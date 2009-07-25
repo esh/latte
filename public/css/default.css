@@ -54,13 +54,6 @@ td {
 	vertical-align:top;
 }
 
-.hidden {
-	/* for IE */
-	filter:alpha(opacity=0);
-	/* CSS3 standard */
-	opacity:0;
-}
-
 .focus {
 	background-color: #D0D0D0;
 	border:2px;
