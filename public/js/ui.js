@@ -23,22 +23,10 @@ function loadUI(target, keys, focus, admin) {
 	
 	load(start, end, focus)
 	
-	function morePrev() {
-		var anchor = keys[start]
-		start = Math.max(start - NUM_DISPLAYED, 0)
-		load(start, end, anchor)
-	}
-	
-	function moreNext() {
-		var anchor = keys[end]
-		end = Math.min(end + NUM_DISPLAYED, keys.length - 1)
-		load(start, end, anchor)
-	}
-
-	function renderGrid(thumbs) {
+	function renderGrid(start, end) {
 		var html =  ""
-		for(var i = 0 ; i < keys.length ; i++) {
-			html += "<img src=\"/blog/" + thumbs[i] + "/t.jpg\" class=\"thumb\"/>" 
+		for(var i = start ; i <= end ; i++) {
+			html += "<img src=\"/blog/" + keys[i] + "/t.jpg\" class=\"thumb\"/>" 
 		}
 
 		return html
@@ -49,7 +37,7 @@ function loadUI(target, keys, focus, admin) {
 		html.push("<table><tr>")
 		if(start > 0) {
 			html.push("<td><div id=\"morePrev\" class=\"preview\">")
-			html.push(renderGrid(keys.slice(Math.max(0, start - NUM_DISPLAYED),start)))
+			html.push(renderGrid(Math.max(0, start - NUM_DISPLAYED),start - 1))
 			html.push("<h1>Load More</h1></div></td>")
 		}
 		for(var i = start ; i <= end ; i++) {
@@ -61,17 +49,21 @@ function loadUI(target, keys, focus, admin) {
 		}
 		if(end < keys.length - 1) {
 			html.push("<td><div id=\"moreNext\" class=\"preview\">")
-			html.push(renderGrid(keys.slice(end, Math.min(keys.length, end + NUM_DISPLAYED))))
+			html.push(renderGrid(end + 1, Math.min(keys.length, end + NUM_DISPLAYED)))
 			html.push("<h1>Load More</h1></div></td>")
 		}
 		html.push("</tr></table>")
 		target.html(html.join(""))
 
 		$("#moreNext").click(function() {
-			moreNext()
+			var anchor = keys[end]
+			end = Math.min(end + NUM_DISPLAYED, keys.length - 1)
+			load(start, end, anchor)
 		})
 		$("#morePrev").click(function() {
-			morePrev()
+			var anchor = keys[start]
+			start = Math.max(start - NUM_DISPLAYED, 0)
+			load(start, end, anchor)
 		})
 		
 		for(var i = start ; i <= end ; i++) {
