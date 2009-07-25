@@ -17,14 +17,15 @@
 			<span style="font-size:80px;margin-right:25px">o0</span>
 			<span style="font-size:25px;font-weight:bold">tagged as</span>
 			<select onchange="nav(this)">
-				<%
+			<%
         		require("utils/common.js")
         		params["cloud"].map(function(e) {
         			return "<option " + (e == params["type"] ? "selected=\"true\">" : ">") + e + "</option>"
         		})
         		echo(params["cloud"].join(" "))
-				%>	
+			%>	
 			</select>
+			<span style="font-size:12px;margin-right:20px"><a href="http://esh.github.com/latte/">powered by latte</a></span>
 		</div>
 		<div id="content"/>
 		
