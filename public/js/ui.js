@@ -47,14 +47,27 @@ function loadUI(target, keys, anchor, admin) {
 	}
 	
 	function load(start, end, fade) {
-		var html = "<table><tr>"
-		if(start > 0) html += "<td><div id=\"morePrev\" class=\"preview\">" + renderGrid(keys.slice(Math.max(0, start - NUM_DISPLAYED),start)) + "<h1>Load More</h1></div></td>"
-		for(var i = start ; i <= end ; i++) {
-			html += "<td id=\"" + keys[i] + "\"" + (keys[i] == anchor ? " class=\"anchor\"" : "") + "/>"
+		var html = new Array()
+		html.push("<table><tr>")
+		if(start > 0) {
+			html.push("<td><div id=\"morePrev\" class=\"preview\">")
+			html.push(renderGrid(keys.slice(Math.max(0, start - NUM_DISPLAYED),start)))
+			html.push("<h1>Load More</h1></div></td>")
 		}
-		if(end < keys.length - 1) html += "<td><div id=\"moreNext\" class=\"preview\">" + renderGrid(keys.slice(end, Math.min(keys.length, end + NUM_DISPLAYED))) + "<h1>Load More</h1></div></td>"
-		html += "</tr></table>"
-		target.html(html)
+		for(var i = start ; i <= end ; i++) {
+			html.push("<td id=\"")
+			html.push(keys[i])
+			html.push("\"")
+			html.push((keys[i] == anchor ? " class=\"anchor\"" : ""))
+			html.push("/>")
+		}
+		if(end < keys.length - 1) {
+			html.push("<td><div id=\"moreNext\" class=\"preview\">")
+			html.push(renderGrid(keys.slice(end, Math.min(keys.length, end + NUM_DISPLAYED))))
+			html.push("<h1>Load More</h1></div></td>")
+		}
+		html.push("</tr></table>")
+		target.html(html.join(""))
 
 		$("#moreNext").click(function() {
 			moreNext()
@@ -65,25 +78,43 @@ function loadUI(target, keys, anchor, admin) {
 		
 		for(var i = start ; i <= end ; i++) {
 			$.getJSON("/blog/detail/" + keys[i], function(data) {
-				var html = "<a href=\"" + data.original + "\">"
-				html += "<img src=\"/blog/" + data.key + "/p.jpg\" " 
-				html += (fade ? "class=\"hidden\" onload=\"fadeIn(this)\"" : "onload=\"toAnchor(" + anchor + ")\"") + "/>"
-				html += "</a>"
-				html += "<h1>" + data.title + "</h1>"
-				html += "<h2>" + data.date + "</h2>"
-				html += "Tagged as&nbsp;"
+				var html = new Array()
+				html.push("<a href=\"")
+				html.push(data.original)
+				html.push("\">")
+				html.push("<img src=\"/blog/")
+				html.push(data.key)
+				html.push("/p.jpg\" ") 
+				html.push(fade ? "class=\"hidden\" onload=\"fadeIn(this)\"" : ("onload=\"toAnchor(" + anchor + ")\""))
+				html.push("/>")
+				html.push("</a>")
+				html.push("<h1>")
+				html.push(data.title)
+				html.push("</h1>")
+				html.push("<h2>")
+				html.push(data.date)
+				html.push("</h2>")
+				html.push("Tagged as&nbsp;")
 				$.each(data.tags, function(i, tag) {
-					html += "<a href=\"" + tag + "\">" + tag + "</a>&nbsp;"
+					html.push("<a href=\"")
+					html.push(tag)
+					html.push("\">")
+					html.push(tag)
+					html.push("</a>&nbsp;")
 				})
 
 				if(admin) {
-					html += "<br/>"
-					html += "<a href=\"/blog/edit/" + data.key + "\">edit</a>"
-					html += "&nbsp;"
-					html += "<a href=\"/blog/remove/" + data.key + "\">remove</a>"
+					html.join("<br/>")
+					html.join("<a href=\"/blog/edit/")
+					html.join(data.key)
+					html.join("\">edit</a>")
+					html.join("&nbsp;")
+					html.join("<a href=\"/blog/remove/")
+					html.join(data.key)
+					html.join("\">remove</a>")
 				}
 				
-				$("#" + data.key).html(html)
+				$("#" + data.key).html(html.join(""))
 			})	
 		}
 	}
