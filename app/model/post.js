@@ -66,12 +66,11 @@
 								
 				// move the file over
 				shell("mv " + path + " " + newPath + "/o." + ext)
-				model.original = "/blog/" + key + "/o" + ext;
 				
 				// create preview
-				resize(newPath + "/o" + ext, newPath + "/p" + ".jpg", 370)
+				resize(newPath + "/o." + ext, newPath + "/p" + ".jpg", 370)
 				// create thumb
-				generateThumb(newPath + "/o" + ext, newPath + "/t" + ".jpg")
+				generateThumb(newPath + "/o." + ext, newPath + "/t" + ".jpg")
 			}
 		})	
 
