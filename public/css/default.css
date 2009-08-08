@@ -44,18 +44,6 @@ td {
 	vertical-align:top;
 }
 
-.thumb {
-        border:0px;
-        margin:1px 1px 1px 1px;
-}
-
-.preview {
-        border:0px;
-        margin:6px 0px 0px 0px;
-        width:246px;
-        cursor:pointer;
-}
-
 .post {
 	padding: 7px 5px 5px 5px;
 }
@@ -64,6 +52,7 @@ td {
 	padding: 5px 5px 5px 5px;
 	border:2px;
 	border-style:dashed;
+	background-color: #B0B0B0;
 }
 
 #header {
@@ -74,4 +63,12 @@ td {
 
 #body {
 	margin-top:103px;
+}
+
+#loadNewer div {
+	width: 200px;
+	text-align:center;
+	font-size: 120px;
+	font-weight: bold;
+        cursor:pointer;
 }

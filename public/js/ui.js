@@ -16,9 +16,11 @@ function loadUI(target, keys, focus, admin) {
 	var LOAD_AMOUNT = 8
 	var end = keys.indexOf(anchor)
 	var start = Math.max(0, end - LOAD_AMOUNT)
-
-	target.html(genHTML(start, end))
+	
+	target.html(genLoadNewer() + genHTML(start, end))
 	callAJAX(start, end)
+
+	if(end < keys.length - 1) $("#loadNewer").click(loadNewerOnClick)
 
 	$(window).scroll(function() {
 		if(($(document).width() - $(window).width()) - $(window).scrollLeft() < 150 && start > 0) {
@@ -28,6 +30,22 @@ function loadUI(target, keys, focus, admin) {
 			callAJAX(start, t)
 		}
 	})
+
+	function loadNewerOnClick() {
+		$("#loadNewer").remove()
+		
+		var t = Math.min(keys.length - 1, end + 1)
+		end = Math.min(keys.length - 1, end + LOAD_AMOUNT)
+		target.html(genLoadNewer() + genHTML(t, end) + target.html())
+		callAJAX(t, end)	
+		
+		if(end < keys.length - 1) $("#loadNewer").click(loadNewerOnClick)
+	}
+
+	function genLoadNewer() {
+		if(end < keys.length - 1) return "<td id=\"loadNewer\"><div>&lt;<h1>Click for newer posts<h1></div></td>"
+		else return ""
+	}
 
 	function genHTML(start, end) {
 		var html = new Array()
