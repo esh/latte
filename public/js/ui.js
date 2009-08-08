@@ -12,71 +12,47 @@ function nav(s) {
 	window.location = "/" + s.options[s.selectedIndex].value
 }
 
-function focusOn(anchor) {
-	$.scrollTo($("#" + anchor), 0)
-}
-
 function loadUI(target, keys, focus, admin) {
-	var NUM_DISPLAYED = 9
-	var end = Math.min(keys.length - 1, keys.indexOf(anchor) + NUM_DISPLAYED)
-	var start = Math.max(0, end - NUM_DISPLAYED) 	
-	
-	load(start, end, focus)
-	
-	function renderGrid(start, end) {
-		var html =  ""
-		for(var i = start ; i <= end ; i++) {
-			html += "<img src=\"/blog/" + keys[i] + "/t.jpg\" class=\"thumb\"/>" 
-		}
+	var LOAD_AMOUNT = 8
+	var end = keys.indexOf(anchor)
+	var start = Math.max(0, end - LOAD_AMOUNT)
 
-		return html
-	}
-	
-	function load(start, end, anchor) {
-		var html = new Array()
-		html.push("<table><tr>")
-		if(start > 0) {
-			html.push("<td><div id=\"morePrev\" class=\"preview\">")
-			html.push(renderGrid(Math.max(0, start - NUM_DISPLAYED),start - 1))
-			html.push("<h1>Load More</h1></div></td>")
+	target.html(genHTML(start, end))
+	callAJAX(start, end)
+
+	$(window).scroll(function() {
+		if(($(document).width() - $(window).width()) - $(window).scrollLeft() < 150 && start > 0) {
+			var t = Math.max(0, start - 1)
+			start = Math.max(0, start - LOAD_AMOUNT)
+			target.html(target.html() + genHTML(start, t))
+			callAJAX(start, t)
 		}
-		for(var i = start ; i <= end ; i++) {
+	})
+
+	function genHTML(start, end) {
+		var html = new Array()
+		for(var i = end ; i >= start ; i--) {
 			html.push("<td id=\"")
 			html.push(keys[i])
-			html.push("\"/>")
+			html.push("\">")
+                        html.push(keys[i] == focus ? "<div class=\"focus\">" : "<div class=\"post\">")
+              		html.push("<a href=\"/blog/")
+                        html.push(keys[i])
+                       	html.push("/o.jpg\">")
+                        html.push("<img src=\"/blog/")
+                        html.push(keys[i])
+                        html.push("/p.jpg\"")
+                        html.push("/>")
+                        html.push("</a></div></td>")
 		}
-		if(end < keys.length - 1) {
-			html.push("<td><div id=\"moreNext\" class=\"preview\">")
-			html.push(renderGrid(end + 1, Math.min(keys.length, end + NUM_DISPLAYED)))
-			html.push("<h1>Load More</h1></div></td>")
-		}
-		html.push("</tr></table>")
-		target.html(html.join(""))
+		return html.join("")
+	}
 
-		$("#moreNext").click(function() {
-			var anchor = keys[end]
-			end = Math.min(end + NUM_DISPLAYED, keys.length - 1)
-			load(start, end, anchor)
-		})
-		$("#morePrev").click(function() {
-			var anchor = keys[start]
-			start = Math.max(start - NUM_DISPLAYED, 0)
-			load(start, end, anchor)
-		})
-		
+	function callAJAX(start, end) {
 		for(var i = start ; i <= end ; i++) {
 			$.getJSON("/blog/detail/" + keys[i], function(data) {
 				var html = new Array()
-				html.push(data.key == focus ? "<div class=\"focus\">" : "<div class=\"post\">")
-				html.push("<a href=\"")
-				html.push(data.original)
-				html.push("\">")
-				html.push("<img src=\"/blog/")
-				html.push(data.key)
-				html.push("/p.jpg\" ") 
-				html.push("onload=\"focusOn(" + anchor + ")\"")
-				html.push("/>")
-				html.push("</a>")
+				html.push($("#" + data.key + " div").html())
 				html.push("<h1>")
 				html.push(data.title)
 				html.push("</h1>")
@@ -93,19 +69,19 @@ function loadUI(target, keys, focus, admin) {
 				})
 
 				if(admin) {
-					html.join("<br/>")
-					html.join("<a href=\"/blog/edit/")
-					html.join(data.key)
-					html.join("\">edit</a>")
-					html.join("&nbsp;")
-					html.join("<a href=\"/blog/remove/")
-					html.join(data.key)
-					html.join("\">remove</a>")
+					html.push("<br/>")
+					html.push("<a href=\"/blog/edit/")
+					html.push(data.key)
+					html.push("\">edit</a>")
+					html.push("&nbsp;")
+					html.push("<a href=\"/blog/remove/")
+					html.push(data.key)
+					html.push("\">remove</a>")
 				}
-				if(data.key == focus) html.push("</div>")
 				
-				$("#" + data.key).html(html.join(""))
+				$("#" + data.key + " div").html(html.join(""))
 			})	
 		}
+
 	}
 }

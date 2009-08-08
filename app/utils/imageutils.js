@@ -6,6 +6,10 @@ function getHeight(path) {
 	return shell("identify -format %h " + path) * 1
 }
 
+function convert(source, target) {
+	return shell("convert " + source + " " + target)
+}
+
 function resize(source, target, size) {
 	if(getWidth(source) < getHeight(source)) return shell("convert -geometry x" + size + " "  + source + " " + target)
 	else return shell("convert -geometry " + size + "x " + source + " " + target) 
