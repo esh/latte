@@ -12,7 +12,7 @@
 		<script src="/js/jquery-1.2.6.min.js" type="text/javascript"></script>
 		<script src="/js/jquery.scrollTo-min.js" type="text/javascript"></script>
 		<script src="/js/ui.js" type="text/javascript"></script>
-	
+
 		<div id="header">
 			<span style="font-size:80px;margin-right:25px">o0</span>
 			<span style="font-size:25px;font-weight:bold">tagged as</span>
@@ -27,7 +27,11 @@
 			</select>
 			<span style="font-size:12px;margin-right:20px"><a href="http://esh.github.com/latte/">powered by latte</a></span>
 		</div>
-		<div id="content"/>
+		<div id="body">
+			<table>
+				<tr id="content"/>
+			</table>
+		</div>
 		
 		<script type="text/javascript">
 			var keys = <%= params["keys"].toSource() %>
