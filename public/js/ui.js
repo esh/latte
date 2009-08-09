@@ -16,18 +16,21 @@ function loadUI(target, keys, focus, admin) {
 	var LOAD_AMOUNT = 8
 	var end = keys.indexOf(anchor)
 	var start = Math.max(0, end - LOAD_AMOUNT)
-	
-	target.html(genLoadNewer() + genHTML(start, end))
-	callAJAX(start, end)
+	var t = keys.slice(start, end + 1).reverse()
 
+	target.html(genLoadNewer() + jQuery.map(t, genHTML).join(""))
+	jQuery.map(t, getDetails)
 	if(end < keys.length - 1) $("#loadNewer").click(loadNewerOnClick)
 
 	$(window).scroll(function() {
 		if(($(document).width() - $(window).width()) - $(window).scrollLeft() < 150 && start > 0) {
 			var t = Math.max(0, start - 1)
 			start = Math.max(0, start - LOAD_AMOUNT)
-			target.html(target.html() + genHTML(start, t))
-			callAJAX(start, t)
+			t = keys.slice(start, t + 1).reverse()
+
+			target.html(target.html() + jQuery.map(t, genHTML).join(""))
+			jQuery.map(t, getDetails)
+			if(end < keys.length - 1) $("#loadNewer").click(loadNewerOnClick)
 		}
 	})
 
@@ -36,9 +39,10 @@ function loadUI(target, keys, focus, admin) {
 		
 		var t = Math.min(keys.length - 1, end + 1)
 		end = Math.min(keys.length - 1, end + LOAD_AMOUNT)
-		target.html(genLoadNewer() + genHTML(t, end) + target.html())
-		callAJAX(t, end)	
-		
+		t = keys.slice(t, end + 1).reverse()
+	
+		target.html(genLoadNewer() + jQuery.map(t, genHTML).join("") + target.html())
+		jQuery.map(t, getDetails)
 		if(end < keys.length - 1) $("#loadNewer").click(loadNewerOnClick)
 	}
 
@@ -47,59 +51,50 @@ function loadUI(target, keys, focus, admin) {
 		else return ""
 	}
 
-	function genHTML(start, end) {
+	function genHTML(key, i) {
 		var html = new Array()
-		for(var i = end ; i >= start ; i--) {
-			html.push("<td id=\"")
-			html.push(keys[i])
-			html.push("\">")
-                        html.push(keys[i] == focus ? "<div class=\"focus\">" : "<div class=\"post\">")
-              		html.push("<a href=\"/blog/")
-                        html.push(keys[i])
-                       	html.push("/o.jpg\">")
-                        html.push("<img src=\"/blog/")
-                        html.push(keys[i])
-                        html.push("/p.jpg\"")
-                        html.push("/>")
-                        html.push("</a></div></td>")
-		}
-		return html.join("")
+        	html.push("<td id=\"")
+                html.push(key)
+                html.push("\">")
+               	html.push(key == focus ? "<div class=\"focus\">" : "<div class=\"post\">")
+               	html.push("<a href=\"/blog/")
+                html.push(key)
+                html.push("/o.jpg\"><img src=\"/blog/")
+                html.push(key)
+                html.push("/p.jpg\"/></a></div></td>")
+		return html
 	}
 
-	function callAJAX(start, end) {
-		for(var i = start ; i <= end ; i++) {
-			$.getJSON("/blog/detail/" + keys[i], function(data) {
-				var html = new Array()
-				html.push($("#" + data.key + " div").html())
-				html.push("<h1>")
-				html.push(data.title)
-				html.push("</h1>")
-				html.push("<h2>")
-				html.push(data.date)
-				html.push("</h2>")
-				html.push("Tagged as&nbsp;")
-				$.each(data.tags, function(i, tag) {
-					html.push("<a href=\"")
-					html.push(tag)
-					html.push("\">")
-					html.push(tag)
-					html.push("</a>&nbsp;")
-				})
+	function getDetails(key, i) {
+		$.getJSON("/blog/detail/" + key, function(data) {
+			var html = new Array()
+			html.push($("#" + data.key + " div").html())
+			html.push("<h1>")
+			html.push(data.title)
+			html.push("</h1><h2>")
+			html.push(data.date)
+			html.push("</h2>Tagged as&nbsp;")
+			$.each(data.tags, function(i, tag) {
+				html.push("<a href=\"")
+				html.push(tag)
+				html.push("\">")
+				html.push(tag)
+				html.push("</a>&nbsp;")
+			})
 
-				if(admin) {
-					html.push("<br/>")
-					html.push("<a href=\"/blog/edit/")
-					html.push(data.key)
-					html.push("\">edit</a>")
-					html.push("&nbsp;")
-					html.push("<a href=\"/blog/remove/")
-					html.push(data.key)
-					html.push("\">remove</a>")
-				}
+			if(admin) {
+				html.push("<br/><br/><a href=\"/blog/edit/")
+				html.push(data.key)
+				html.push("\">edit</a>&nbsp;<a href=\"/blog/remove/")
+				html.push(data.key)
+				html.push("\">remove</a>")
+			}
 				
-				$("#" + data.key + " div").html(html.join(""))
-			})	
-		}
+			$("#" + data.key + " div").html(html.join(""))
+		})	
+	}
 
+	function setupLightbox(key, i) {
+		$("#" + key + " div a").lightbox()
 	}
 }
