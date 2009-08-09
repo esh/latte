@@ -13,9 +13,9 @@ function nav(s) {
 }
 
 function loadUI(target, keys, focus, admin) {
-	var LOAD_AMOUNT = 8
+	var loadAmount = parseInt($(window).width() / 270 * 1.5)
 	var end = keys.indexOf(anchor)
-	var start = Math.max(0, end - LOAD_AMOUNT)
+	var start = Math.max(0, end - loadAmount)
 	var t = keys.slice(start, end + 1).reverse()
 
 	target.html(genLoadNewer() + jQuery.map(t, genHTML).join(""))
@@ -25,7 +25,7 @@ function loadUI(target, keys, focus, admin) {
 	$(window).scroll(function() {
 		if(($(document).width() - $(window).width()) - $(window).scrollLeft() < 150 && start > 0) {
 			var t = Math.max(0, start - 1)
-			start = Math.max(0, start - LOAD_AMOUNT)
+			start = Math.max(0, start - loadAmount)
 			t = keys.slice(start, t + 1).reverse()
 
 			target.html(target.html() + jQuery.map(t, genHTML).join(""))
@@ -38,7 +38,7 @@ function loadUI(target, keys, focus, admin) {
 		$("#loadNewer").remove()
 		
 		var t = Math.min(keys.length - 1, end + 1)
-		end = Math.min(keys.length - 1, end + LOAD_AMOUNT)
+		end = Math.min(keys.length - 1, end + loadAmount)
 		t = keys.slice(t, end + 1).reverse()
 	
 		target.html(genLoadNewer() + jQuery.map(t, genHTML).join("") + target.html())
