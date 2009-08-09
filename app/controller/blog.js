@@ -34,7 +34,6 @@
 			params["key"] = post.key
 			params["title"] = post.title
 			params["description"] = post.description
-			params["original"] = post.original
 			params["tags"] = post.tags.join(" ")
 			
 			return ["ok", render("view/blog/form.jhtml")]

@@ -9,24 +9,16 @@
   <body>
     <form action="/blog/save" method="post" enctype="multipart/form-data" style="width: 600px; margin:auto">
       <%      	
-		if(params["key"] != null) {
-           echo('<input type="hidden" name="key" value="' + params["key"] + '"/>\n');
-           echo('<input type="hidden" name="date" value="' + params["date"] + '"/>\n');
-           echo('<input type="hidden" name="original" value="' + params["original"] + '"/>\n');
+	if(params["key"] != null) {
+		echo('<input type="hidden" name="key" value="' + params["key"] + '"/>\n');
+           	echo('<input type="hidden" name="date" value="' + params["date"] + '"/>\n');
     	} 
       %>
       <p>
       Title:<br/>
       <input type="text" name="title" value="<%= params["title"]; %>" style="width: 600px"/>
       </p>          
-      <%
-		if(params["preview"] != null) {
-			echo("<p>");
-			echo(writer.print("<img src=\"blog/" + thumb + "/p.jpg\">\n"));
-			echo("</p>");
-		}
-      %>
-      
+      <% if(params["key"] != null) echo("<p><img src=\"/blog/" + params["key"] + "/p.jpg\"></p>"); %>
       <p>
       Upload:<br/>
       <input type="file" name="upload" style="width: 600px"/>

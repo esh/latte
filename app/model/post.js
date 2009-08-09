@@ -55,7 +55,7 @@
 				})
 			}
 			
-			if(path != null && path != undefined) {
+			if(path != null && path != undefined && path.length > 0) {
 				log.debug("using picture: " + path)
 				var newPath = "public/blog/" + key;
 				try { shell("rm " + newPath + "/*") } catch(e) {}
