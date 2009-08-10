@@ -9,17 +9,23 @@ import org.mozilla.javascript.ContextFactory;
 import org.mozilla.javascript.Scriptable;
 
 public class ScriptLoader {
+	private final String root;
 	private final Scriptable parent;
 	private final Map<String, Script> mapping = new HashMap<String, Script>();
 	
 	public ScriptLoader() {
+		this("app/");
+	}
+	
+	public ScriptLoader(String root) {
+		this.root = root;
 		Context cx = ContextFactory.getGlobal().enterContext();
 		this.parent = cx.initStandardObjects(null, false);
 		Context.exit();
 	}
 	
 	public Script get(String path) throws Exception {
-		path = "app/" + path;
+		path = root + path;
 		Script script = mapping.get(path);
 		if(script == null || script.lastModified() < new File(path).lastModified()) {
 			if(path.endsWith(".js")) script = new Javascript(parent, new File(path), this);
