@@ -15,9 +15,9 @@
 		keys.slice(Math.max(0, keys.length - NUM_DISPLAY)).reverse().forEach(function(key) {
 			var post = model.post.get(key)
 			
-			rss.item += <item>
+			rss.channel.item += <item>
 					<title>{post.title}</title>
-					<description/>
+					<description>{post.title}</description>
 					<link>http://www.edomame.com/all/{key}</link>
 				    </item>
 		})
