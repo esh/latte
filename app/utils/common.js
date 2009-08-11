@@ -14,9 +14,18 @@ Array.prototype.subtract = function(t) {
 }
 
 Array.prototype.map = function(fn) {
+	var t = new Array()
 	for(var i = 0 ; i < this.length ; i++) {
-		this[i] = fn(this[i])
+		t.push(fn(this[i]))
 	}
+	return t
+}
+
+Array.prototype.reduce = function(t, fn) {
+	for(var i = 0 ; i < this.length ; i++) {
+		t = fn(t, this[i])
+	}
+	return t
 }
 
 String.prototype.trim = function() {
