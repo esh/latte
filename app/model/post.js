@@ -32,7 +32,7 @@
 			if(tags.indexOf("all") == -1) tags.push("all")
 		
 			if(key == null || key == undefined) {
-				ds.update("INSERT INTO posts (title, timestamp) VALUES('" + escape(title) + "','" + new Date().toDateString() + "')")
+				ds.update("INSERT INTO posts (title, timestamp) VALUES('" + escape(title) + "','" + new Date().toGMTString() + "')")
 				ds.query("SELECT last_insert_rowid() AS id", function(rs) {
 					log.debug("getting key")
 					if(rs.next()) key = rs.getInt("id")
@@ -48,7 +48,7 @@
 				
 				log.debug("new model: " + key)
 			} else {
-				ds.update("UPDATE posts SET title='" + escape(title) + "',timestamp='" + new Date().toDateString() + "' WHERE id=" + key)
+				ds.update("UPDATE posts SET title='" + escape(title) + "',timestamp='" + new Date().toGMTString() + "' WHERE id=" + key)
 				ds.update("DELETE from tags WHERE post=" + key)
 				tags.forEach(function(tag) {
 					ds.update("INSERT INTO tags (name, post) VALUES('" + escape(tag) + "'," + key + ")")

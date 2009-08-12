@@ -13,28 +13,41 @@ function nav(s) {
 }
 
 function loadUI(target, keys, focus, admin) {
-	var loadAmount = parseInt($(window).width() / 270 * 1.5)
+	var loadAmount = calcLoadAmount() 
 	var end = keys.indexOf(anchor)
 	var start = Math.max(0, end - loadAmount)
 	var t = keys.slice(start, end + 1).reverse()
 
 	target.html(genLoadNewer() + jQuery.map(t, genHTML).join(""))
 	jQuery.map(t, getDetails)
-	if(end < keys.length - 1) $("#loadNewer").click(loadNewerOnClick)
+	if(end < keys.length - 1) $("#loadNewer").click(loadNewer)
 
 	$(window).scroll(function() {
-		if(($(document).width() - $(window).width()) - $(window).scrollLeft() < 150 && start > 0) {
-			var t = Math.max(0, start - 1)
-			start = Math.max(0, start - loadAmount)
-			t = keys.slice(start, t + 1).reverse()
-
-			target.html(target.html() + jQuery.map(t, genHTML).join(""))
-			jQuery.map(t, getDetails)
-			if(end < keys.length - 1) $("#loadNewer").click(loadNewerOnClick)
-		}
+		if(($(document).width() - $(window).width()) - $(window).scrollLeft() < 150 && start > 0) loadOlder()
 	})
 
-	function loadNewerOnClick() {
+	$(window).resize(function() {
+		if($(window).width() >= $(document).width()) {
+			loadAmount = calcLoadAmount()
+			loadOlder()
+		}	
+	})
+
+	function calcLoadAmount() {
+        	return parseInt($(window).width() / 270 * 1.2)
+	}
+
+	function loadOlder() {
+		var t = Math.max(0, start - 1)
+		start = Math.max(0, start - loadAmount)
+		t = keys.slice(start, t + 1).reverse()
+
+		target.html(target.html() + jQuery.map(t, genHTML).join(""))
+		jQuery.map(t, getDetails)
+		if(end < keys.length - 1) $("#loadNewer").click(loadNewer)
+	}
+
+	function loadNewer() {
 		$("#loadNewer").remove()
 		
 		var t = Math.min(keys.length - 1, end + 1)
@@ -43,7 +56,7 @@ function loadUI(target, keys, focus, admin) {
 	
 		target.html(genLoadNewer() + jQuery.map(t, genHTML).join("") + target.html())
 		jQuery.map(t, getDetails)
-		if(end < keys.length - 1) $("#loadNewer").click(loadNewerOnClick)
+		if(end < keys.length - 1) $("#loadNewer").click(loadNewer)
 	}
 
 	function genLoadNewer() {
