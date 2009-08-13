@@ -8,6 +8,7 @@
 						<title>{post.title}</title>
 						<description>{post.title}</description>
 						<link>http://www.edomame.com/all/{post.key}</link>
+						<pubDate>{post.date}</pubDate>
 						<guid>{post.key}</guid>
 			      		</item>
 				}).reduce(
