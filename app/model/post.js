@@ -4,7 +4,7 @@
 		
 	function get(id) {
 		var model
-		ds.query("SELECT id, title, orig, timestamp FROM posts WHERE id=" + escape(id), function(rs) {
+		ds.query("SELECT id, title, timestamp FROM posts WHERE id=" + escape(id), function(rs) {
 			if(rs.next()) {
 				model = {
 					key: rs.getInt("id"),
