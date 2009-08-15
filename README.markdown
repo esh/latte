@@ -1,5 +1,5 @@
 #Introduction
-This project started life when I decided to learn javascript after reading <a href="http://steve-yegge.blogspot.com/2007/06/rhino-on-rails.html">Steve Yegge's post on Rhino on Rails</a> Rather then wait for Steve to release RoR (he still hasn't) I decided to write a _very_ simplified version myself.
+This project started life when I decided to learn javascript after reading <a href="http://steve-yegge.blogspot.com/2007/06/rhino-on-rails.html">Steve Yegge's post on Rhino on Rails</a>. Rather then wait for Steve to release RoR (he still hasn't) I decided to write a _very_ simplified version myself.
 
 As you can guess, this is yet another MVC web framework. It uses javascript on the server side and its powered by rhino. JDBC, basic file io, HTTP communication are exposed via host objects.
 
