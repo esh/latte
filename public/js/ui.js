@@ -13,6 +13,8 @@ function nav(s) {
 }
 
 function loadUI(target, keys, focus, admin) {
+	const MAX_WIDTH = 370
+	const MIN_WIDTH = 278
 	var loadAmount = calcLoadAmount() 
 	var end = keys.indexOf(anchor)
 	var start = Math.max(0, end - loadAmount)
@@ -34,12 +36,12 @@ function loadUI(target, keys, focus, admin) {
 	})
 
 	function calcLoadAmount() {
-        	return parseInt($(window).width() / 270 * 1.2)
+        	return parseInt($(window).width() / MIN_WIDTH * 1.2)
 	}
 
 	function loadOlder() {
 		var t = Math.max(0, start - 1)
-		start = Math.max(0, start - loadAmount)
+		start = Math.max(0, start - loadAmount) 
 		t = keys.slice(start, t + 1).reverse()
 
 		target.html(target.html() + jQuery.map(t, genHTML).join(""))
@@ -51,7 +53,7 @@ function loadUI(target, keys, focus, admin) {
 		$("#loadNewer").remove()
 		
 		var t = Math.min(keys.length - 1, end + 1)
-		end = Math.min(keys.length - 1, end + loadAmount)
+		end = Math.min(keys.length - 1, end + Math.min(1,Math.floor($(window).width() / MAX_WIDTH)))
 		t = keys.slice(t, end + 1).reverse()
 	
 		target.html(genLoadNewer() + jQuery.map(t, genHTML).join("") + target.html())
@@ -105,9 +107,5 @@ function loadUI(target, keys, focus, admin) {
 				
 			$("#" + data.key + " div").html(html.join(""))
 		})	
-	}
-
-	function setupLightbox(key, i) {
-		$("#" + key + " div a").lightbox()
 	}
 }
