@@ -23,7 +23,7 @@
         		}).join(" "))
 			%>	
 			</select>
-			<span style="font-size:12px;margin-right:20px"><a href="http://esh.github.com/latte/">powered by latte</a></span>
+			<span style="font-size:12px;margin-right:20px"><a href="http://www.github.com/esh/latte/">powered by latte</a></span>
 		</div>
 		<div id="body">
 			<table>
