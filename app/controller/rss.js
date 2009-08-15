@@ -2,14 +2,16 @@
 	return {
 		show: function() {
 			require("utils/common.js")
-			return ["ok", "<?rss version=\"1.0\"?>\n" + model.tagset.get("all").slice(-16).map(function(key) {
-				var post = model.post.get(key)
+			var post = require("model/post.js")(db)
+			var keys = require("model/tagset.js")(db).get("all").slice(-16)
+			return ["ok", "<?rss version=\"1.0\"?>\n" + keys.map(function(key) {
+				var p = post.get(key)
 				return  <item>
-						<title>{post.title}</title>
-						<description>{post.title}</description>
+						<title>{p.title}</title>
+						<description>{p.title}</description>
 						<link>http://www.edomame.com/all/{post.key}</link>
-						<pubDate>{post.date}</pubDate>
-						<guid>{post.key}</guid>
+						<pubDate>{p.date}</pubDate>
+						<guid>{p.key}</guid>
 			      		</item>
 				}).reduce(
 					<rss version="2.0">
