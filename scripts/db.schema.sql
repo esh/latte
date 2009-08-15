@@ -1,2 +1,0 @@
-CREATE TABLE posts(id integer primary key asc autoincrement, title, timestamp);
-CREATE TABLE tags(name, post REFERENCES posts (id));
