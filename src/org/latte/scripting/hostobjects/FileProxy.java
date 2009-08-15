@@ -48,7 +48,11 @@ public class FileProxy {
 		return new String(buffer);
 	}
 	
-	public void remove() throws IOException {
-		file.delete();
+	public void remove() throws Exception {
+		if(!file.delete()) throw new JavaScriptException("could not delete " + file.getAbsolutePath(), 0);
+	}
+	
+	public void rename(String path) throws Exception {
+		if(!file.renameTo(new File(path))) throw new JavaScriptException("could not move " + file.getAbsolutePath() + " to " + path, 0);
 	}
 }
