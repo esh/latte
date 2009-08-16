@@ -7,7 +7,7 @@
 		if(request.params["passcode"] == config.sitepass) {
 			session["authorized"] = true
 			return ["redirect", "/"]
-		} else return ["ok", render("view/admin/password.jhtml")]
+		} else return ["ok", render("view/admin/password.jhtml", new Object())]
 	}
 	
 	function logout() {

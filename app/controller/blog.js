@@ -13,41 +13,40 @@
 	}
 	
 	function show(type) {
-		var params = new Object()
-		return function() {
-			params["type"] = (type == undefined | type == "") ? "all" : type
-			params["keys"] = tagset.get(params["type"])
-			params["cloud"] = tags.get()
-			params["admin"] = session["authorized"] == true
-			
-			return ["ok", render("view/blog/show.jhtml")]
-		}()
+		var type = (type == undefined || type == "") ? "all" : type
+		return ["ok", render(
+				"view/blog/show.jhtml",
+				{ 
+					type: type, 
+					keys: tagset.get(type),
+					cloud: tags.get(),
+					admin: session["authorized"] == true
+				})]
 	}
 	
 	function create() {
-		var params = new Object()
 		return secure(function() {	
-			return ["ok", render("view/blog/form.jhtml")]
+			return ["ok", render("view/blog/form.jhtml", new Object())]
 		})
 	}
-	
+
 	function edit(pkey) {
-		var params = new Object()
 		return secure(function() {
 			var p = post.get(pkey)
-			params["key"] = p.key
-			params["title"] = p.title
-			params["description"] = p.description
-			params["tags"] = p.tags.join(" ")
+			p.tags = p.tags.join(" ")
 			
-			return ["ok", render("view/blog/form.jhtml")]
+			return ["ok", render("view/blog/form.jhtml", p)]
 		})
 	}
 	
 	function save() {
 		return secure(function() {
 			var twit = request.params["key"] == null
-			var p = post.persist(request.params["key"], request.params["title"], request.params["upload"], request.params["tags"])
+			var p = post.persist(
+					request.params["key"],
+					request.params["title"],
+					request.params["upload"],
+					request.params["tags"])
 			if(twit) require("twitter.js")(p)
 			
 			return ["redirect", "/blog/show/all/" + post.key]

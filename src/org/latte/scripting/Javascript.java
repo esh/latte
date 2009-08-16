@@ -73,8 +73,8 @@ public class Javascript implements Script {
 		scope.put("render", scope, new Callable() {
 			public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] params) {
 				try {
-					if(params != null && params.length == 1 && params[0] instanceof String) return ((JHTML)loader.get((String)params[0])).render(cx, scope);
-					else throw new IllegalArgumentException("expecting string");
+					if(params != null && params.length == 2) return ((JHTML)loader.get((String)params[0])).render(cx, scope, params[1]);
+					else throw new IllegalArgumentException("expecting 2 args");
 				} catch(Exception e) {
 					throw new IllegalArgumentException(e);
 				}

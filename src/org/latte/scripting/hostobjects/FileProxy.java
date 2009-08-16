@@ -38,7 +38,7 @@ public class FileProxy {
 	}
 
 	public String read() throws Exception {
-		if(!file.exists()) throw new JavaScriptException(file.getAbsoluteFile() + " not found", "open", 0);	
+		if(!file.exists()) throw new JavaScriptException(file.getAbsoluteFile() + " not found", "file", 0);	
 		
 		byte[] buffer = new byte[(int)file.length()];
 		FileInputStream in = new java.io.FileInputStream(file);
@@ -49,10 +49,10 @@ public class FileProxy {
 	}
 	
 	public void remove() throws Exception {
-		if(!file.delete()) throw new JavaScriptException("could not delete " + file.getAbsolutePath(), 0);
+		if(!file.delete()) throw new JavaScriptException("could not delete " + file.getAbsolutePath(), "file", 0);
 	}
 	
 	public void rename(String path) throws Exception {
-		if(!file.renameTo(new File(path))) throw new JavaScriptException("could not move " + file.getAbsolutePath() + " to " + path, 0);
+		if(!file.renameTo(new File(path))) throw new JavaScriptException("could not move " + file.getAbsolutePath() + " to " + path, "file", 0);
 	}
 }

@@ -19,7 +19,7 @@ public class JHTML implements Script {
 	private final Scriptlet[] scriptlets;
 	
 	private interface Scriptlet {
-		public void render(final StringBuilder buffer, Context cx, Scriptable scope) throws Exception;
+		public void render(final StringBuilder buffer, Context cx, Scriptable scope, Object params) throws Exception;
 	}
 	
 	private class JSScriptlet implements Scriptlet {
@@ -30,21 +30,25 @@ public class JHTML implements Script {
 		}
 		
 		@SuppressWarnings("unchecked")
-		public void render(final StringBuilder buffer, Context cx, Scriptable scope) throws Exception {
-			script.eval(cx,
-						scope,
-						new Tuple[] { new Tuple("echo", new Callable() {
-							public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] params) {
-								try {
-									if(params != null && params.length == 1) buffer.append(params[0].toString());
-									else throw new IllegalArgumentException("expecting 1 arg");
-															 
-									return null;
-								} catch(Exception e) {
-									throw new IllegalArgumentException(e);
-								}
+		public void render(final StringBuilder buffer, Context cx, Scriptable scope, Object params) throws Exception {
+			script.eval(
+				cx,
+				scope,
+				new Tuple[] {
+					new Tuple("params", params),
+					new Tuple("echo", new Callable() {
+						public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] params) {
+							try {
+								if(params != null && params.length == 1) buffer.append(params[0].toString());
+								else throw new IllegalArgumentException("expecting 1 arg");
+							
+								return null;
+							} catch(Exception e) {
+								throw new IllegalArgumentException(e);
 							}
-						}) });
+						}
+					})
+				});
 			}
 		}
 	
@@ -54,7 +58,7 @@ public class JHTML implements Script {
 		public HTMLScriptlet(String contents) {
 			this.contents = contents;
 		}
-		public void render(final StringBuilder buffer, Context cx, Scriptable scope) {
+		public void render(final StringBuilder buffer, Context cx, Scriptable scope, Object params) {
 			buffer.append(contents);
 		}
 	}
@@ -111,12 +115,12 @@ public class JHTML implements Script {
 		scriptlets = t.toArray(new Scriptlet[t.size()]);
 	}
 	
-	public String render(Context cx, Scriptable scope) throws Exception {
+	public String render(Context cx, Scriptable scope, Object params) throws Exception {
 		StringBuilder buffer = new StringBuilder();
 		
 		// produce the page
 		for(Scriptlet scriptlet : scriptlets) {
-			scriptlet.render(buffer, cx, scope);
+			scriptlet.render(buffer, cx, scope, params);
 		}
 		
 		return buffer.toString();
