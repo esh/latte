@@ -1,7 +1,7 @@
-register("config", config)
+register("config", require("config.js"))
 register("db", require("utils/sqldatastore.js")("org.sqlite.JDBC","jdbc:sqlite:db"))
 
-httpserver(8080, 32, function(request, response, session) {
+httpserver(config.port, config.staticcachesize, function(request, response, session) {
 	// form a closure
 	(function() {
 		var rewriter = require("urlrewrite.js")
