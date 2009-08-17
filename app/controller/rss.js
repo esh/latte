@@ -9,7 +9,7 @@
 				return  <item>
 						<title>{p.title}</title>
 						<description>{p.title}</description>
-						<link>http://www.edomame.com/all/{post.key}</link>
+						<link>http://www.edomame.com/all/{p.key}</link>
 						<pubDate>{p.date}</pubDate>
 						<guid>{p.key}</guid>
 			      		</item>
