@@ -11,12 +11,17 @@ public class Run {
 	 * @throws Exception 
 	 */
 	public static void main(String[] args) throws Exception {
-		if(args.length != 1) {
-			System.err.println("expecting 1 argument");
-			System.exit(-1);
-		}
 		PropertyConfigurator.configure("log4j.properties");
 		
-		((Javascript)new ScriptLoader("").get(args[0])).eval(null);
+		if(args.length == 1) {
+			((Javascript)new ScriptLoader("").get(args[0])).eval(null);
+		}
+		else if(args.length == 2) {
+			((Javascript)new ScriptLoader(args[0].split(";")).get(args[1])).eval(null);
+		}
+		else {
+			System.err.println("expecting 1 or 2 argument(s)");
+			System.exit(-1);
+		}
 	}
 }

@@ -1,15 +1,19 @@
 package org.latte.scripting;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.ContextFactory;
 import org.mozilla.javascript.Scriptable;
 
 public class ScriptLoader {
-	private final String root;
+	private static final Logger LOG = Logger.getLogger(ScriptLoader.class);
+	
+	private final String[] paths;
 	private final Scriptable parent;
 	private final Map<String, Script> mapping = new HashMap<String, Script>();
 	
@@ -17,22 +21,40 @@ public class ScriptLoader {
 		this("app/");
 	}
 	
-	public ScriptLoader(String root) {
-		this.root = root;
+	public ScriptLoader(String path) {
+		this(new String[] { path });
+	}
+	
+	public ScriptLoader(String[] paths) {
+		for(int i = 0 ; i < paths.length ; i++) {
+			if(!paths[i].endsWith("/")) paths[i] += "/";
+		}
+		
+		this.paths = paths;
 		Context cx = ContextFactory.getGlobal().enterContext();
 		this.parent = cx.initStandardObjects(null, false);
 		Context.exit();
 	}
 	
-	public Script get(String path) throws Exception {
-		path = root + path;
-		Script script = mapping.get(path);
-		if(script == null || script.lastModified() < new File(path).lastModified()) {
-			if(path.endsWith(".js")) script = new Javascript(parent, new File(path), this);
-			else script = new JHTML(parent, new File(path), this);
-			mapping.put(path, script);
+	public Script get(String p) throws Exception {
+		Script script = mapping.get(p);
+		for(String path : paths) {
+			try {
+				File file = new File(path + p);
+				if(script == null || script.lastModified() < file.lastModified()) {
+					if(p.endsWith(".js")) script = new Javascript(parent, file, this);
+					else script = new JHTML(parent, file, this);
+					mapping.put(p, script);
+					
+					LOG.info("loaded: " + p);
+					return script;
+				}
+				else if(script != null) {
+					return script;
+				}
+			} catch(FileNotFoundException e) {}
 		}
 		
-		return script;
+		throw new FileNotFoundException(p);
 	}
 }

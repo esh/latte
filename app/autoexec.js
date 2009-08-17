@@ -11,8 +11,8 @@ httpserver(config.port, config.staticcachesize, function(request, response, sess
 		
 		// get the controller
 		var controller = args.shift();
-		if(controller == "") controller = require("/controller/root.js")()
-		else controller = require("/controller/" + controller + ".js")()
+		if(controller == "") controller = require("controller/root.js")()
+		else controller = require("controller/" + controller + ".js")()
 		
 		var action = args.shift();
 		if(action == undefined || action == "") action = "show"
