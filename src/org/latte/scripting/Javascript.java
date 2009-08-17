@@ -9,6 +9,7 @@ import org.latte.scripting.hostobjects.Open;
 import org.latte.scripting.hostobjects.RWLock;
 import org.latte.scripting.hostobjects.JDBC;
 import org.latte.scripting.hostobjects.Shell;
+import org.latte.scripting.hostobjects.HTTPServer;
 import org.latte.util.Tuple;
 import org.mozilla.javascript.Callable;
 import org.mozilla.javascript.Context;
@@ -84,7 +85,8 @@ public class Javascript implements Script {
 		scope.put("open", scope, new Open());
 		scope.put("hopen", scope, new HOpen());
 		scope.put("jdbc", scope, new JDBC());
-		
+		scope.put("httpserver", scope, new HTTPServer());	
+	
 		ScriptableObject.defineClass(scope, RWLock.class);
 		
 		
