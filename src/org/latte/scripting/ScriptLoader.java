@@ -18,7 +18,7 @@ public class ScriptLoader {
 	private final Map<String, Script> mapping = new HashMap<String, Script>();
 	
 	public ScriptLoader() {
-		this("app/");
+		this(".");
 	}
 	
 	public ScriptLoader(String path) {
@@ -27,7 +27,7 @@ public class ScriptLoader {
 	
 	public ScriptLoader(String[] paths) {
 		for(int i = 0 ; i < paths.length ; i++) {
-			if(!paths[i].endsWith("/")) paths[i] += "/";
+			if(paths[i].length() > 0 && !paths[i].endsWith("/")) paths[i] += "/";
 		}
 		
 		this.paths = paths;
