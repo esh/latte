@@ -17,5 +17,5 @@ I am currently using latte to power <http://www.edomame.com>, my personal websit
 1. shell>ant
 1. shell>./latte run scripts/db.create.js
 1. shell>mkdir public/blog
-1. shell>./latte app init
+1. shell>./latte app init.js
 1. open http://localhost:8080 from a browser!
