@@ -46,7 +46,7 @@ public class RequestProxy extends ScriptableObject {
 	}
 	
 	public RequestProxy(HttpServletRequest request) throws IOException {
-		ScriptableObject.putProperty(this, "hostname", InetAddress.getByName(request.getRemoteAddr()).getHostAddress());
+		ScriptableObject.putProperty(this, "hostname", InetAddress.getByName(request.getRemoteAddr()).getHostName());
 		ScriptableObject.putProperty(this, "url", request.getRequestURI());
 		ScriptableObject.putProperty(this, "params", new Params(request));	
 		
