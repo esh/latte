@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.InetAddress;
 import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
@@ -45,7 +46,7 @@ public class RequestProxy extends ScriptableObject {
 	}
 	
 	public RequestProxy(HttpServletRequest request) throws IOException {
-		ScriptableObject.putProperty(this, "hostname", request.getRemoteHost());
+		ScriptableObject.putProperty(this, "hostname", InetAddress.getByName(request.getRemoteAddr()).getHostAddress());
 		ScriptableObject.putProperty(this, "url", request.getRequestURI());
 		ScriptableObject.putProperty(this, "params", new Params(request));	
 		
