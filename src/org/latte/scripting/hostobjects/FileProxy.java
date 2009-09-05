@@ -55,4 +55,8 @@ public class FileProxy {
 	public void rename(String path) throws Exception {
 		if(!file.renameTo(new File(path))) throw new JavaScriptException("could not move " + file.getAbsolutePath() + " to " + path, "file", 0);
 	}
+	
+	public String[] list() {
+		return file.list();
+	}
 }
