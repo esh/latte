@@ -59,4 +59,12 @@ public class FileProxy {
 	public String[] list() {
 		return file.list();
 	}
+	
+	public boolean isDirectory() {
+		return file.isDirectory();
+	}
+	
+	public boolean isFile() {
+		return file.isFile();
+	}
 }
