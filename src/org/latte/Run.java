@@ -17,7 +17,7 @@ public class Run {
 			((Javascript)new ScriptLoader("").get(args[0])).eval(null);
 		}
 		else if(args.length == 2) {
-			((Javascript)new ScriptLoader(args[0].split(";")).get(args[1])).eval(null);
+			((Javascript)new ScriptLoader(args[0].split(":")).get(args[1])).eval(null);
 		}
 		else {
 			System.err.println("expecting 1 or 2 argument(s)");
