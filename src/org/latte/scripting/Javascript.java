@@ -10,6 +10,8 @@ import org.latte.scripting.hostobjects.RWLock;
 import org.latte.scripting.hostobjects.JDBC;
 import org.latte.scripting.hostobjects.Shell;
 import org.latte.scripting.hostobjects.HTTPServer;
+import org.latte.scripting.hostobjects.Thread;
+import org.latte.scripting.hostobjects.Sleep;
 import org.latte.util.Tuple;
 import org.mozilla.javascript.Callable;
 import org.mozilla.javascript.Context;
@@ -81,6 +83,8 @@ public class Javascript implements Script {
 				}
 			}
 		});
+		scope.put("thread", scope, new Thread());
+		scope.put("sleep", scope, new Sleep());
 		scope.put("shell", scope, new Shell());
 		scope.put("open", scope, new Open());
 		scope.put("hopen", scope, new HOpen());
