@@ -4,14 +4,15 @@ import java.io.File;
 import java.io.FileReader;
 
 import org.apache.log4j.Logger;
-import org.latte.scripting.hostobjects.HOpen;
+import org.latte.scripting.hostobjects.HGet;
+import org.latte.scripting.hostobjects.HPost;
+import org.latte.scripting.hostobjects.HTTPServer;
+import org.latte.scripting.hostobjects.JDBC;
 import org.latte.scripting.hostobjects.Open;
 import org.latte.scripting.hostobjects.RWLock;
-import org.latte.scripting.hostobjects.JDBC;
 import org.latte.scripting.hostobjects.Shell;
-import org.latte.scripting.hostobjects.HTTPServer;
-import org.latte.scripting.hostobjects.Thread;
 import org.latte.scripting.hostobjects.Sleep;
+import org.latte.scripting.hostobjects.Thread;
 import org.latte.util.Tuple;
 import org.mozilla.javascript.Callable;
 import org.mozilla.javascript.Context;
@@ -87,7 +88,8 @@ public class Javascript implements Script {
 		scope.put("sleep", scope, new Sleep());
 		scope.put("shell", scope, new Shell());
 		scope.put("open", scope, new Open());
-		scope.put("hopen", scope, new HOpen());
+		scope.put("hget", scope, new HGet());
+		scope.put("hpost", scope, new HPost());
 		scope.put("jdbc", scope, new JDBC());
 		scope.put("httpserver", scope, new HTTPServer());	
 	
