@@ -26,7 +26,7 @@ public class HGet implements Callable {
 		  	
 			return sb.toString();
 		} catch (Exception e) {
-			throw new JavaScriptException("hget", e.toString(), 0);
+			throw new JavaScriptException(e, "hget", 0);
 		}
 	}
 }

@@ -15,7 +15,7 @@ public class JDBC implements Callable {
 				
 				return DriverManager.getConnection((String)params[1]);
 			} catch (Exception e) {
-				throw new JavaScriptException(e.toString(), "jdbc", 0);
+				throw new JavaScriptException(e, "jdbc", 0);
 			}
 			
 		}

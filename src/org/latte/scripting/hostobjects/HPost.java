@@ -20,7 +20,7 @@ public class HPost implements Callable {
 		try {
 			URLConnection uc = new URL((String)params[0]).openConnection();
 			Scriptable reqParams = (Scriptable)params[1];
-			if(params != null) {	
+			if(reqParams != null) {	
 				for(Object key : reqParams.getIds()) {
 					uc.setRequestProperty(key.toString(), reqParams.get(key.toString(), reqParams).toString());
 				}
@@ -33,7 +33,7 @@ public class HPost implements Callable {
 			out.flush();
 			out.close();
 			
-			InputStream in = new URL((String)params[0]).openConnection().getInputStream();
+			InputStream in = uc.getInputStream();
 			BufferedReader br = new BufferedReader(new InputStreamReader(in));
 			StringBuilder sb = new StringBuilder();
 			String res;
@@ -45,7 +45,7 @@ public class HPost implements Callable {
 		  	
 			return sb.toString();
 		} catch (Exception e) {
-			throw new JavaScriptException("hpost", e.toString(), 0);
+			throw new JavaScriptException(e, "hpost", 0);
 		}
 	}
 }
