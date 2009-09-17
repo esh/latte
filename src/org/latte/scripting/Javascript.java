@@ -4,33 +4,22 @@ import java.io.File;
 import java.io.FileReader;
 
 import org.apache.log4j.Logger;
-import org.latte.scripting.hostobjects.HGet;
-import org.latte.scripting.hostobjects.HPost;
-import org.latte.scripting.hostobjects.HTTPServer;
-import org.latte.scripting.hostobjects.JDBC;
-import org.latte.scripting.hostobjects.Open;
-import org.latte.scripting.hostobjects.RWLock;
-import org.latte.scripting.hostobjects.Shell;
-import org.latte.scripting.hostobjects.Sleep;
-import org.latte.scripting.hostobjects.Thread;
 import org.latte.util.Tuple;
-import org.mozilla.javascript.Callable;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.ContextFactory;
 import org.mozilla.javascript.Scriptable;
-import org.mozilla.javascript.ScriptableObject;
 
 public class Javascript implements Script {
-	private final static Logger LOG = Logger.getLogger(Javascript.class);
+	private final Logger log;
 	private final long lastModified;
-	private final ScriptLoader loader;
 	private final Scriptable parent;
 	
 	private final org.mozilla.javascript.Script script;
 	
-	public Javascript(Scriptable parent, File file, ScriptLoader loader) throws Exception {
+	public Javascript(Scriptable parent, File file) throws Exception {
+		log = Logger.getLogger(file.getName());
+		 
 		this.lastModified = file.lastModified();
-		this.loader = loader;
 		this.parent = parent;
 		
 		try {
@@ -42,8 +31,8 @@ public class Javascript implements Script {
 	}
 	
 	public Javascript(Scriptable parent, String content, ScriptLoader loader) throws Exception {
+		log = Logger.getLogger("scriptlet");
 		this.lastModified = -1;
-		this.loader = loader;
 		this.parent = parent;
 		
 		try {
@@ -55,46 +44,7 @@ public class Javascript implements Script {
 	}
 
 	protected Object eval(Context cx, Scriptable scope, Tuple<String, Object>[] env) throws Exception {
-		scope.put("log", scope, LOG);
-		scope.put("require", scope, new Callable() {
-			public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] params) {
-				try {
-					if(params != null && params.length == 1 && params[0] instanceof String) return ((Javascript)loader.get((String)params[0])).eval(cx, scope, null);
-					else throw new IllegalArgumentException("expecting string");
-				} catch(Exception e) {
-					throw new IllegalArgumentException(e);
-				}
-			}
-		});
-		scope.put("register", scope, new Callable() {
-			public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] params) {
-				if(params != null && params.length == 2 && params[0] instanceof String) {
-					parent.put((String) params[0], parent, params[1]);
-					return null;
-				} else throw new IllegalArgumentException("expecting string, obj");
-			}
-		});
-		scope.put("render", scope, new Callable() {
-			public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] params) {
-				try {
-					if(params != null && params.length == 2) return ((JHTML)loader.get((String)params[0])).render(cx, scope, params[1]);
-					else throw new IllegalArgumentException("expecting 2 args");
-				} catch(Exception e) {
-					throw new IllegalArgumentException(e);
-				}
-			}
-		});
-		scope.put("thread", scope, new Thread());
-		scope.put("sleep", scope, new Sleep());
-		scope.put("shell", scope, new Shell());
-		scope.put("open", scope, new Open());
-		scope.put("hget", scope, new HGet());
-		scope.put("hpost", scope, new HPost());
-		scope.put("jdbc", scope, new JDBC());
-		scope.put("httpserver", scope, new HTTPServer());	
-	
-		ScriptableObject.defineClass(scope, RWLock.class);
-		
+		scope.put("log", scope, log);		
 		
 		if(env != null) {
 			for(Tuple<String, Object> binding : env) {
