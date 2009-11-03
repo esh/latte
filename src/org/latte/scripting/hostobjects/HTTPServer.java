@@ -77,6 +77,7 @@ public class HTTPServer implements Callable {
 						@Override
 						public String getClassName() { return "Session"; }
 					};
+                    session.put("id", session, request.getSession().getId());
 					request.getSession().setAttribute("latte.session", session);
 				}
 				

@@ -54,7 +54,7 @@ public class RequestProxy extends ScriptableObject {
 		String authorization = (String)request.getHeader("Authorization");
 		if(authorization != null && authorization.startsWith("Basic"))  ScriptableObject.putProperty(this, "authorization", new String(new Base64().decode(authorization.split(" ")[1].getBytes())));
 		
-		if("application/json".equals(request.getContentType())) {
+		if(request.getContentType() != null && request.getContentType().contains("application/json")) {
 			StringBuffer sb = new StringBuffer();
 			BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
 			String line;
