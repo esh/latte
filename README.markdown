@@ -5,6 +5,14 @@ This is another MVC framework. It uses javascript on the server side and its pow
 
 I am currently using latte to power <http://www.edomame.com>, my personal website. 
 
+#Features
+* JavaScript awesomeness in the backend
+* convention over configuration
+* rapid REPL, just save and refresh your browser
+* simple HTML templating
+* java interop comes free
+* no crazy magic, it's simple
+
 #Dependencies
 * JDK 1.5+
 * apache ant
