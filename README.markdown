@@ -3,7 +3,7 @@ This project started life when I decided to learn javascript after reading <a hr
 
 This is another MVC framework. It uses javascript on the server side and its powered by rhino. You can do stuff quickly because latte has a fast REPL cycle and because convention is favored over configuration.
 
-I am currently using latte to power <http://www.edomame.com>, my personal website. Check out the code at <http://www.github.com/esh/edomame> to see a full webapp built on latte.
+I am currently using latte to power <http://www.edomame.com>, my personal website. 
 
 #Dependencies
 * JDK 1.5+
@@ -13,3 +13,19 @@ I am currently using latte to power <http://www.edomame.com>, my personal websit
 1. clone the repository from github!
 1. shell into the root directory
 1. shell>ant
+
+#A simple website
+1. latte/> ./latte.sh app init.js
+2. open http://localhost:8080/hello/world in a browser 
+
+latte/app/controller/> cat hello.js
+(function() {
+	return {
+		world: function() {
+			return ["ok", "hello world"]
+		}
+	}
+})
+
+#A more complicated website
+Check out the code at <http://www.github.com/esh/edomame> to see a full webapp built on latte. It has url rewriting, database access, a REST api, automatic redeployment via github pushes, and many more goodies.
