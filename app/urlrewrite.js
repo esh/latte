@@ -1,0 +1,3 @@
+(function(url) {
+	return url
+})
