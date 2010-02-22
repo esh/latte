@@ -13,23 +13,20 @@ public class Run {
 	 */
 	public static void main(String[] args) throws Exception {
 		PropertyConfigurator.configure("log4j.properties");
-		String[] paths = null;
 		String script = null;
 		
 		if(args.length == 1) {
-			paths = new String[0];
 			script = args[0];
 		}
 		else if(args.length == 2) {
-			paths = args[0].split(":");
-			script = args[1];
+			script = args[0];
 		}
 		else {
-			System.err.println("usage: org.latte.Run path[:paths] script");
+			System.err.println("usage: org.latte.Run script [args]");
 			System.exit(-1);
 		}
 
-		ScriptLoader loader  = new ScriptLoader(paths);
+		ScriptLoader loader  = new ScriptLoader();
 		loader.register("httpserver", new HTTPServer());	
 
 		((Javascript)loader.get(script)).eval(null);

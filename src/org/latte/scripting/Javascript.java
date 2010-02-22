@@ -1,7 +1,9 @@
 package org.latte.scripting;
 
-import java.io.File;
-import java.io.FileReader;
+import java.io.InputStreamReader;
+
+import java.net.URL;
+import java.net.URLConnection;
 
 import org.apache.log4j.Logger;
 import org.latte.util.Tuple;
@@ -16,15 +18,16 @@ public class Javascript implements Script {
 	
 	private final org.mozilla.javascript.Script script;
 	
-	public Javascript(Scriptable parent, File file) throws Exception {
-		log = Logger.getLogger(file.getName());
-		 
-		this.lastModified = file.lastModified();
+	public Javascript(Scriptable parent, URL url) throws Exception {
+		log = Logger.getLogger(url.getPath());
+
+		URLConnection conn = url.openConnection();		 
+		this.lastModified = conn.getLastModified();
 		this.parent = parent;
 		
 		try {
 			Context cx = ContextFactory.getGlobal().enterContext();	
-			script = cx.compileReader(new FileReader(file), file.getAbsolutePath(), 1, null);
+			script = cx.compileReader(new InputStreamReader(conn.getInputStream()), url.getPath(), 1, null);
 		} finally {
 			Context.exit();
 		}

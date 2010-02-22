@@ -1,14 +1,21 @@
 package org.latte.scripting;
 
-import java.io.File;
-import java.io.FileInputStream;
+import java.net.URL;
+import java.net.URLConnection;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import org.latte.util.Tuple;
+import java.io.InputStream;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 import org.mozilla.javascript.Callable;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;
+
+import org.latte.util.Tuple;
 
 public class JHTML implements Script {
 	private static final String CLOSE = "%>";
@@ -63,16 +70,24 @@ public class JHTML implements Script {
 		}
 	}
 	
-	public JHTML(Scriptable parent, File file, ScriptLoader loader) throws Exception {
-		this.lastModified = file.lastModified();
+	public JHTML(Scriptable parent, URL url, ScriptLoader loader) throws Exception {
+		URLConnection conn = url.openConnection();		 
+		this.lastModified = conn.getLastModified();
 
-		byte[] buffer = new byte[(int)file.length()];
-		FileInputStream in = new FileInputStream(file);
-		in.read(buffer);
-		in.close();
+		StringBuilder sb = new StringBuilder();
+		InputStream is = conn.getInputStream();
+		try {
+			String line;
+			BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+			while ((line = reader.readLine()) != null) {
+			    sb.append(line).append("\n");
+			}
+		} finally {
+			is.close();
+		}
 		
 		List<Scriptlet> t = new ArrayList<Scriptlet>();
-		String text = new String(buffer);
+		String text = sb.toString();
 		
 		int start = 0, open = 0, close = 0;		
 		while((open = text.indexOf(OPEN, start)) != -1) {
