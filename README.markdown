@@ -25,23 +25,20 @@ Latte is a serverside JavaScript MVC framework powered by Rhino. I use latte to 
 #So simple
 
 1. latte/app/controller> cat hello.js
-	(function() {
-		return {
-			world: function() {
-				return ["ok", "hello world"]
-			},
-			world2: function() {
-				return ["ok", render("view/hello/world2.jhtml", { text: "hello world2" })]
+		(function() {
+			return {
+				world: function() {
+					return ["ok", "hello world"]
+				},
+				world2: function() {
+					return ["ok", render("view/hello/world2.jhtml", { text: "hello world2" })]
+				}
 			}
-		}
-	})
+		})
 
 1. latte> ./latte.sh init.js
 1. check out http://localhost:8080/hello/world in a browser 
 1. and.. http://localhost:8080/hello/world2
-
-#A slighter more complicated website
-open http://localhost:8080/hello/world2 in a browser 
 
 #A more complicated website
 Check out the code at <http://www.github.com/esh/edomame> to see a full webapp built on latte. It has url rewriting, database access, a REST api, automatic redeployment via github pushes, and many more goodies.
