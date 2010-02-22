@@ -29,11 +29,7 @@ public class ScriptLoader {
 	private final Map<String, Script> mapping = new HashMap<String, Script>();
 	
 	public ScriptLoader() throws Exception {
-		this(".");
-	}
-	
-	public ScriptLoader(String path) throws Exception {
-		this(new String[] { path });
+		this(new String[] { "." });
 	}
 	
 	public ScriptLoader(String[] paths) throws Exception {
@@ -45,8 +41,7 @@ public class ScriptLoader {
 		Context cx = ContextFactory.getGlobal().enterContext();
 		this.parent = cx.initStandardObjects(null, false);
 		
-		
-		this.parent.put("require", this.parent, new Callable() {
+		register("require", new Callable() {
 			public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] params) {
 				try {
 					if(params != null && params.length == 1 && params[0] instanceof String) return ((Javascript)get((String)params[0])).eval(cx, scope, null);
@@ -56,7 +51,7 @@ public class ScriptLoader {
 				}
 			}
 		});
-		this.parent.put("register", this.parent, new Callable() {
+		register("register", new Callable() {
 			public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] params) {
 				if(params != null && params.length == 2 && params[0] instanceof String) {
 					parent.put((String) params[0], parent, params[1]);
@@ -64,7 +59,7 @@ public class ScriptLoader {
 				} else throw new IllegalArgumentException("expecting string, obj");
 			}
 		});
-		this.parent.put("render", this.parent, new Callable() {
+		register("render", new Callable() {
 			public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] params) {
 				try {
 					if(params != null && params.length == 2) return ((JHTML)get((String)params[0])).render(cx, scope, params[1]);
@@ -74,18 +69,21 @@ public class ScriptLoader {
 				}
 			}
 		});
-		this.parent.put("thread", this.parent, new Thread());
-		this.parent.put("sleep", this.parent, new Sleep());
-		this.parent.put("shell", this.parent, new Shell());
-		this.parent.put("open", this.parent, new Open());
-		this.parent.put("hget", this.parent, new HGet());
-		this.parent.put("hpost", this.parent, new HPost());
-		this.parent.put("jdbc", this.parent, new JDBC());
-		this.parent.put("httpserver", this.parent, new HTTPServer());	
+		register("thread", new Thread());
+		register("sleep", new Sleep());
+		register("shell", new Shell());
+		register("open", new Open());
+		register("hget", new HGet());
+		register("hpost", new HPost());
+		register("jdbc", new JDBC());
 	
 		ScriptableObject.defineClass(this.parent, RWLock.class);
 			
 		Context.exit();
+	}
+
+	public void register(String name, Callable callable) {
+		this.parent.put(name, this.parent, callable);
 	}
 	
 	public Script get(String p) throws Exception {
