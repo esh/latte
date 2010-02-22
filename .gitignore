@@ -3,8 +3,6 @@
 .pid
 .settings
 db
-data
-public/blog
 log
 lib/latte.jar
 bin
