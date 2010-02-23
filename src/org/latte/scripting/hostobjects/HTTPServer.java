@@ -29,9 +29,10 @@ public class HTTPServer implements Callable {
 	
 	// port, staticcachesize, function(request, response, session)
 	public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] params) {
+		ScriptableObject config = (ScriptableObject)params[0];
 		Server server = new Server();
 		SelectChannelConnector connector = new SelectChannelConnector();
-		connector.setPort(((Integer)params[0]).intValue());
+		connector.setPort(((Integer)config.get("port", config)).intValue());
 		server.setConnectors(new Connector[] { connector });
 		
 		org.mortbay.jetty.servlet.Context context = new org.mortbay.jetty.servlet.Context(server, "/", org.mortbay.jetty.servlet.Context.SESSIONS);
@@ -39,11 +40,11 @@ public class HTTPServer implements Callable {
 
 		
 		context.addServlet(new ServletHolder(new DefaultServlet()), "/public/*");
-		context.addServlet(new ServletHolder(new LatteServlet(scope, (Callable)params[2])), "/");
+		context.addServlet(new ServletHolder(new LatteServlet(scope, (Callable)params[1])), "/");
 
 		Map<String, String> initParams = new HashMap<String, String>();
 		initParams.put("org.mortbay.jetty.servlet.Default.resourceBase", ".");
-		initParams.put("org.mortbay.jetty.servlet.Default.maxCachedFiles", ((Integer)params[1]).toString());
+		initParams.put("org.mortbay.jetty.servlet.Default.maxCachedFiles", ((Integer)config.get("staticcachesize", config)).toString());
 		context.setInitParams(initParams);
 		
 		try {

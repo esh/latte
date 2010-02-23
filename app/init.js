@@ -1,7 +1,7 @@
 var config = require("config.js")
 
-httpserver(config.port, config.staticcachesize, function(request, response, session) {
-	// kind of evil, form a closure for access to request, response, session, config, db
+httpserver(config, function(request, response, session) {
+	// kind of evil, form a closure for access to request, response, session, config
 	(function() {
 		try {
 			var rewriter = require("urlrewrite.js")

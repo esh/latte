@@ -36,8 +36,7 @@ public class LatteServlet extends HttpServlet {
 
 		loader.register("httpserver", new Callable() {
 			public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] params) {
-				fn = (Callable)params[2];	
-			
+				fn = (Callable)params[1];	
 				return null;
 			}
 		});
