@@ -1,6 +1,5 @@
 package org.latte;
 
-import org.apache.log4j.PropertyConfigurator;
 import org.latte.scripting.Javascript;
 import org.latte.scripting.ScriptLoader;
 import org.latte.scripting.hostobjects.HTTPServer;
@@ -12,7 +11,6 @@ public class Run {
 	 * @throws Exception 
 	 */
 	public static void main(String[] args) throws Exception {
-		PropertyConfigurator.configure("log4j.properties");
 		String script = null;
 		
 		if(args.length == 1) {

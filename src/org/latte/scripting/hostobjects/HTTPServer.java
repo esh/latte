@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 import org.latte.scripting.PrimitiveWrapFactory;
 import org.mortbay.jetty.Connector;
 import org.mortbay.jetty.Handler;
@@ -25,7 +25,7 @@ import org.mozilla.javascript.Scriptable;
 import org.mozilla.javascript.ScriptableObject;
 
 public class HTTPServer implements Callable {
-	private static final Logger LOG = Logger.getLogger(HTTPServer.class);
+	private static final Logger LOG = Logger.getLogger(HTTPServer.class.getName());
 	
 	// port, staticcachesize, function(request, response, session)
 	public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] params) {

@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
+import java.util.logging.Level;
+
 import org.latte.scripting.PrimitiveWrapFactory;
 import org.mozilla.javascript.Callable;
 import org.mozilla.javascript.Context;
@@ -24,7 +26,7 @@ import org.latte.scripting.Javascript;
 import org.latte.scripting.ScriptLoader;
 
 public class LatteServlet extends HttpServlet {
-	private static final Logger LOG = Logger.getLogger(LatteServlet.class);
+	private static final Logger LOG = Logger.getLogger(LatteServlet.class.getName());
 	final private Scriptable parent;
 	private Callable fn;
 
@@ -76,7 +78,7 @@ public class LatteServlet extends HttpServlet {
 					session
 			});
 		} catch(Exception e) {
-			LOG.fatal("", e);
+			LOG.log(Level.SEVERE, "", e);
 			response.sendError(500);
 		} finally {
 			Context.exit();

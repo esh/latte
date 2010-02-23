@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 import org.latte.util.Tuple;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.ContextFactory;

@@ -3,8 +3,7 @@ package org.latte.scripting;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
-
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 import org.latte.scripting.hostobjects.HGet;
 import org.latte.scripting.hostobjects.HPost;
 import org.latte.scripting.hostobjects.HTTPServer;
@@ -21,7 +20,7 @@ import org.mozilla.javascript.Scriptable;
 import org.mozilla.javascript.ScriptableObject;
 
 public class ScriptLoader {
-	private static final Logger LOG = Logger.getLogger(ScriptLoader.class);
+	private static final Logger LOG = Logger.getLogger(ScriptLoader.class.getName());
 	
 	private final Scriptable parent;
 	private final Map<String, Script> mapping = new HashMap<String, Script>();
