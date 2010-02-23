@@ -5,6 +5,7 @@
 
 	<target name="clean">
 		<delete dir="bin"/>
+		<delete dir="dist"/>
 	</target>
 
 	<target name="compile">
@@ -13,10 +14,20 @@
 	</target>
 
 	<target name="jar" depends="compile">
-		<jar destfile="lib/latte.jar"
-       			basedir="bin"
-       			includes="**/*.class"/>
-		</target>
+		<jar destfile="lib/latte.jar" basedir="bin" includes="**/*.class"/>
+	</target>
 
+	<target name="war" depends="compile">
+		<mkdir dir="dist"/>
+		<war destfile="dist/latte.war" webxml="src/meta/web.xml">
+			<lib dir="lib">
+				<exclude name="latte.jar"/>
+				<exclude name="jetty*.jar"/>
+				<exclude name="servlet*.jar"/>
+			</lib>
+			<classes dir="bin"/>
+			<classes dir="app"/>
+		</war>
+	</target>
 	<target name="build" depends="compile,jar" />
 </project>

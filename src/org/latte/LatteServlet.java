@@ -20,10 +20,28 @@ import org.mozilla.javascript.JavaScriptException;
 import org.mozilla.javascript.Scriptable;
 import org.mozilla.javascript.ScriptableObject;
 
+import org.latte.scripting.Javascript;
+import org.latte.scripting.ScriptLoader;
+
 public class LatteServlet extends HttpServlet {
 	private static final Logger LOG = Logger.getLogger(LatteServlet.class);
 	final private Scriptable parent;
-	final private Callable fn;
+	private Callable fn;
+
+	public LatteServlet() throws Exception {
+		ScriptLoader loader = new ScriptLoader();
+		this.parent = loader.getRoot();
+
+		loader.register("httpserver", new Callable() {
+			public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] params) {
+				fn = (Callable)params[2];	
+			
+				return null;
+			}
+		});
+
+		((Javascript)loader.get("init.js")).eval(null);
+	}
 	
 	public LatteServlet(Scriptable parent, Callable fn) {
 		this.parent = parent;

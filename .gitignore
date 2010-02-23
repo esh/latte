@@ -2,7 +2,7 @@
 .project
 .pid
 .settings
-db
+dist
 log
 lib/latte.jar
 bin

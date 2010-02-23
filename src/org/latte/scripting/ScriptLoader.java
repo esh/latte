@@ -71,6 +71,10 @@ public class ScriptLoader {
 		Context.exit();
 	}
 
+	public Scriptable getRoot() {
+		return this.parent;
+	}
+
 	public void register(String name, Callable callable) {
 		this.parent.put(name, this.parent, callable);
 	}

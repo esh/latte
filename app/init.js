@@ -1,5 +1,4 @@
 var config = require("config.js")
-var db = require("utils/sqldatastore.js")("org.sqlite.JDBC","jdbc:sqlite:db/live")
 
 httpserver(config.port, config.staticcachesize, function(request, response, session) {
 	// kind of evil, form a closure for access to request, response, session, config, db
