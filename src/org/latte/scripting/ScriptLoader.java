@@ -13,6 +13,7 @@ import org.latte.scripting.hostobjects.RWLock;
 import org.latte.scripting.hostobjects.Shell;
 import org.latte.scripting.hostobjects.Sleep;
 import org.latte.scripting.hostobjects.Thread;
+import org.latte.scripting.hostobjects.GetHostByAddr;
 import org.mozilla.javascript.Callable;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.ContextFactory;
@@ -64,6 +65,7 @@ public class ScriptLoader {
 		register("hget", new HGet());
 		register("hpost", new HPost());
 		register("jdbc", new JDBC());
+		register("gethostbyaddr", new GetHostByAddr());
 	
 		ScriptableObject.defineClass(this.parent, RWLock.class);
 			
