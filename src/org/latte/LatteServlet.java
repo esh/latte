@@ -3,6 +3,8 @@ package org.latte;
 import org.latte.scripting.hostobjects.RequestProxy;
 
 import java.io.IOException;
+import java.io.Serializable;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,6 +31,13 @@ public class LatteServlet extends HttpServlet {
 	private static final Logger LOG = Logger.getLogger(LatteServlet.class.getName());
 	final private Scriptable parent;
 	private Callable fn;
+
+	private class Session extends ScriptableObject implements Serializable {
+		@Override
+		public String getClassName() {
+			return "Session";
+		}
+	}
 
 	public LatteServlet() throws Exception {
 		ScriptLoader loader = new ScriptLoader();
@@ -58,14 +67,9 @@ public class LatteServlet extends HttpServlet {
 		try {
 			Context cx = ContextFactory.getGlobal().enterContext();
 
-			Scriptable session;
-			if((session = (Scriptable)request.getSession().getAttribute("latte.session")) == null) {
-				session = new ScriptableObject() {
-					@Override
-					public String getClassName() { return "Session"; }
-				};
-	    			session.put("id", session, request.getSession().getId());
-				request.getSession().setAttribute("latte.session", session);
+			Session session;
+			if((session = (Session)request.getSession().getAttribute("latte.session")) == null) {
+				session = new Session();
 			}
 			
 			Scriptable scope = cx.newObject(parent);

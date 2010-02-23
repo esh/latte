@@ -18,6 +18,7 @@
 	</target>
 
 	<target name="war" depends="compile">
+		<delete dir="dist"/>
 		<mkdir dir="dist"/>
 		<war destfile="dist/latte.war" webxml="src/meta/web.xml">
 			<lib dir="lib">
@@ -29,5 +30,35 @@
 			<classes dir="app"/>
 		</war>
 	</target>
+	<target name="gae" depends="compile">
+		<delete dir="dist"/>
+		<mkdir dir="src"/>
+		<mkdir dir="dist"/>
+		<mkdir dir="dist/WEB-INF"/>
+		<mkdir dir="dist/WEB-INF/lib"/>
+		<mkdir dir="dist/WEB-INF/classes"/>
+		<copy todir="dist/WEB-INF/">
+			<fileset dir="src/meta">
+				<include name="**/*.xml"/>
+			</fileset>
+		</copy>
+		<copy todir="dist/WEB-INF/classes">
+			<fileset dir="bin">
+				<include name="**/*.class"/>
+			</fileset>
+			<fileset dir="app">
+				<include name="**/*"/>
+			</fileset>
+		</copy>
+		<copy todir="dist/WEB-INF/lib">
+			<fileset dir="lib">
+				<include name="**/*.jar"/>
+				<exclude name="latte.jar"/>
+				<exclude name="jetty*.jar"/>
+				<exclude name="servlet*.jar"/>
+			</fileset>
+		</copy>
+	</target>
+
 	<target name="build" depends="compile,jar" />
 </project>
