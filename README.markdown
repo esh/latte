@@ -9,6 +9,7 @@ Latte is a serverside JavaScript MVC framework powered by Rhino. I use latte to 
 * rapid REPL, just save and refresh your browser
 * simple HTML templating - write the dynamic bits in JavaScript
 * java interop comes free
+* deployable on the google app engine or as a servlet!
 * no crazy magic, it's simple
 
 #Dependencies
