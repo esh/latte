@@ -70,6 +70,7 @@ public class LatteServlet extends HttpServlet {
 			Session session;
 			if((session = (Session)request.getSession().getAttribute("latte.session")) == null) {
 				session = new Session();
+				request.getSession().setAttribute("latte.session", session);
 			}
 			
 			Scriptable scope = cx.newObject(parent);
