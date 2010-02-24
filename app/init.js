@@ -28,7 +28,7 @@ httpserver(config, function(request, response, session) {
 				break
 			case "unauthorized":
 				response.sendError(401)
-				log.error("blocked " + request.address + " from " + request.url)
+				log.warning("blocked " + request.address + " from " + request.url)
 				break
 			case "redirect":
 				response.sendRedirect(result[1])
@@ -39,8 +39,8 @@ httpserver(config, function(request, response, session) {
 		} catch(e) {
 			
 			response.sendError(500)
-			log.error(request.address + " caused:")
-			log.error(e)
+			log.warning(request.address + " caused:")
+			log.warning(e)
 		}
 	})()
 })
