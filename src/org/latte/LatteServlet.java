@@ -25,8 +25,7 @@ import org.mozilla.javascript.ContextFactory;
 import org.mozilla.javascript.JavaScriptException;
 import org.mozilla.javascript.Scriptable;
 import org.mozilla.javascript.ScriptableObject;
-import org.mozilla.javascript.serialize.ScriptableOutputStream;
-import org.mozilla.javascript.serialize.ScriptableInputStream;
+import org.mozilla.javascript.JSON;
 
 import org.latte.scripting.Javascript;
 import org.latte.scripting.ScriptLoader;
@@ -37,10 +36,14 @@ public class LatteServlet extends HttpServlet {
 	private Callable fn;
 
 	private class Session implements Serializable {
+		private Context cx;
+		private Scriptable scope;
 		private Scriptable session;
 	
-		private Session(Context cx) {
-			this.session = cx.newObject(parent);
+		private Session(Context cx, Scriptable scope) {
+			this.cx = cx;
+			this.scope = scope;
+			this.session = cx.newObject(scope);
 		}
 
 		private Scriptable getSession() {
@@ -48,13 +51,11 @@ public class LatteServlet extends HttpServlet {
 		}
 
 		private void writeObject(ObjectOutputStream out) throws IOException {
-			ScriptableOutputStream sos = new ScriptableOutputStream(out, parent);
-			sos.writeObject(session);
+			LOG.info("HI " + JSON.stringify(cx, scope, session));
 		}
 		     
 		private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
-			ScriptableInputStream sin = new ScriptableInputStream(in, parent);
-			session = (Scriptable)in.readObject();
+		
 		}
 	}
 
@@ -88,7 +89,7 @@ public class LatteServlet extends HttpServlet {
 			Context cx = ContextFactory.getGlobal().enterContext();
 			Session session = null;
 			if((session = (Session)request.getSession().getAttribute("latte.session")) == null) {
-				session = new Session(cx);
+				session = new Session(cx, parent);
 				request.getSession().setAttribute("latte.session", session);
 			}
 
@@ -98,6 +99,8 @@ public class LatteServlet extends HttpServlet {
 					response,
 					session.getSession()
 			});
+
+			session.writeObject(null);
 		} catch(Exception e) {
 			LOG.log(Level.SEVERE, "", e);
 			response.sendError(500);

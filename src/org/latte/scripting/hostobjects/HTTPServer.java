@@ -38,8 +38,9 @@ public class HTTPServer implements Callable {
 		org.mortbay.jetty.servlet.Context context = new org.mortbay.jetty.servlet.Context(server, "/", org.mortbay.jetty.servlet.Context.SESSIONS);
 		context.addFilter(new FilterHolder(new MultiPartFilter()), "/*", Handler.REQUEST);
 
-		
-		context.addServlet(new ServletHolder(new DefaultServlet()), "/public/*");
+		ServletHolder defaultServlet = new ServletHolder(new DefaultServlet());
+		context.addServlet(defaultServlet, "/public/*");
+		context.addServlet(defaultServlet, "/favicon.ico");
 		context.addServlet(new ServletHolder(new LatteServlet(scope, (Callable)params[1])), "/");
 
 		Map<String, String> initParams = new HashMap<String, String>();
