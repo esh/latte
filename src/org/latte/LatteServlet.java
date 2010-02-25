@@ -9,14 +9,16 @@ import java.io.ObjectInputStream;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import java.util.logging.Logger;
-import java.util.logging.Level;
+import java.io.InputStreamReader;
+import java.io.IOException;
 
 import org.latte.scripting.PrimitiveWrapFactory;
 import org.mozilla.javascript.Callable;
@@ -51,11 +53,15 @@ public class LatteServlet extends HttpServlet {
 		}
 
 		private void writeObject(ObjectOutputStream out) throws IOException {
-			LOG.info("HI " + JSON.stringify(cx, scope, session));
+			out.writeChars(JSON.stringify(cx, scope, session));
 		}
 		     
 		private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
-		
+			try {
+				this.session = (Scriptable) JSON.fromReader(cx, scope, new InputStreamReader(in));
+			} catch(IOException e) {
+				LOG.log(Level.WARNING, "", e);
+			}	
 		}
 	}
 
@@ -99,8 +105,6 @@ public class LatteServlet extends HttpServlet {
 					response,
 					session.getSession()
 			});
-
-			session.writeObject(null);
 		} catch(Exception e) {
 			LOG.log(Level.SEVERE, "", e);
 			response.sendError(500);
