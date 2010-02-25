@@ -27,43 +27,16 @@ import org.mozilla.javascript.ContextFactory;
 import org.mozilla.javascript.JavaScriptException;
 import org.mozilla.javascript.Scriptable;
 import org.mozilla.javascript.ScriptableObject;
-import org.mozilla.javascript.JSON;
 
 import org.latte.scripting.Javascript;
 import org.latte.scripting.ScriptLoader;
+
+import org.mozilla.javascript.JSON;
 
 public class LatteServlet extends HttpServlet {
 	private static final Logger LOG = Logger.getLogger(LatteServlet.class.getName());
 	final private Scriptable parent;
 	private Callable fn;
-
-	private class Session implements Serializable {
-		private Context cx;
-		private Scriptable scope;
-		private Scriptable session;
-	
-		private Session(Context cx, Scriptable scope) {
-			this.cx = cx;
-			this.scope = scope;
-			this.session = cx.newObject(scope);
-		}
-
-		private Scriptable getSession() {
-			return session;
-		}
-
-		private void writeObject(ObjectOutputStream out) throws IOException {
-			out.writeChars(JSON.stringify(cx, scope, session));
-		}
-		     
-		private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
-			try {
-				this.session = (Scriptable) JSON.fromReader(cx, scope, new InputStreamReader(in));
-			} catch(IOException e) {
-				LOG.log(Level.WARNING, "", e);
-			}	
-		}
-	}
 
 	public LatteServlet() throws Exception {
 		ScriptLoader loader = new ScriptLoader();
@@ -93,18 +66,26 @@ public class LatteServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {			
 		try {
 			Context cx = ContextFactory.getGlobal().enterContext();
-			Session session = null;
-			if((session = (Session)request.getSession().getAttribute("latte.session")) == null) {
-				session = new Session(cx, parent);
-				request.getSession().setAttribute("latte.session", session);
+			Scriptable session;
+			String sessionSource;
+			if((sessionSource = (String)request.getSession().getAttribute("latte.session")) == null) {
+				LOG.info("new session");
+				session = cx.newObject(parent);
+			} else {
+				LOG.info("inflating from: " + sessionSource);
+				session = (Scriptable)JSON.fromString(cx, parent, sessionSource);
 			}
 
 			cx.setWrapFactory(new PrimitiveWrapFactory());
 			fn.call(cx, parent, parent, new Object[] {
 					new RequestProxy(request),
 					response,
-					session.getSession()
+					session
 			});
+
+			sessionSource = JSON.stringify(cx, parent, session);
+			LOG.info("deflating: " + sessionSource);
+			request.getSession().setAttribute("latte.session", sessionSource);
 		} catch(Exception e) {
 			LOG.log(Level.SEVERE, "", e);
 			response.sendError(500);

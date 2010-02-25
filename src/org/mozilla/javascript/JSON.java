@@ -11,8 +11,4 @@ public class JSON {
 	public static Object fromString(Context cx, Scriptable scope, String source) {
 		return cx.evaluateString(scope, source, "", 0, null);
 	}
-
-	public static Object fromReader(Context cx, Scriptable scope, Reader reader) throws IOException {
-		return cx.evaluateReader(scope, reader, "", 0, null);
-	}
 }
