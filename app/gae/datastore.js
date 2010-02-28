@@ -1,4 +1,6 @@
 (function() {
+	require("utils/common.js")
+
 	importPackage(com.google.appengine.api.datastore)
 	var ds = DatastoreServiceFactory.getDatastoreService()
 
@@ -23,9 +25,29 @@
 		return results
 	}
 
+	function transaction(fn) {
+		var t = ds.beginTransaction()
+		try {
+			fn({
+				put: put,
+				get: get,
+				find: find
+			})
+			t.commit()
+		}
+		catch(e) {
+			log.severe(e)
+			log.severe("rolling back")
+			t.rollback()
+
+			throw e
+		}
+	}
+
 	return {
 		put: put,
 		get: get,
-		find: find
+		find: find,
+		transaction: transaction
  	}
 })

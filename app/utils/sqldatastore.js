@@ -31,8 +31,8 @@
 			conn.commit()
 		}
 		catch(e) {
-			log.warning(e)
-			log.warning("rolling back")
+			log.severe(e)
+			log.severe("rolling back")
 			conn.rollback()
 			
 			throw e
