@@ -69,10 +69,8 @@ public class LatteServlet extends HttpServlet {
 			Scriptable session;
 			String sessionSource;
 			if((sessionSource = (String)request.getSession().getAttribute("latte.session")) == null) {
-				LOG.info("new session");
 				session = cx.newObject(parent);
 			} else {
-				LOG.info("inflating from: " + sessionSource);
 				session = (Scriptable)JSON.fromString(cx, parent, sessionSource);
 			}
 
@@ -84,7 +82,6 @@ public class LatteServlet extends HttpServlet {
 			});
 
 			sessionSource = JSON.stringify(cx, parent, session);
-			LOG.info("deflating: " + sessionSource);
 			request.getSession().setAttribute("latte.session", sessionSource);
 		} catch(Exception e) {
 			LOG.log(Level.SEVERE, "", e);
