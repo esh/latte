@@ -25,6 +25,7 @@
 				<exclude name="latte.jar"/>
 				<exclude name="jetty*.jar"/>
 				<exclude name="servlet*.jar"/>
+				<exclude name="appengine*.jar"/>
 			</lib>
 			<classes dir="bin"/>
 			<classes dir="app"/>

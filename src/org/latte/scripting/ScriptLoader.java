@@ -19,16 +19,18 @@ import org.mozilla.javascript.Context;
 import org.mozilla.javascript.ContextFactory;
 import org.mozilla.javascript.Scriptable;
 import org.mozilla.javascript.ScriptableObject;
+import org.mozilla.javascript.ImporterTopLevel;
 
 public class ScriptLoader {
 	private static final Logger LOG = Logger.getLogger(ScriptLoader.class.getName());
 	
-	private final Scriptable parent;
+	private final ScriptableObject parent;
 	private final Map<String, Script> mapping = new HashMap<String, Script>();
 	
 	public ScriptLoader() throws Exception {
 		Context cx = ContextFactory.getGlobal().enterContext();
-		this.parent = cx.initStandardObjects(null, false);
+		this.parent = new ImporterTopLevel(cx);
+		cx.initStandardObjects(parent);
 		
 		register("require", new Callable() {
 			public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] params) {
