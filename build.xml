@@ -35,6 +35,7 @@
 		<delete dir="dist"/>
 		<mkdir dir="src"/>
 		<mkdir dir="dist"/>
+		<mkdir dir="public"/>
 		<mkdir dir="dist/WEB-INF"/>
 		<mkdir dir="dist/WEB-INF/lib"/>
 		<mkdir dir="dist/WEB-INF/classes"/>
@@ -57,6 +58,11 @@
 				<exclude name="latte.jar"/>
 				<exclude name="jetty*.jar"/>
 				<exclude name="servlet*.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="dist/public">
+			<fileset dir="public">
+				<include name="**/*"/>
 			</fileset>
 		</copy>
 	</target>

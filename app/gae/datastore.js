@@ -9,6 +9,12 @@
 		entity.setProperty("data", data.toSource())
 		return KeyFactory.keyToString(ds.put(entity))
 	}
+
+	function update(key, data) {
+		var entity = new Entity(KeyFactory.stringToKey(key))
+		entity.setProperty("data", data.toSource())
+		ds.put(entity)
+	}
 	
 	function get(key) {
 		var entity = ds.get(KeyFactory.stringToKey(key))
@@ -25,13 +31,19 @@
 		return results
 	}
 
+	function remove(key) {
+		ds["delete"](key)
+	}
+
 	function transaction(fn) {
 		var t = ds.beginTransaction()
 		try {
 			fn({
 				put: put,
 				get: get,
-				find: find
+				find: find,
+				update: update,
+				remove: remove
 			})
 			t.commit()
 		}
@@ -48,6 +60,8 @@
 		put: put,
 		get: get,
 		find: find,
+		update: update,
+		remove: remove,
 		transaction: transaction
  	}
 })

@@ -1,12 +1,13 @@
 package org.latte;
 
-import org.latte.scripting.hostobjects.RequestProxy;
-
 import java.io.IOException;
 import java.io.Serializable;
 import java.io.ObjectOutputStream;
 import java.io.ObjectInputStream;
+import java.io.BufferedReader;
+import java.io.File;
 
+import java.util.Set;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -32,6 +33,7 @@ import org.latte.scripting.Javascript;
 import org.latte.scripting.ScriptLoader;
 
 import org.mozilla.javascript.JSON;
+import org.apache.commons.codec.binary.Base64;
 
 public class LatteServlet extends HttpServlet {
 	private static final Logger LOG = Logger.getLogger(LatteServlet.class.getName());
@@ -75,8 +77,52 @@ public class LatteServlet extends HttpServlet {
 			}
 
 			cx.setWrapFactory(new PrimitiveWrapFactory());
+
+			Scriptable requestProxy = cx.newObject(parent);
+			if(request.getParameterMap().size() > 0) {
+				Scriptable params = cx.newObject(parent);
+				for(String key : (Set<String>)request.getParameterMap().keySet()) {
+					Object value = request.getParameterMap().get(key);
+					
+					if(request.getContentType().startsWith("multipart/form-data")) {
+						if(value instanceof String) {
+							File tmp = (File)request.getAttribute(key);	
+							File file = new File(tmp.getAbsoluteFile() + ((String)value).substring(((String)value).indexOf(".")));
+							tmp.renameTo(file);
+							ScriptableObject.putProperty(params, key, file.getAbsolutePath());
+						}
+						else {
+							ScriptableObject.putProperty(params, key, new String((byte[])value));
+						}
+					}
+					else {
+						ScriptableObject.putProperty(params, key, ((String[])value)[0]);
+					}
+				}
+				ScriptableObject.putProperty(requestProxy, "params", params);	
+			}
+			ScriptableObject.putProperty(requestProxy, "address", request.getRemoteAddr());
+			ScriptableObject.putProperty(requestProxy, "remoteaddr", request.getRemoteAddr());
+			ScriptableObject.putProperty(requestProxy, "url", request.getServletPath());
+					
+			String authorization = (String)request.getHeader("Authorization");
+			if(authorization != null && authorization.startsWith("Basic"))  {
+				ScriptableObject.putProperty(requestProxy, "authorization", new String(new Base64().decode(authorization.split(" ")[1].getBytes())));
+			}
+		
+			if(request.getContentType() != null && request.getContentType().contains("application/json")) {
+				StringBuffer sb = new StringBuffer();
+				BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
+				String line;
+				while((line = br.readLine()) != null) {
+					sb.append(line);
+				}
+				
+				ScriptableObject.putProperty(requestProxy, "content", sb.toString());
+			}
+
 			fn.call(cx, parent, parent, new Object[] {
-					new RequestProxy(request),
+					requestProxy,
 					response,
 					session
 			});

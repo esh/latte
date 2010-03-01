@@ -70,7 +70,7 @@ public class ScriptLoader {
 		register("gethostbyaddr", new GetHostByAddr());
 	
 		ScriptableObject.defineClass(this.parent, RWLock.class);
-			
+		
 		Context.exit();
 	}
 
