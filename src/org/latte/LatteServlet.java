@@ -5,11 +5,11 @@ import java.io.Serializable;
 import java.io.ObjectOutputStream;
 import java.io.ObjectInputStream;
 import java.io.BufferedReader;
-import java.io.File;
 
 import java.util.Set;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Enumeration;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 
@@ -79,28 +79,18 @@ public class LatteServlet extends HttpServlet {
 			cx.setWrapFactory(new PrimitiveWrapFactory());
 
 			Scriptable requestProxy = cx.newObject(parent);
-			if(request.getParameterMap().size() > 0) {
-				Scriptable params = cx.newObject(parent);
-				for(String key : (Set<String>)request.getParameterMap().keySet()) {
-					Object value = request.getParameterMap().get(key);
-					
-					if(request.getContentType().startsWith("multipart/form-data")) {
-						if(value instanceof String) {
-							File tmp = (File)request.getAttribute(key);	
-							File file = new File(tmp.getAbsoluteFile() + ((String)value).substring(((String)value).indexOf(".")));
-							tmp.renameTo(file);
-							ScriptableObject.putProperty(params, key, file.getAbsolutePath());
-						}
-						else {
-							ScriptableObject.putProperty(params, key, new String((byte[])value));
-						}
-					}
-					else {
-						ScriptableObject.putProperty(params, key, ((String[])value)[0]);
-					}
+			Scriptable params = cx.newObject(parent);
+			Enumeration paramNames = request.getParameterNames();
+			while(paramNames.hasMoreElements()) {
+				String key = (String)paramNames.nextElement();
+				String[] values = request.getParameterValues(key);
+				if(values.length == 1) {
+					ScriptableObject.putProperty(params, key, values[0]);
+				} else {
+					ScriptableObject.putProperty(params, key, values);
 				}
-				ScriptableObject.putProperty(requestProxy, "params", params);	
 			}
+			ScriptableObject.putProperty(requestProxy, "params", params);
 			ScriptableObject.putProperty(requestProxy, "address", request.getRemoteAddr());
 			ScriptableObject.putProperty(requestProxy, "remoteaddr", request.getRemoteAddr());
 			ScriptableObject.putProperty(requestProxy, "url", request.getServletPath());
