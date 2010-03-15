@@ -7,7 +7,7 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.net.URL;
-import java.net.URLConnection;
+import java.net.HttpURLConnection;
 
 import org.mozilla.javascript.Callable;
 import org.mozilla.javascript.Context;
@@ -18,22 +18,22 @@ public class HPost implements Callable {
 
 	public Object call(Context cx, Scriptable scope, Scriptable thisObj, Object[] params) {
 		try {
-			URLConnection uc = new URL((String)params[0]).openConnection();
+			URL url = new URL((String)params[0]);
+			HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+			connection.setDoOutput(true);
+			connection.setRequestMethod("POST");
 			Scriptable reqParams = (Scriptable)params[1];
 			if(reqParams != null) {	
 				for(Object key : reqParams.getIds()) {
-					uc.setRequestProperty(key.toString(), reqParams.get(key.toString(), reqParams).toString());
+					connection.setRequestProperty(key.toString(), reqParams.get(key.toString(), reqParams).toString());
 				}
 			}
-			uc.setDoOutput(true);
-			OutputStream out = uc.getOutputStream();
-			Writer writer = new OutputStreamWriter(out);
+
+			OutputStreamWriter writer = new OutputStreamWriter(connection.getOutputStream());
 			writer.write((String)params[2]);
 			writer.close();
-			out.flush();
-			out.close();
-			
-			InputStream in = uc.getInputStream();
+
+			InputStream in = connection.getInputStream();
 			BufferedReader br = new BufferedReader(new InputStreamReader(in));
 			StringBuilder sb = new StringBuilder();
 			String res;
