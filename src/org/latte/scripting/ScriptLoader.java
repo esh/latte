@@ -6,7 +6,6 @@ import java.util.Map;
 import java.util.logging.Logger;
 import org.latte.scripting.hostobjects.HGet;
 import org.latte.scripting.hostobjects.HPost;
-import org.latte.scripting.hostobjects.HTTPServer;
 import org.latte.scripting.hostobjects.JDBC;
 import org.latte.scripting.hostobjects.Open;
 import org.latte.scripting.hostobjects.RWLock;
