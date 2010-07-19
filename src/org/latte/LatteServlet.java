@@ -24,6 +24,7 @@ import javax.mail.Multipart;
 import javax.mail.Part;
 import javax.mail.Session;
 import javax.mail.internet.MimeMessage;
+import javax.servlet.http.Cookie;
 
 import java.io.InputStreamReader;
 import java.io.IOException;
@@ -108,6 +109,11 @@ public class LatteServlet extends HttpServlet {
 				ScriptableObject.putProperty(requestProxy, "content", sb.toString());
 			} else {
 				Scriptable params = cx.newObject(parent);
+
+				for(Cookie cookie : request.getCookies()) {
+					ScriptableObject.putProperty(params, cookie.getName(), cookie.getValue());
+				}
+
 				Enumeration paramNames = request.getParameterNames();
 				while(paramNames.hasMoreElements()) {
 					String key = (String)paramNames.nextElement();
