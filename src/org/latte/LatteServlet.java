@@ -107,26 +107,26 @@ public class LatteServlet extends HttpServlet {
 				}
 				
 				ScriptableObject.putProperty(requestProxy, "content", sb.toString());
-			} else {
-				Scriptable params = cx.newObject(parent);
-
-				for(Cookie cookie : request.getCookies()) {
-					ScriptableObject.putProperty(params, cookie.getName(), cookie.getValue());
-				}
-
-				Enumeration paramNames = request.getParameterNames();
-				while(paramNames.hasMoreElements()) {
-					String key = (String)paramNames.nextElement();
-					String[] values = request.getParameterValues(key);
-					if(values.length == 1) {
-						ScriptableObject.putProperty(params, key, values[0]);
-					} else {
-						ScriptableObject.putProperty(params, key, values);
-					}
-				}
-				ScriptableObject.putProperty(requestProxy, "params", params);
-			}
+			} 
 			
+			Scriptable params = cx.newObject(parent);
+
+			for(Cookie cookie : request.getCookies()) {
+				ScriptableObject.putProperty(params, cookie.getName(), cookie.getValue());
+			}
+
+			Enumeration paramNames = request.getParameterNames();
+			while(paramNames.hasMoreElements()) {
+				String key = (String)paramNames.nextElement();
+				String[] values = request.getParameterValues(key);
+				if(values.length == 1) {
+					ScriptableObject.putProperty(params, key, values[0]);
+				} else {
+					ScriptableObject.putProperty(params, key, values);
+				}
+			}
+			ScriptableObject.putProperty(requestProxy, "params", params);
+		
 			fn.call(cx, parent, parent, new Object[] {
 				requestProxy,
 				response,
