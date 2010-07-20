@@ -110,8 +110,10 @@ public class LatteServlet extends HttpServlet {
 			} else {
 				Scriptable params = cx.newObject(parent);
 
-				for(Cookie cookie : request.getCookies()) {
-					ScriptableObject.putProperty(params, cookie.getName(), cookie.getValue());
+				if(request.getCookies() != null) {
+					for(Cookie cookie : request.getCookies()) {
+						ScriptableObject.putProperty(params, cookie.getName(), cookie.getValue());
+					}
 				}
 
 				Enumeration paramNames = request.getParameterNames();
