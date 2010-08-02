@@ -128,6 +128,14 @@ public class LatteServlet extends HttpServlet {
 				}
 			}
 			ScriptableObject.putProperty(requestProxy, "params", params);
+
+			Scriptable headers = cx.newObject(parent);
+			Enumeration headerNames = request.getHeaderNames();
+			while(headerNames.hasMoreElements()) {
+				String key = (String)headerNames.nextElement();
+				ScriptableObject.putProperty(headers, key, request.getHeader(key));
+			}
+			ScriptableObject.putProperty(requestProxy, "headers", headers);
 		
 			fn.call(cx, parent, parent, new Object[] {
 				requestProxy,
